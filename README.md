@@ -1,5 +1,4 @@
-
-
+![logo](https://github.com/SakethSumanBathini/SakethSumanBathini/blob/main/github_banner_final_large_dynamic_centered.png)
 <h1 align="center">Hi 👋, I'm Saketh Suman</h1>
 <h3 align="center">A passionate Data Analyst from India</h3>
 
