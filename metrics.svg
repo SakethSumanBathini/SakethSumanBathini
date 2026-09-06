@@ -1,0 +1,10 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 880 320" width="880" height="320">
+  <rect width="880" height="320" rx="10" fill="#020205" stroke="#1F1F23" stroke-width="1"/>
+  <rect x="410" y="108" width="60" height="3" rx="1.5" fill="#FF5C00"/>
+  <text x="50%" y="146" text-anchor="middle" font-family="system-ui,-apple-system,Segoe UI,sans-serif"
+        font-size="22" font-weight="700" fill="#FF5C00">Full Metrics</text>
+  <text x="50%" y="172" text-anchor="middle" font-family="system-ui,-apple-system,Segoe UI,sans-serif"
+        font-size="12" fill="#8B8B93">metrics.yml  ·  lowlighter/metrics</text>
+  <text x="50%" y="194" text-anchor="middle" font-family="system-ui,-apple-system,Segoe UI,sans-serif"
+        font-size="12" fill="#8B8B93">placeholder — the real card appears after the workflow runs</text>
+</svg>

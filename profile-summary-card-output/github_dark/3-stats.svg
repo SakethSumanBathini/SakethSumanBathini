@@ -1,0 +1,10 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 340 200" width="340" height="200">
+  <rect width="340" height="200" rx="10" fill="#020205" stroke="#1F1F23" stroke-width="1"/>
+  <rect x="140" y="48" width="60" height="3" rx="1.5" fill="#FF5C00"/>
+  <text x="50%" y="86" text-anchor="middle" font-family="system-ui,-apple-system,Segoe UI,sans-serif"
+        font-size="15" font-weight="700" fill="#FF5C00">Stats</text>
+  <text x="50%" y="112" text-anchor="middle" font-family="system-ui,-apple-system,Segoe UI,sans-serif"
+        font-size="10" fill="#8B8B93">profile-cards.yml</text>
+  <text x="50%" y="134" text-anchor="middle" font-family="system-ui,-apple-system,Segoe UI,sans-serif"
+        font-size="10" fill="#8B8B93">placeholder — the real card appears after the workflow runs</text>
+</svg>
