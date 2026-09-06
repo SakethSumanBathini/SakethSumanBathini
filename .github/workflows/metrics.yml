@@ -46,23 +46,13 @@ jobs:
           plugin_isocalendar: yes
           plugin_isocalendar_duration: full-year
 
-          # ── Coding habits ────────────────────────────────────────────
-          # Halved from 200 events and scoped to 14 days. The plugin reads
-          # recent diffs; asking for less is what makes it stop erroring.
-          plugin_habits: yes
-          plugin_habits_from: 100
-          plugin_habits_days: 14
-          plugin_habits_facts: yes
-          plugin_habits_charts: no
-
-          # ── Achievements ─────────────────────────────────────────────
-          # secrets:no — the hidden-achievement lookup is the part that
-          # most often throws, and it adds nothing visible.
-          plugin_achievements: yes
-          plugin_achievements_threshold: B
-          plugin_achievements_secrets: no
-          plugin_achievements_display: compact
-          plugin_achievements_limit: 8
+          # ── Disabled: habits + achievements ──────────────────────────
+          # Both printed "Unexpected error" into the image even with
+          # retries: 3. They are the two most API-hungry plugins and fail
+          # on this account. A missing section beats a visible error.
+          # Re-enable either by flipping to `yes`.
+          plugin_habits: no
+          plugin_achievements: no
 
           # ── Brand skin ───────────────────────────────────────────────
           # Repaints the default GitHub green to #FF5C00 on #020205.
