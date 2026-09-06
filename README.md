@@ -1,13 +1,13 @@
-﻿<!--
-â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•
-  SAKETH SUMAN BATHINI â€” GITHUB PROFILE README  Â·  v2
+<!--
+═══════════════════════════════════════════════════════════════════════════════
+  SAKETH SUMAN BATHINI — GITHUB PROFILE README  ·  v2
   Brand: #FF5C00 on #020205  (matches portfolio)
   Username already wired in: SakethSumanBathini
-  Only edits needed â†’ the CHECK-THESE list in SETUP.md
-â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•
+  Only edits needed → the CHECK-THESE list in SETUP.md
+═══════════════════════════════════════════════════════════════════════════════
 -->
 
-<!-- â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â• 01 Â· NAME HEATMAP HERO â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â• -->
+<!-- ══════════════════════ 01 · NAME HEATMAP HERO ══════════════════════ -->
 
 <div align="center">
 
@@ -29,37 +29,37 @@
 
 ---
 
-## ðŸ‘‹ whoami
+## 👋 whoami
 
 ```yaml
 name:        Saketh Suman Bathini
-role:        Data Analyst  â†’  AI Engineer
+role:        Data Analyst  →  AI Engineer
 location:    Hyderabad, Telangana, India
 
 education:
-  - B.Sc Computer Science  Â· NxtWave Institute of Advanced Technology  Â· CGPA 8.69
-  - B.Tech CSE             Â· Sreyas Institute of Engineering & Technology
-  - B.Sc Computer Science  Â· BITS Pilani (Online)
+  - B.Sc Computer Science  · NxtWave Institute of Advanced Technology  · CGPA 8.69
+  - B.Tech CSE             · Sreyas Institute of Engineering & Technology
+  - B.Sc Computer Science  · BITS Pilani (Online)
 
 leads:
-  - President          Â· Gen AI Club, NIAT
-  - Technical Ops Lead Â· HackWithIndia
-  - Campus Ambassador  Â· Techniche, IIT Guwahati
+  - President          · Gen AI Club, NIAT
+  - Technical Ops Lead · HackWithIndia
+  - Campus Ambassador  · Techniche, IIT Guwahati
 
 builds_with: [Python, SQL, Power BI, Tableau, LangChain, n8n, Groq]
-currently:   RAG chatbots Â· agentic workflows Â· dashboards people actually open
+currently:   RAG chatbots · agentic workflows · dashboards people actually open
 offline:     national-level table tennis
 ```
 
 <div align="center">
 
 <pre>
-â–ˆâ–ˆâ–ˆâ–ˆâ–ˆâ–ˆâ–ˆâ•— â–ˆâ–ˆâ–ˆâ–ˆâ–ˆâ•— â–ˆâ–ˆâ•—  â–ˆâ–ˆâ•—â–ˆâ–ˆâ–ˆâ–ˆâ–ˆâ–ˆâ–ˆâ•—â–ˆâ–ˆâ–ˆâ–ˆâ–ˆâ–ˆâ–ˆâ–ˆâ•—â–ˆâ–ˆâ•—  â–ˆâ–ˆâ•—
-â–ˆâ–ˆâ•”â•â•â•â•â•â–ˆâ–ˆâ•”â•â•â–ˆâ–ˆâ•—â–ˆâ–ˆâ•‘ â–ˆâ–ˆâ•”â•â–ˆâ–ˆâ•”â•â•â•â•â•â•šâ•â•â–ˆâ–ˆâ•”â•â•â•â–ˆâ–ˆâ•‘  â–ˆâ–ˆâ•‘
-â–ˆâ–ˆâ–ˆâ–ˆâ–ˆâ–ˆâ–ˆâ•—â–ˆâ–ˆâ–ˆâ–ˆâ–ˆâ–ˆâ–ˆâ•‘â–ˆâ–ˆâ–ˆâ–ˆâ–ˆâ•”â• â–ˆâ–ˆâ–ˆâ–ˆâ–ˆâ•—     â–ˆâ–ˆâ•‘   â–ˆâ–ˆâ–ˆâ–ˆâ–ˆâ–ˆâ–ˆâ•‘
-â•šâ•â•â•â•â–ˆâ–ˆâ•‘â–ˆâ–ˆâ•”â•â•â–ˆâ–ˆâ•‘â–ˆâ–ˆâ•”â•â–ˆâ–ˆâ•— â–ˆâ–ˆâ•”â•â•â•     â–ˆâ–ˆâ•‘   â–ˆâ–ˆâ•”â•â•â–ˆâ–ˆâ•‘
-â–ˆâ–ˆâ–ˆâ–ˆâ–ˆâ–ˆâ–ˆâ•‘â–ˆâ–ˆâ•‘  â–ˆâ–ˆâ•‘â–ˆâ–ˆâ•‘  â–ˆâ–ˆâ•—â–ˆâ–ˆâ–ˆâ–ˆâ–ˆâ–ˆâ–ˆâ•—   â–ˆâ–ˆâ•‘   â–ˆâ–ˆâ•‘  â–ˆâ–ˆâ•‘
-â•šâ•â•â•â•â•â•â•â•šâ•â•  â•šâ•â•â•šâ•â•  â•šâ•â•â•šâ•â•â•â•â•â•â•   â•šâ•â•   â•šâ•â•  â•šâ•â•
+███████╗ █████╗ ██╗  ██╗███████╗████████╗██╗  ██╗
+██╔════╝██╔══██╗██║ ██╔╝██╔════╝╚══██╔══╝██║  ██║
+███████╗███████║█████╔╝ █████╗     ██║   ███████║
+╚════██║██╔══██║██╔═██╗ ██╔══╝     ██║   ██╔══██║
+███████║██║  ██║██║  ██╗███████╗   ██║   ██║  ██║
+╚══════╝╚═╝  ╚═╝╚═╝  ╚═╝╚══════╝   ╚═╝   ╚═╝  ╚═╝
 </pre>
 
 </div>
@@ -68,7 +68,7 @@ offline:     national-level table tennis
 
 ## <img src="./assets/emoji/chart-bar.png" width="26" /> &nbsp;About
 
-I turn messy, real-world data into things people make decisions with â€” dashboards that get opened more than once, and AI agents that quietly do the boring work.
+I turn messy, real-world data into things people make decisions with — dashboards that get opened more than once, and AI agents that quietly do the boring work.
 
 Most of my time goes into two places. **Analytics:** survey design, cleaning, modelling, and the Power BI / Tableau layer on top. **AI engineering:** LangChain pipelines, retrieval-augmented chatbots, and n8n automations that wire the two together.
 
@@ -76,7 +76,7 @@ I learn by shipping under deadline. `Scam Shield`, built at the India AI Impact 
 
 Right now I'm going deeper on vector databases, agent orchestration, and getting models into production instead of leaving them in notebooks.
 
-If you're building something with data or AI in it â€” or hiring for it â€” I'm at **[sakethsumanbathini@gmail.com](mailto:sakethsumanbathini@gmail.com)**.
+If you're building something with data or AI in it — or hiring for it — I'm at **[sakethsumanbathini@gmail.com](mailto:sakethsumanbathini@gmail.com)**.
 
 ---
 
@@ -98,16 +98,16 @@ If you're building something with data or AI in it â€” or hiring for it â�
 
 | Achievement | Scale | What it was |
 |---|---|---|
-| **ELUSOC 2026** | 3rd place | 611 PRs merged Â· 26 repos Â· 11 weeks |
-| **India AI Impact Buildathon** | **Top 10** of 48,000+ | `Scam Shield` â€” 850 shortlisted, Top 10 in the final |
-| **KultureHire** | +75% engagement | Data Analyst Intern Â· 100% data accuracy |
+| **ELUSOC 2026** | 3rd place | 611 PRs merged · 26 repos · 11 weeks |
+| **India AI Impact Buildathon** | **Top 10** of 48,000+ | `Scam Shield` — 850 shortlisted, Top 10 in the final |
+| **KultureHire** | +75% engagement | Data Analyst Intern · 100% data accuracy |
 | **TTFI National Ranking** | National level | Table tennis |
 
 ---
 
-## <img src="./assets/emoji/medal.png" width="26" /> &nbsp;ELUSOC 2026 â€” Full Badge Run
+## <img src="./assets/emoji/medal.png" width="26" /> &nbsp;ELUSOC 2026 — Full Badge Run
 
-Eleven weeks, 26 repositories, **611 merged pull requests**, and every tier in the ladder cleared â€” Spawnling through Repo Legend. Finished **3rd overall**.
+Eleven weeks, 26 repositories, **611 merged pull requests**, and every tier in the ladder cleared — Spawnling through Repo Legend. Finished **3rd overall**.
 
 <div align="center">
 
@@ -132,20 +132,20 @@ Eleven weeks, 26 repositories, **611 merged pull requests**, and every tier in t
 </div>
 
 <details>
-<summary><b>ðŸŽ–ï¸ The full ladder, in order</b></summary>
+<summary><b>🎖️ The full ladder, in order</b></summary>
 
 <br/>
 
 | Tier | Badge |
 |---|---|
-| 1 | ðŸ¥š Spawnling |
-| 2 | ðŸª¨ Stone Coder |
-| 3 | â›“ï¸ Iron Developer |
-| 4 | ðŸ¥‡ Gold Engineer |
-| 5 | ðŸ’Ž Diamond Architect |
-| 6 | ðŸŒŒ End Conqueror |
-| 7 | ðŸ”¥ Netherite Champion |
-| 8 | ðŸ‘‘ **Repo Legend** |
+| 1 | 🥚 Spawnling |
+| 2 | 🪨 Stone Coder |
+| 3 | ⛓️ Iron Developer |
+| 4 | 🥇 Gold Engineer |
+| 5 | 💎 Diamond Architect |
+| 6 | 🌌 End Conqueror |
+| 7 | 🔥 Netherite Champion |
+| 8 | 👑 **Repo Legend** |
 
 All eight tiers cleared. The full contribution log is public on the
 [ELUSOC profile](https://www.edulinkup.dev/elusoc/profile/SakethSumanBathini).
@@ -221,7 +221,7 @@ All eight tiers cleared. The full contribution log is public on the
 
 ---
 
-## ðŸŒŒ Contributions in 3D
+## 🌌 Contributions in 3D
 
 <div align="center">
 
@@ -249,13 +249,13 @@ All eight tiers cleared. The full contribution log is public on the
 </div>
 
 <details>
-<summary><b>ðŸ“Š Deep dive â€” language split, commit times, full metrics</b></summary>
+<summary><b>📊 Deep dive — language split, commit times, full metrics</b></summary>
 
 <br/>
 
 <div align="center">
 
-<!-- Generated by GitHub Actions and committed to this repo â€” these cannot rate-limit. -->
+<!-- Generated by GitHub Actions and committed to this repo — these cannot rate-limit. -->
 
 <img src="./profile-summary-card-output/github_dark/1-repos-per-language.svg" height="200" alt="Repos per language"/>
 <img src="./profile-summary-card-output/github_dark/2-most-commit-language.svg" height="200" alt="Most commit language"/>
@@ -273,7 +273,7 @@ All eight tiers cleared. The full contribution log is public on the
 
 ---
 
-## ðŸ Watch It Eat My Commits
+## 🐍 Watch It Eat My Commits
 
 <div align="center">
 
@@ -287,13 +287,13 @@ All eight tiers cleared. The full contribution log is public on the
 
 ---
 
-## ðŸš€ Featured Work
+## 🚀 Featured Work
 
 <table>
 <tr>
 <td width="50%" valign="top">
 
-#### ðŸ©º TriageIQ
+#### 🩺 TriageIQ
 AI triage assistant that ranks incoming cases by urgency, so the critical ones surface first instead of sitting in a queue.
 
 <img src="https://img.shields.io/badge/Python-3776AB?style=flat-square&logo=python&logoColor=white"/>
@@ -302,8 +302,8 @@ AI triage assistant that ranks incoming cases by urgency, so the critical ones s
 </td>
 <td width="50%" valign="top">
 
-#### ðŸ“ž CallSensei AI
-Turns raw call recordings into structured, searchable insight â€” transcription, sentiment, and extracted action items.
+#### 📞 CallSensei AI
+Turns raw call recordings into structured, searchable insight — transcription, sentiment, and extracted action items.
 
 <img src="https://img.shields.io/badge/Python-3776AB?style=flat-square&logo=python&logoColor=white"/>
 <img src="https://img.shields.io/badge/Groq-F55036?style=flat-square&logo=groq&logoColor=white"/>
@@ -313,8 +313,8 @@ Turns raw call recordings into structured, searchable insight â€” transcrip
 <tr>
 <td width="50%" valign="top">
 
-#### ðŸŽ¬ SceneSense AI
-Multimodal scene understanding â€” feed it video, get back a structured account of what's actually happening in it.
+#### 🎬 SceneSense AI
+Multimodal scene understanding — feed it video, get back a structured account of what's actually happening in it.
 
 <img src="https://img.shields.io/badge/PyTorch-EE4C2C?style=flat-square&logo=pytorch&logoColor=white"/>
 <img src="https://img.shields.io/badge/OpenCV-5C3EE8?style=flat-square&logo=opencv&logoColor=white"/>
@@ -322,37 +322,37 @@ Multimodal scene understanding â€” feed it video, get back a structured acc
 </td>
 <td width="50%" valign="top">
 
-#### ðŸ›¡ï¸ Scam Shield
+#### 🛡️ Scam Shield
 Flags fraudulent messages and calls before they reach the person being targeted.
 
 <img src="https://img.shields.io/badge/Python-3776AB?style=flat-square&logo=python&logoColor=white"/>
 <img src="https://img.shields.io/badge/NLP-FF5C00?style=flat-square&logoColor=white"/>
 
-<sub>ðŸ† India AI Impact Buildathon â€” <b>Top 10 of 48,000+</b></sub>
+<sub>🏆 India AI Impact Buildathon — <b>Top 10 of 48,000+</b></sub>
 
 </td>
 </tr>
 <tr>
 <td width="50%" valign="top">
 
-#### ðŸ“Š Gen Z Career Dashboard
-A survey on what Gen Z actually wants from work, taken end to end â€” design, cleaning, modelling, then Power BI and Tableau.
+#### 📊 Gen Z Career Dashboard
+A survey on what Gen Z actually wants from work, taken end to end — design, cleaning, modelling, then Power BI and Tableau.
 
 <img src="https://img.shields.io/badge/Power%20BI-F2C811?style=flat-square&logo=powerbi&logoColor=black"/>
 <img src="https://img.shields.io/badge/Tableau-E97627?style=flat-square&logo=tableau&logoColor=white"/>
 
-<sub>ðŸ“ˆ Full analytics pipeline, solo</sub>
+<sub>📈 Full analytics pipeline, solo</sub>
 
 </td>
 <td width="50%" valign="top">
 
-#### ðŸŒ Portfolio
+#### 🌐 Portfolio
 Hand-built, no framework. Orbital constellation, scroll-driven timeline, three-tier RAG chatbot on Groq.
 
 <img src="https://img.shields.io/badge/Vanilla%20JS-F7DF1E?style=flat-square&logo=javascript&logoColor=black"/>
 <img src="https://img.shields.io/badge/Vite-646CFF?style=flat-square&logo=vite&logoColor=white"/>
 
-<sub>ðŸŽ¨ Every pixel written by hand</sub>
+<sub>🎨 Every pixel written by hand</sub>
 
 </td>
 </tr>
@@ -363,49 +363,49 @@ Hand-built, no framework. Orbital constellation, scroll-driven timeline, three-t
 ## <img src="./assets/emoji/briefcase.png" width="26" /> &nbsp;Where I've Shipped
 
 ```
-2026 â”€â”€â—  HackWithIndia Â· Technical Operations Lead
-       â”‚  Running technical ops for national-scale hackathons.
-       â”‚
-       â—  Gen AI Club, NIAT Â· President
-       â”‚  Leading the campus generative-AI community.
-       â”‚
-2025 â”€â”€â—  Devnovate Â· Software Development Intern
-       â”‚  Shipping product features in a fast-moving startup stack.
-       â”‚
-       â—  Cognifyz Technologies Â· Power BI Data Analytics Intern
-       â”‚  Dashboards that moved reporting from weekly to real-time.
-       â”‚
-2024 â”€â”€â—  KultureHire Â· Data Analyst Intern
-       â”‚  Analysis behind a 75% engagement lift Â· 100% data accuracy.
-       â”‚
-       â—  JPMorgan Chase (Forage) Â· Excel Skills Virtual Programme
+2026 ──●  HackWithIndia · Technical Operations Lead
+       │  Running technical ops for national-scale hackathons.
+       │
+       ●  Gen AI Club, NIAT · President
+       │  Leading the campus generative-AI community.
+       │
+2025 ──●  Devnovate · Software Development Intern
+       │  Shipping product features in a fast-moving startup stack.
+       │
+       ●  Cognifyz Technologies · Power BI Data Analytics Intern
+       │  Dashboards that moved reporting from weekly to real-time.
+       │
+2024 ──●  KultureHire · Data Analyst Intern
+       │  Analysis behind a 75% engagement lift · 100% data accuracy.
+       │
+       ●  JPMorgan Chase (Forage) · Excel Skills Virtual Programme
           VBA automation and pivot-driven financial models.
 ```
 
 <details>
-<summary><b>ðŸ¤ Community & leadership</b></summary>
+<summary><b>🤝 Community & leadership</b></summary>
 
 <br/>
 
 | Role | Organisation | Period |
 |---|---|---|
 | **President** | Gen AI Club, NIAT | Current |
-| **Technical Operations Lead** | HackWithIndia | Feb 2026 â€“ Present |
-| **Insider & Technical Representative** | The Student Spot | Oct 2025 â€“ Present |
-| **Campus Ambassador** | Techniche, IIT Guwahati | Aug 2025 â€“ Feb 2026 |
-| **Student Partner** | Internshala | â€” |
+| **Technical Operations Lead** | HackWithIndia | Feb 2026 – Present |
+| **Insider & Technical Representative** | The Student Spot | Oct 2025 – Present |
+| **Campus Ambassador** | Techniche, IIT Guwahati | Aug 2025 – Feb 2026 |
+| **Student Partner** | Internshala | — |
 
 </details>
 
 <details>
-<summary><b>ðŸŽ“ Education</b></summary>
+<summary><b>🎓 Education</b></summary>
 
 <br/>
 
 | Programme | Institution | Notes |
 |---|---|---|
-| **B.Sc Computer Science** | NxtWave Institute of Advanced Technology (NIAT) | Aug 2025 â€“ Jul 2029 Â· CGPA **8.69** |
-| **B.Tech Computer Science & Engineering** | Sreyas Institute of Engineering & Technology (JNTUH) | Batch 2026 â€“ 2030 |
+| **B.Sc Computer Science** | NxtWave Institute of Advanced Technology (NIAT) | Aug 2025 – Jul 2029 · CGPA **8.69** |
+| **B.Tech Computer Science & Engineering** | Sreyas Institute of Engineering & Technology (JNTUH) | Batch 2026 – 2030 |
 | **B.Sc Computer Science** | BITS Pilani (Online) | In progress |
 
 </details>
@@ -414,15 +414,15 @@ Hand-built, no framework. Orbital constellation, scroll-driven timeline, three-t
 
 ## <img src="./assets/emoji/bulb.png" width="26" /> &nbsp;Right Now
 
-- ðŸ”­ Building **RAG chatbots** on LangChain + Groq, wired into n8n workflows
-- ðŸŒ± Going deeper on **vector databases**, agent orchestration, and production ML
-- ðŸŽ¯ Targeting **GSoC 2027** â€” contributing to open source year-round until then
-- ðŸ’¼ Open to **Data Analyst / AI Engineer** internships
-- ðŸ“ Off-keyboard: national-level table tennis
+- 🔭 Building **RAG chatbots** on LangChain + Groq, wired into n8n workflows
+- 🌱 Going deeper on **vector databases**, agent orchestration, and production ML
+- 🎯 Targeting **GSoC 2027** — contributing to open source year-round until then
+- 💼 Open to **Data Analyst / AI Engineer** internships
+- 🏓 Off-keyboard: national-level table tennis
 
 ---
 
-## ðŸ¤ Let's Build Something
+## 🤝 Let's Build Something
 
 <div align="center">
 
@@ -441,9 +441,8 @@ Hand-built, no framework. Orbital constellation, scroll-driven timeline, three-t
 
 <br/><br/>
 
-<sub>â­ If something here was useful, a star costs nothing and means a lot.</sub>
+<sub>⭐ If something here was useful, a star costs nothing and means a lot.</sub>
 
 <img src="https://capsule-render.vercel.app/api?type=waving&color=0:FF8A3D,50:FF5C00,100:020205&height=130&section=footer&text=Thanks%20for%20scrolling&fontSize=20&fontColor=FFFFFF&fontAlignY=72&animation=fadeIn" width="100%" alt="footer"/>
 
 </div>
-
