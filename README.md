@@ -21,6 +21,16 @@
 
 <br/>
 
+<img src="./assets/card-identity.svg" alt="Identity card" width="100%" />
+
+<br/>
+
+<a href="https://github.com/SakethSumanBathini">
+<img src="./profile-grid.svg" alt="Neural grid profile card" width="100%" />
+</a>
+
+<br/>
+
 <img src="https://komarev.com/ghpvc/?username=SakethSumanBathini&label=PROFILE+VIEWS&color=FF5C00&style=for-the-badge&labelColor=020205" alt="Profile views"/>
 <img src="https://img.shields.io/badge/OPEN%20TO%20WORK-Data%20%2F%20AI-FF5C00?style=for-the-badge&labelColor=020205" alt="Open to work"/>
 <img src="https://img.shields.io/badge/BASED%20IN-Hyderabad%2C%20IN-FF8A3D?style=for-the-badge&labelColor=020205" alt="Location"/>
@@ -235,6 +245,10 @@ All eight tiers cleared. The full contribution log is public on the
 
 <div align="center">
 
+<img src="./assets/card-terminal.svg" alt="Terminal stats card" width="100%" />
+
+<br/><br/>
+
 <img src="https://github-readme-stats-kohl-three-v64zcb5mlh.vercel.app/api?username=SakethSumanBathini&show_icons=true&count_private=true&include_all_commits=true&hide_border=true&rank_icon=github&bg_color=020205&title_color=FF5C00&icon_color=FF5C00&text_color=E6E6E6&ring_color=FF5C00&card_width=420" height="180" alt="GitHub Stats"/>
 <img src="https://github-readme-stats-kohl-three-v64zcb5mlh.vercel.app/api/top-langs/?username=SakethSumanBathini&layout=compact&langs_count=8&hide=html,css,scss&hide_border=true&bg_color=020205&title_color=FF5C00&text_color=E6E6E6&card_width=330" height="180" alt="Top Languages"/>
 
@@ -442,6 +456,10 @@ Hand-built, no framework. Orbital constellation, scroll-driven timeline, three-t
 <br/><br/>
 
 <sub>⭐ If something here was useful, a star costs nothing and means a lot.</sub>
+
+<img src="./assets/card-footer.svg" alt="Footer" width="100%" />
+
+<br/>
 
 <img src="https://capsule-render.vercel.app/api?type=waving&color=0:FF8A3D,50:FF5C00,100:020205&height=130&section=footer&text=Thanks%20for%20scrolling&fontSize=20&fontColor=FFFFFF&fontAlignY=72&animation=fadeIn" width="100%" alt="footer"/>
 
