@@ -16,7 +16,7 @@
 <br/>
 
 <a href="https://sakethsuman.xyz">
-<img src="https://readme-typing-svg.demolab.com?font=JetBrains+Mono&weight=700&size=23&duration=2600&pause=800&color=FF5C00&center=true&vCenter=true&width=780&height=45&lines=Data+Analyst+turning+into+an+AI+Engineer.;India+Top+10+%E2%80%94+HCL+%26+GUVI+National+Hackathon.;611+pull+requests+merged+in+11+weeks.;Top+850+of+38%2C000%2B+%E2%80%94+AI+Impact+Buildathon.;I+build+things+that+ship%2C+not+demos." alt="Typing SVG" />
+<img src="https://readme-typing-svg.demolab.com?font=JetBrains+Mono&weight=700&size=23&duration=2600&pause=800&color=FF5C00&center=true&vCenter=true&width=780&height=45&lines=Data+Analyst+turning+into+an+AI+Engineer.;Top+10+of+48%2C000%2B+%E2%80%94+India+AI+Impact+Buildathon.;611+pull+requests+merged+in+11+weeks.;I+build+things+that+ship%2C+not+demos." alt="Typing SVG" />
 </a>
 
 <br/>
@@ -72,7 +72,7 @@ I turn messy, real-world data into things people make decisions with — dashboa
 
 Most of my time goes into two places. **Analytics:** survey design, cleaning, modelling, and the Power BI / Tableau layer on top. **AI engineering:** LangChain pipelines, retrieval-augmented chatbots, and n8n automations that wire the two together.
 
-I learn by shipping under deadline. Three products at a national hackathon in one weekend put me in **India's Top 10**. Eleven weeks of open source ended in **611 merged pull requests across 26 repositories** and a **3rd place** finish. I'd rather have the merge log than the certificate.
+I learn by shipping under deadline. `Scam Shield`, built at the India AI Impact Buildathon, came **Top 10 out of 48,000+ entrants**. Eleven weeks of open source ended in **611 merged pull requests across 26 repositories** and a **3rd place** finish. I'd rather have the merge log than the certificate.
 
 Right now I'm going deeper on vector databases, agent orchestration, and getting models into production instead of leaving them in notebooks.
 
@@ -84,10 +84,10 @@ If you're building something with data or AI in it — or hiring for it — I'm 
 
 <div align="center">
 
-<img src="https://img.shields.io/badge/HCL%20%26%20GUVI%20National%20Hackathon-INDIA%20TOP%2010-FF5C00?style=for-the-badge&labelColor=020205" alt="India Top 10"/>
+<img src="https://img.shields.io/badge/India%20AI%20Impact%20Buildathon-TOP%2010%20OF%2048%2C000%2B-FF5C00?style=for-the-badge&labelColor=020205" alt="Top 10 of 48,000+"/>
 <img src="https://img.shields.io/badge/ELUSOC%202026-3RD%20PLACE-FF5C00?style=for-the-badge&labelColor=020205" alt="ELUSOC 3rd place"/>
 <br/>
-<img src="https://img.shields.io/badge/AI%20Impact%20Buildathon-TOP%20850%20%2F%2038%2C000%2B-FF8A3D?style=for-the-badge&labelColor=020205" alt="Top 850"/>
+<img src="https://img.shields.io/badge/Shortlist-850%20OF%2048%2C000%2B-FF8A3D?style=for-the-badge&labelColor=020205" alt="850 shortlisted"/>
 <img src="https://img.shields.io/badge/Open%20Source-611%20PRs%20%C2%B7%2026%20REPOS-FF8A3D?style=for-the-badge&labelColor=020205" alt="611 PRs"/>
 <br/>
 <img src="https://img.shields.io/badge/KultureHire-%2B75%25%20ENGAGEMENT-8B8B93?style=for-the-badge&labelColor=020205" alt="75 percent lift"/>
@@ -98,9 +98,8 @@ If you're building something with data or AI in it — or hiring for it — I'm 
 
 | Achievement | Scale | What it was |
 |---|---|---|
-| **HCL & GUVI National Hackathon** | India Top 10 | Shipped `TriageIQ`, `CallSensei AI`, `SceneSense AI` |
 | **ELUSOC 2026** | 3rd place | 611 PRs merged · 26 repos · 11 weeks |
-| **India AI Impact Buildathon** | Top 850 / 38,000+ | `Scam Shield` |
+| **India AI Impact Buildathon** | **Top 10** of 48,000+ | `Scam Shield` — 850 shortlisted, Top 10 in the final |
 | **KultureHire** | +75% engagement | Data Analyst Intern · 100% data accuracy |
 | **TTFI National Ranking** | National level | Table tennis |
 
@@ -300,8 +299,6 @@ AI triage assistant that ranks incoming cases by urgency, so the critical ones s
 <img src="https://img.shields.io/badge/Python-3776AB?style=flat-square&logo=python&logoColor=white"/>
 <img src="https://img.shields.io/badge/LangChain-1C3C3C?style=flat-square&logo=langchain&logoColor=white"/>
 
-<sub>🏆 HCL & GUVI National Hackathon — <b>India Top 10</b></sub>
-
 </td>
 <td width="50%" valign="top">
 
@@ -310,8 +307,6 @@ Turns raw call recordings into structured, searchable insight — transcription,
 
 <img src="https://img.shields.io/badge/Python-3776AB?style=flat-square&logo=python&logoColor=white"/>
 <img src="https://img.shields.io/badge/Groq-F55036?style=flat-square&logo=groq&logoColor=white"/>
-
-<sub>🏆 HCL & GUVI National Hackathon — <b>India Top 10</b></sub>
 
 </td>
 </tr>
@@ -324,8 +319,6 @@ Multimodal scene understanding — feed it video, get back a structured account 
 <img src="https://img.shields.io/badge/PyTorch-EE4C2C?style=flat-square&logo=pytorch&logoColor=white"/>
 <img src="https://img.shields.io/badge/OpenCV-5C3EE8?style=flat-square&logo=opencv&logoColor=white"/>
 
-<sub>🏆 HCL & GUVI National Hackathon — <b>India Top 10</b></sub>
-
 </td>
 <td width="50%" valign="top">
 
@@ -335,7 +328,7 @@ Flags fraudulent messages and calls before they reach the person being targeted.
 <img src="https://img.shields.io/badge/Python-3776AB?style=flat-square&logo=python&logoColor=white"/>
 <img src="https://img.shields.io/badge/NLP-FF5C00?style=flat-square&logoColor=white"/>
 
-<sub>🏅 India AI Impact Buildathon — <b>Top 850 / 38,000+</b></sub>
+<sub>🏆 India AI Impact Buildathon — <b>Top 10 of 48,000+</b></sub>
 
 </td>
 </tr>
