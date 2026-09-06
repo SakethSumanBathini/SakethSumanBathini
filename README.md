@@ -47,9 +47,8 @@ role:        Data Analyst  →  AI Engineer
 location:    Hyderabad, Telangana, India
 
 education:
-  - B.Sc Computer Science  · NxtWave Institute of Advanced Technology  · CGPA 8.69
   - B.Tech CSE             · Sreyas Institute of Engineering & Technology
-  - B.Sc Computer Science  · BITS Pilani (Online)
+  - B.Sc Computer Science  · BITS Pilani (Online) · CGPA 8.69
 
 leads:
   - President          · Gen AI Club, NIAT
