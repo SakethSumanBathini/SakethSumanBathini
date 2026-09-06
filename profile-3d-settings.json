@@ -1,0 +1,28 @@
+{
+  "type": "normal",
+  "fileName": "profile-brand.svg",
+  "growingAnimation": true,
+
+  "backgroundColor": "#020205",
+  "foregroundColor": "#E6E6E6",
+  "strongColor": "#FF5C00",
+  "weakColor": "#8B8B93",
+  "radarColor": "#FF5C00",
+
+  "contribColors": [
+    "#14141b",
+    "#5c2a0a",
+    "#a34410",
+    "#e0530f",
+    "#FF8A3D"
+  ],
+
+  "l10n": {
+    "commit": "Commits",
+    "repo": "Repos",
+    "review": "Reviews",
+    "pullreq": "Pull Requests",
+    "issue": "Issues",
+    "contrib": "Contributions"
+  }
+}

@@ -9,6 +9,12 @@ on:
 permissions:
   contents: write
 
+# Serialise every workflow that writes to main.
+# Without this, simultaneous runs race and all but one get their push rejected.
+concurrency:
+  group: profile-assets
+  cancel-in-progress: false
+
 jobs:
   build:
     runs-on: ubuntu-latest
@@ -27,3 +33,10 @@ jobs:
           UTC_OFFSET: 5.5
           BRANCH_NAME: main
           AUTO_PUSH: true
+          # Only the theme the README actually uses.
+          # Empty = generate all ~60 themes = ~380 files of dead weight.
+          THEME: github_dark
+          # CSS animation baked into the SVGs
+          ANIMATION: rise
+          DURATION: 1.2
+          EXCLUDE: html,css,scss

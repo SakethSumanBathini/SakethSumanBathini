@@ -15,7 +15,7 @@
 
 <br/>
 
-<a href="https://saketh-suman-bathini.vercel.app">
+<a href="https://sakethsuman.xyz">
 <img src="https://readme-typing-svg.demolab.com?font=JetBrains+Mono&weight=700&size=23&duration=2600&pause=800&color=FF5C00&center=true&vCenter=true&width=780&height=45&lines=Data+Analyst+turning+into+an+AI+Engineer.;India+Top+10+%E2%80%94+HCL+%26+GUVI+National+Hackathon.;611+pull+requests+merged+in+11+weeks.;Top+850+of+38%2C000%2B+%E2%80%94+AI+Impact+Buildathon.;I+build+things+that+ship%2C+not+demos." alt="Typing SVG" />
 </a>
 
@@ -226,7 +226,7 @@ All eight tiers cleared. The full contribution log is public on the
 
 <div align="center">
 
-<img src="./profile-3d-contrib/profile-gitblock.svg" alt="3D contribution calendar" width="100%" />
+<img src="./profile-3d-contrib/profile-brand.svg" alt="3D contribution calendar" width="100%" />
 
 </div>
 
@@ -436,8 +436,8 @@ Hand-built, no framework. Orbital constellation, scroll-driven timeline, three-t
 <p>If you're working on something with data or AI in it, my inbox is open.</p>
 
 <a href="mailto:sakethsumanbathini@gmail.com"><img src="https://img.shields.io/badge/Email-FF5C00?style=for-the-badge&logo=gmail&logoColor=white" alt="Email"/></a>
-<a href="https://linkedin.com/in/YOUR_LINKEDIN"><img src="https://img.shields.io/badge/LinkedIn-0A66C2?style=for-the-badge&logo=linkedin&logoColor=white" alt="LinkedIn"/></a>
-<a href="https://saketh-suman-bathini.vercel.app"><img src="https://img.shields.io/badge/Portfolio-020205?style=for-the-badge&logo=vercel&logoColor=FF5C00" alt="Portfolio"/></a>
+<a href="https://www.linkedin.com/in/saketh-suman-bathini-5922532ba"><img src="https://img.shields.io/badge/LinkedIn-0A66C2?style=for-the-badge&logo=linkedin&logoColor=white" alt="LinkedIn"/></a>
+<a href="https://sakethsuman.xyz"><img src="https://img.shields.io/badge/sakethsuman.xyz-020205?style=for-the-badge&logo=firefoxbrowser&logoColor=FF5C00" alt="Portfolio"/></a>
 <a href="https://github.com/SakethSumanBathini"><img src="https://img.shields.io/badge/GitHub-181717?style=for-the-badge&logo=github&logoColor=white" alt="GitHub"/></a>
 
 <br/><br/>

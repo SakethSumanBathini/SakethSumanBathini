@@ -8,6 +8,12 @@ on:
 permissions:
   contents: write
 
+# Serialise every workflow that writes to main.
+# Without this, simultaneous runs race and all but one get their push rejected.
+concurrency:
+  group: profile-assets
+  cancel-in-progress: false
+
 jobs:
   metrics:
     runs-on: ubuntu-latest
@@ -24,22 +30,50 @@ jobs:
           config_timezone: Asia/Kolkata
           config_display: large
 
-          # Language breakdown
+          # habits and achievements are the two most API-hungry plugins and
+          # fail intermittently on rate limits. Retry instead of shipping
+          # "Unexpected error" into the image.
+          retries: 3
+          retries_delay: 30
+
+          # ── Languages ────────────────────────────────────────────────
           plugin_languages: yes
           plugin_languages_details: percentage
           plugin_languages_limit: 8
-          plugin_languages_ignored: html, css, scss, jupyter notebook
+          plugin_languages_ignored: html, css, scss, jupyter notebook, batchfile, procfile, dockerfile, shell
 
-          # Full-year isometric contribution calendar
+          # ── Full-year isometric calendar ─────────────────────────────
           plugin_isocalendar: yes
           plugin_isocalendar_duration: full-year
 
-          # Coding habits + when you commit
+          # ── Coding habits ────────────────────────────────────────────
+          # Halved from 200 events and scoped to 14 days. The plugin reads
+          # recent diffs; asking for less is what makes it stop erroring.
           plugin_habits: yes
-          plugin_habits_from: 200
-          plugin_habits_charts: yes
+          plugin_habits_from: 100
+          plugin_habits_days: 14
+          plugin_habits_facts: yes
+          plugin_habits_charts: no
 
-          # GitHub achievements
+          # ── Achievements ─────────────────────────────────────────────
+          # secrets:no — the hidden-achievement lookup is the part that
+          # most often throws, and it adds nothing visible.
           plugin_achievements: yes
-          plugin_achievements_threshold: C
-          plugin_achievements_secrets: yes
+          plugin_achievements_threshold: B
+          plugin_achievements_secrets: no
+          plugin_achievements_display: compact
+          plugin_achievements_limit: 8
+
+          # ── Brand skin ───────────────────────────────────────────────
+          # Repaints the default GitHub green to #FF5C00 on #020205.
+          extras_css: |
+            :root {
+              --color-calendar-graph-day-L1-bg: #5c2a0a;
+              --color-calendar-graph-day-L2-bg: #a34410;
+              --color-calendar-graph-day-L3-bg: #e0530f;
+              --color-calendar-graph-day-L4-bg: #FF8A3D;
+            }
+            svg { background: #020205 !important; }
+            .header, .header .title { color: #FF5C00 !important; }
+            h2, .field .title { color: #FF5C00 !important; }
+            a { color: #FF8A3D !important; }
