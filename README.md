@@ -236,8 +236,8 @@ All eight tiers cleared. The full contribution log is public on the
 
 <div align="center">
 
-<img src="https://github-readme-stats.vercel.app/api?username=SakethSumanBathini&show_icons=true&count_private=true&include_all_commits=true&hide_border=true&rank_icon=github&bg_color=020205&title_color=FF5C00&icon_color=FF5C00&text_color=E6E6E6&ring_color=FF5C00&card_width=420" height="180" alt="GitHub Stats"/>
-<img src="https://github-readme-stats.vercel.app/api/top-langs/?username=SakethSumanBathini&layout=compact&langs_count=8&hide=html,css,scss&hide_border=true&bg_color=020205&title_color=FF5C00&text_color=E6E6E6&card_width=330" height="180" alt="Top Languages"/>
+<img src="https://github-readme-stats-kohl-three-v64zcb5mlh.vercel.app/api?username=SakethSumanBathini&show_icons=true&count_private=true&include_all_commits=true&hide_border=true&rank_icon=github&bg_color=020205&title_color=FF5C00&icon_color=FF5C00&text_color=E6E6E6&ring_color=FF5C00&card_width=420" height="180" alt="GitHub Stats"/>
+<img src="https://github-readme-stats-kohl-three-v64zcb5mlh.vercel.app/api/top-langs/?username=SakethSumanBathini&layout=compact&langs_count=8&hide=html,css,scss&hide_border=true&bg_color=020205&title_color=FF5C00&text_color=E6E6E6&card_width=330" height="180" alt="Top Languages"/>
 
 <br/>
 
@@ -245,7 +245,7 @@ All eight tiers cleared. The full contribution log is public on the
 
 <br/><br/>
 
-<img src="https://github-readme-activity-graph.vercel.app/graph?username=SakethSumanBathini&bg_color=020205&color=FF5C00&line=FF5C00&point=FFFFFF&area=true&area_color=FF5C00&title_color=FF5C00&hide_border=true&custom_title=Commits%20over%20the%20last%2031%20days&radius=8" width="100%" alt="Activity Graph"/>
+<img src="https://github-readme-activity-graph-pink-chi.vercel.app/graph?username=SakethSumanBathini&bg_color=020205&color=FF5C00&line=FF5C00&point=FFFFFF&area=true&area_color=FF5C00&title_color=FF5C00&hide_border=true&custom_title=Commits%20over%20the%20last%2031%20days&radius=8" width="100%" alt="Activity Graph"/>
 
 </div>
 
