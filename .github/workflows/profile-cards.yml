@@ -10,7 +10,6 @@ permissions:
   contents: write
 
 # Serialise every workflow that writes to main.
-# Without this, simultaneous runs race and all but one get their push rejected.
 concurrency:
   group: profile-assets
   cancel-in-progress: false
@@ -29,14 +28,33 @@ jobs:
           GITHUB_TOKEN: ${{ secrets.SUMMARY_GITHUB_TOKEN }}
         with:
           USERNAME: ${{ github.repository_owner }}
-          # India Standard Time
           UTC_OFFSET: 5.5
-          BRANCH_NAME: main
-          AUTO_PUSH: true
-          # Only the theme the README actually uses.
-          # Empty = generate all ~60 themes = ~380 files of dead weight.
+
+          # The action's built-in push has failed on 2 of 3 runs with an
+          # opaque "git push Invalid status code: 1". We generate only,
+          # then commit and push ourselves in the next step.
+          AUTO_PUSH: false
+
+          # Only the theme the README uses. Empty = ~60 themes = ~380 files.
           THEME: github_dark
-          # CSS animation baked into the SVGs
           ANIMATION: rise
           DURATION: 1.2
           EXCLUDE: html,css,scss
+
+      - name: Commit and push
+        run: |
+          git config user.name  "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add -A profile-summary-card-output
+
+          # If the regenerated cards are byte-identical there is nothing to
+          # commit. That is a success, not a failure — exit green.
+          if git diff --staged --quiet; then
+            echo "Cards unchanged since last run. Nothing to commit."
+            exit 0
+          fi
+
+          git commit -m "chore: update profile summary cards [skip ci]"
+          # rebase in case another workflow pushed while this one rendered
+          git pull --rebase origin main
+          git push
