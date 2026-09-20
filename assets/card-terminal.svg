@@ -76,7 +76,7 @@ text, tspan { white-space: pre; }
 <tspan x="440" y="58" fill="#4a4a55">----------------------------------------------------------------------</tspan>
 <tspan x="440" y="78" class="cc">. </tspan><tspan class="key">Subject</tspan><tspan class="cc"> ........................................... </tspan><tspan class="value">Saketh Suman Bathini</tspan>
 <tspan x="440" y="98" class="cc">. </tspan><tspan class="key">Role</tspan><tspan class="cc"> ....................................... </tspan><tspan class="value">Data Analyst -&gt; AI Engineer</tspan>
-<tspan x="440" y="118" class="cc">. </tspan><tspan class="key">Account.Age</tspan><tspan class="cc" id="age_dots"> ......................................................... </tspan><tspan class="value" id="age_data">--</tspan>
+<tspan x="440" y="118" class="cc">. </tspan><tspan class="key">Account.Age</tspan><tspan class="cc" id="age_dots"> ................................... </tspan><tspan class="value" id="age_data">2 years, 1 month, 3 days</tspan>
 <tspan x="440" y="138" class="cc">. </tspan><tspan class="key">Status</tspan><tspan class="cc"> .................................. </tspan><tspan class="value">Building | Learning | Shipping</tspan>
 <tspan x="440" y="158" class="cc">. </tspan><tspan class="key">Toolchain</tspan><tspan class="cc"> .............................. </tspan><tspan class="value">VS Code, Git, Vite, Antigravity</tspan>
 <tspan x="440" y="178" class="cc">.</tspan>
@@ -91,12 +91,12 @@ text, tspan { white-space: pre; }
 <tspan x="440" y="366" class="cc">. </tspan><tspan class="key">Grid.LinkedIn</tspan><tspan class="cc"> ........................... </tspan><tspan class="value">saketh-suman-bathini-5922532ba</tspan>
 <tspan x="440" y="386" class="cc">. </tspan><tspan class="key">Grid.GitHub</tspan><tspan class="cc"> ......................................... </tspan><tspan class="value">SakethSumanBathini</tspan>
 <tspan x="440" y="412" fill="#FF8A3D">- GitHub Stats -------------------------------------------------------</tspan>
-<tspan x="440" y="434" class="cc">. </tspan><tspan class="key">Repositories</tspan><tspan class="cc" id="repo_dots"> ........................................................ </tspan><tspan class="value" id="repo_data">--</tspan>
-<tspan x="440" y="454" class="cc">. </tspan><tspan class="key">Contributions</tspan><tspan class="cc" id="contrib_dots"> ....................................................... </tspan><tspan class="value" id="contrib_data">--</tspan>
-<tspan x="440" y="474" class="cc">. </tspan><tspan class="key">Pull Requests</tspan><tspan class="cc" id="pr_dots"> ....................................................... </tspan><tspan class="value" id="pr_data">--</tspan>
-<tspan x="440" y="494" class="cc">. </tspan><tspan class="key">Issues</tspan><tspan class="cc" id="issue_dots"> .............................................................. </tspan><tspan class="value" id="issue_data">--</tspan>
-<tspan x="440" y="514" class="cc">. </tspan><tspan class="key">Stars Earned</tspan><tspan class="cc" id="star_dots"> ........................................................ </tspan><tspan class="value" id="star_data">--</tspan>
-<tspan x="440" y="534" class="cc">. </tspan><tspan class="key">Followers</tspan><tspan class="cc" id="follower_dots"> ........................................................... </tspan><tspan class="value" id="follower_data">--</tspan>
-<tspan x="440" y="554" class="cc">. </tspan><tspan class="key">Lines of Code</tspan><tspan class="cc" id="loc_dots"> ............................... </tspan><tspan class="value" id="loc_data">--</tspan><tspan class="cc">  ( </tspan><tspan class="addColor" id="loc_add">--</tspan><tspan class="addColor">++</tspan><tspan class="cc">, </tspan><tspan class="delColor" id="loc_del">--</tspan><tspan class="delColor">--</tspan><tspan class="cc"> )</tspan>
+<tspan x="440" y="434" class="cc">. </tspan><tspan class="key">Repositories</tspan><tspan class="cc" id="repo_dots"> ........................................................ </tspan><tspan class="value" id="repo_data">40</tspan>
+<tspan x="440" y="454" class="cc">. </tspan><tspan class="key">Contributions</tspan><tspan class="cc" id="contrib_dots"> .................................................... </tspan><tspan class="value" id="contrib_data">2,191</tspan>
+<tspan x="440" y="474" class="cc">. </tspan><tspan class="key">Pull Requests</tspan><tspan class="cc" id="pr_dots"> ...................................................... </tspan><tspan class="value" id="pr_data">678</tspan>
+<tspan x="440" y="494" class="cc">. </tspan><tspan class="key">Issues</tspan><tspan class="cc" id="issue_dots"> ............................................................. </tspan><tspan class="value" id="issue_data">402</tspan>
+<tspan x="440" y="514" class="cc">. </tspan><tspan class="key">Stars Earned</tspan><tspan class="cc" id="star_dots"> ........................................................ </tspan><tspan class="value" id="star_data">23</tspan>
+<tspan x="440" y="534" class="cc">. </tspan><tspan class="key">Followers</tspan><tspan class="cc" id="follower_dots"> ........................................................... </tspan><tspan class="value" id="follower_data">13</tspan>
+<tspan x="440" y="554" class="cc">. </tspan><tspan class="key">Lines of Code</tspan><tspan class="cc" id="loc_dots"> .......................... </tspan><tspan class="value" id="loc_data">161,307</tspan><tspan class="cc">  ( </tspan><tspan class="addColor" id="loc_add">176,390</tspan><tspan class="addColor">++</tspan><tspan class="cc">, </tspan><tspan class="delColor" id="loc_del">15,083</tspan><tspan class="delColor">--</tspan><tspan class="cc"> )</tspan>
 </text>
 </svg>
