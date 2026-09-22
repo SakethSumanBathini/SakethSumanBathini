@@ -86,7 +86,7 @@ text, tspan { white-space: pre; }
 <tspan x="505" y="24" class="key">SAKETHSUMANBATHINI@Neural-grid </tspan><tspan class="cc">------------------------------</tspan>
 <tspan x="505" y="46" class="cc">. </tspan><tspan class="key">Subject</tspan><tspan class="cc" id="subject_dots">: ............................. </tspan><tspan class="value">Saketh Suman Bathini</tspan>
 <tspan x="505" y="66" class="cc">. </tspan><tspan class="key">Role</tspan><tspan class="cc" id="role_dots">: ......................... </tspan><tspan class="value">Data Analyst -&gt; AI Engineer</tspan>
-<tspan x="505" y="86" class="cc">. </tspan><tspan class="key">Age</tspan><tspan class="cc" id="age_dots">: ............................. </tspan><tspan class="value" id="age_data">2 years, 1 month, 4 days</tspan>
+<tspan x="505" y="86" class="cc">. </tspan><tspan class="key">Age</tspan><tspan class="cc" id="age_dots">: ............................. </tspan><tspan class="value" id="age_data">2 years, 1 month, 5 days</tspan>
 <tspan x="505" y="106" class="cc">. </tspan><tspan class="key">Status</tspan><tspan class="cc" id="status_dots">: .................... </tspan><tspan class="value">Building - Learning - Shipping</tspan>
 <tspan x="505" y="126" class="cc">. </tspan><tspan class="key">ToolChain</tspan><tspan class="cc" id="toolchain_dots">: ................ </tspan><tspan class="value">VS Code, Git, Vite, Antigravity</tspan>
 <tspan x="505" y="146" class="cc">.</tspan>
