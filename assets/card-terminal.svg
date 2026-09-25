@@ -76,7 +76,7 @@ text, tspan { white-space: pre; }
 <tspan x="440" y="58" fill="#4a4a55">----------------------------------------------------------------------</tspan>
 <tspan x="440" y="78" class="cc">. </tspan><tspan class="key">Subject</tspan><tspan class="cc"> ........................................... </tspan><tspan class="value">Saketh Suman Bathini</tspan>
 <tspan x="440" y="98" class="cc">. </tspan><tspan class="key">Role</tspan><tspan class="cc"> ....................................... </tspan><tspan class="value">Data Analyst -&gt; AI Engineer</tspan>
-<tspan x="440" y="118" class="cc">. </tspan><tspan class="key">Account.Age</tspan><tspan class="cc" id="age_dots"> ................................... </tspan><tspan class="value" id="age_data">2 years, 1 month, 7 days</tspan>
+<tspan x="440" y="118" class="cc">. </tspan><tspan class="key">Account.Age</tspan><tspan class="cc" id="age_dots"> ................................... </tspan><tspan class="value" id="age_data">2 years, 1 month, 8 days</tspan>
 <tspan x="440" y="138" class="cc">. </tspan><tspan class="key">Status</tspan><tspan class="cc"> .................................. </tspan><tspan class="value">Building | Learning | Shipping</tspan>
 <tspan x="440" y="158" class="cc">. </tspan><tspan class="key">Toolchain</tspan><tspan class="cc"> .............................. </tspan><tspan class="value">VS Code, Git, Vite, Antigravity</tspan>
 <tspan x="440" y="178" class="cc">.</tspan>
