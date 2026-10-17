@@ -75,9 +75,9 @@
   "oid": "6c231ae68ca256e3f6bcce4e631c87bf395b64fb"
  },
  "SakethSumanBathini/RENTAL-WORLD": {
-  "add": 10421,
-  "del": 1151,
-  "oid": "80d36afbca75ab2875ac327118711871de76e3d6"
+  "add": 10422,
+  "del": 1152,
+  "oid": "a5874be9945ef87c3f3f914ef953447e54678ba3"
  },
  "SakethSumanBathini/Road-Accident-Project_Repository": {
   "add": 160,
@@ -92,7 +92,7 @@
  "SakethSumanBathini/SakethSumanBathini": {
   "add": 3890,
   "del": 7018,
-  "oid": "9e1a30143683ce57405b045e9d37f9948d5e9dc9"
+  "oid": "a3327906812d2157a8c8f41045ed0c6ecedb14d2"
  },
  "SakethSumanBathini/Sales-Dashboard-Repository": {
   "add": 138,
@@ -123,6 +123,11 @@
   "add": 14621,
   "del": 1107,
   "oid": "7150b27247c7785dc78c6add1a69afab69c49229"
+ },
+ "SakethSumanBathini/rental-world-v2": {
+  "add": 0,
+  "del": 0,
+  "oid": "ce1f63bff30c3d936aac96565fe87436ab45a617"
  },
  "SakethSumanBathini/rental-world-web": {
   "add": 10949,
