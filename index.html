@@ -706,17 +706,17 @@ footer .wrap { display: flex; flex-wrap: wrap; justify-content: space-between; g
     <div class='tally'>
       <div><b>0</b><span>wrong accusations in 135,000 simulated single-college leaks</span></div>
       <div><b>100%</b><span>of synthetic phone photos showing 5–6 questions traced to the right college (30 photos)</span></div>
-      <div><b>99%</b><span>of 3-question numbered leaks keep the real source in a top-5 shortlist</span></div>
+      <div><b>99%</b><span>of 3-question numbered leaks with wording variants keep the real source in a top-5 shortlist</span></div>
       <div><b>87%</b><span>of two-college mixes traced from 12 numbered questions, with no innocent college blamed in 45,000 mixes</span></div>
     </div>
     <figure class='chart'>
       <div class='chart-scroll'>
         <svg id='chart' viewBox='0 0 1000 410' role='img' aria-label='Share of leaks traced to one college with confidence, by number of leaked questions'></svg>
       </div>
-      <figcaption class='note'>Simulation of a whole paper: 500 colleges, 3,000 leaks per point, 2% misreading and 5% wording-misread noise, named only at 10,000 to 1. The shaded band is the size of the Kannur leak, 4–5 questions; at that size the real source of a numbered leak was in the top five in 99.9% of leaks or more.</figcaption>
+      <figcaption class='note'>Simulation of a whole paper: 500 colleges, 3,000 leaks per point, 2% misreading and 5% wording-misread noise, named only at 10,000 to 1. The shaded band is the size of the Kannur leak, 4–5 questions; at that size the real source of a numbered leak with wording variants was in the top five in 99.9% of leaks or more.</figcaption>
     </figure>
     <h3 class='table-title' id='attackTitle'>Then we tried to fool it.</h3>
-    <p class='atk-lede'>148,000 simulated leaks against the decoder in the demo above, 2,000 for each setting, all with typing mistakes. Tricks can stop it naming anyone. Only once did it name an innocent college: a copy from outside the 500 colleges that matched another college’s pattern by chance, which happens to about 1 in 30,000 such copies.</p>
+    <p class='atk-lede'>148,000 simulated leaks against the decoder in the demo above, 2,000 for each setting, almost all with typing mistakes. Tricks can stop it naming anyone. Only once did it name an innocent college: a copy from outside the 500 colleges that matched another college’s pattern by chance, which happens to at most about 1 in 20,000 such copies.</p>
     <div class='table-wrap'>
       <table class='atk' aria-labelledby='attackTitle'>
         <thead><tr><th scope='col'>What the leaker did</th><th scope='col' class='n'>Names the source from</th><th scope='col' class='n'>Real source in the top 5, 6 lines</th><th scope='col' class='n'>Innocent college named</th></tr></thead>
@@ -734,7 +734,7 @@ footer .wrap { display: flex; flex-wrap: wrap; justify-content: space-between; g
         </tbody>
       </table>
     </div>
-    <p class='note atk-note'>“Names the source from” is the smallest leak named in at least 95% of cases. Before we hardened the decoder on 18 Oct, the same 148,000 leaks named 8 innocent colleges. Three changes: numbers that simply run 1, 2, 3 may be the leaker’s own, so both readings are weighed; a line’s wording counts only when it clearly matches one approved wording; and the bar went from 1,000 to 10,000 to 1.</p>
+    <p class='note atk-note'>“Names the source from” is the smallest leak named in at least 95% of cases. Before we hardened the decoder on 18 Oct, the same 148,000 leaks named 8 innocent colleges. Three changes, plus a bug fix in the second check: numbers that simply run 1, 2, 3 may be the leaker’s own, so both readings are weighed; a line’s wording counts only when it clearly matches one approved wording; and the bar went from 1,000 to 10,000 to 1.</p>
   </div>
 </section>
 
@@ -776,7 +776,7 @@ footer .wrap { display: flex; flex-wrap: wrap; justify-content: space-between; g
       <div><dt>Demonstrated feasibility</dt><dd>Working simulation, OCR test, an attack test of 148,000 leaks and the live demo on this page. A leak lab with classmates on 21–22 Oct.</dd></div>
       <div><dt>Cost</dt><dd>Software only. It changes one step, making each college's PDF, and runs on a laptop.</dd></div>
       <div><dt>Beneficiary impact</dt><dd>A re-exam at one college instead of all. Kannur's sub-committee recommended exactly that once the source was known.</dd></div>
-      <div><dt>Scalability</dt><dd>The same code serves state boards and paper-delivery vendors that reach 2,000+ colleges.</dd></div>
+      <div><dt>Scalability</dt><dd>The same method serves state boards and paper-delivery vendors that reach 2,000+ colleges; more colleges need about one more leaked line, because the bar rises with their number.</dd></div>
     </dl>
   </div>
 </section>
