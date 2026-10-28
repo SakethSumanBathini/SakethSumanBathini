@@ -41,8 +41,8 @@ a { color: #FF8A3D !important; }</style>
                                 <g>
                                     <rect class="day" x="0" y="0" width="11" height="11" fill="#ebedf0" rx="2" ry="2"/>
                                     <rect class="day" x="15" y="0" width="11" height="11" fill="#ebedf0" rx="2" ry="2"/>
-                                    <rect class="day" x="30" y="0" width="11" height="11" fill="#ebedf0" rx="2" ry="2"/>
-                                    <rect class="day" x="45" y="0" width="11" height="11" fill="#216e39" rx="2" ry="2"/>
+                                    <rect class="day" x="30" y="0" width="11" height="11" fill="#216e39" rx="2" ry="2"/>
+                                    <rect class="day" x="45" y="0" width="11" height="11" fill="#ebedf0" rx="2" ry="2"/>
                                     <rect class="day" x="60" y="0" width="11" height="11" fill="#ebedf0" rx="2" ry="2"/>
                                     <rect class="day" x="75" y="0" width="11" height="11" fill="#ebedf0" rx="2" ry="2"/>
                                     <rect class="day" x="90" y="0" width="11" height="11" fill="#ebedf0" rx="2" ry="2"/>
@@ -228,10 +228,10 @@ a { color: #FF8A3D !important; }</style>
                         <rect x="0" y="0" width="920" height="8" fill="white" rx="5"/>
                     </mask>
                     <rect mask="url(#languages-bar)" x="0" y="0" width="0" height="8" fill="#d1d5da"/>
-                    <rect mask="url(#languages-bar)" x="0" y="0" width="487.21366186004616" height="8" fill="#3572A5"/>
-                    <rect mask="url(#languages-bar)" x="487.21366186004616" y="0" width="354.8121601255607" height="8" fill="#3178c6"/>
-                    <rect mask="url(#languages-bar)" x="842.0258219856069" y="0" width="51.23094785842318" height="8" fill="#f1e05a"/>
-                    <rect mask="url(#languages-bar)" x="893.2567698440299" y="0" width="26.74323015596993" height="8" fill="#a52a22"/>
+                    <rect mask="url(#languages-bar)" x="0" y="0" width="452.68548706606845" height="8" fill="#3572A5"/>
+                    <rect mask="url(#languages-bar)" x="452.68548706606845" y="0" width="393.14312379917465" height="8" fill="#3178c6"/>
+                    <rect mask="url(#languages-bar)" x="845.8286108652431" y="0" width="49.580950252445724" height="8" fill="#f1e05a"/>
+                    <rect mask="url(#languages-bar)" x="895.4095611176888" y="0" width="24.59043888231117" height="8" fill="#a52a22"/>
                 </svg>
                 <div class="row fill-width">
                     <section>
@@ -243,7 +243,7 @@ a { color: #FF8A3D !important; }</style>
                                 Python
                             </div>
                             <small>
-                                <div>52.96%</div>
+                                <div>49.2%</div>
                             </small>
                         </div>
                     </section>
@@ -256,7 +256,7 @@ a { color: #FF8A3D !important; }</style>
                                 TypeScript
                             </div>
                             <small>
-                                <div>38.57%</div>
+                                <div>42.73%</div>
                             </small>
                         </div>
                     </section>
@@ -269,7 +269,7 @@ a { color: #FF8A3D !important; }</style>
                                 JavaScript
                             </div>
                             <small>
-                                <div>5.57%</div>
+                                <div>5.39%</div>
                             </small>
                         </div>
                     </section>
@@ -282,7 +282,7 @@ a { color: #FF8A3D !important; }</style>
                                 Jinja
                             </div>
                             <small>
-                                <div>2.91%</div>
+                                <div>2.67%</div>
                             </small>
                         </div>
                     </section>
@@ -327,7 +327,7 @@ a { color: #FF8A3D !important; }</style>
                             <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16" width="16" height="16">
                                 <path d="M10.896 2H8.75V.75a.75.75 0 00-1.5 0V2H5.104a.25.25 0 00-.177.427l2.896 2.896a.25.25 0 00.354 0l2.896-2.896A.25.25 0 0010.896 2zM8.75 15.25a.75.75 0 01-1.5 0V14H5.104a.25.25 0 01-.177-.427l2.896-2.896a.25.25 0 01.354 0l2.896 2.896a.25.25 0 01-.177.427H8.75v1.25zm-6.5-6.5a.75.75 0 000-1.5h-.5a.75.75 0 000 1.5h.5zM6 8a.75.75 0 01-.75.75h-.5a.75.75 0 010-1.5h.5A.75.75 0 016 8zm2.25.75a.75.75 0 000-1.5h-.5a.75.75 0 000 1.5h.5zM12 8a.75.75 0 01-.75.75h-.5a.75.75 0 010-1.5h.5A.75.75 0 0112 8zm2.25.75a.75.75 0 000-1.5h-.5a.75.75 0 000 1.5h.5z"/>
                             </svg>
-                            Average per day at ~5.72
+                            Average per day at ~5.71
                         </div>
                     </section>
                 </div>
@@ -2282,13 +2282,18 @@ a { color: #FF8A3D !important; }</style>
                                 <path fill="#ebedf0" filter="url(#brightness1)" d="M0,1 1.7,2 1.7,2 0,1 z"/>
                                 <path fill="#ebedf0" filter="url(#brightness2)" d="M1.7,2 3.4,1 3.4,1 1.7,2 z"/>
                             </g>
+                            <g transform="translate(-3.4, 8)">
+                                <path fill="#ebedf0" d="M1.7,2 0,1 1.7,0 3.4,1 z"/>
+                                <path fill="#ebedf0" filter="url(#brightness1)" d="M0,1 1.7,2 1.7,2 0,1 z"/>
+                                <path fill="#ebedf0" filter="url(#brightness2)" d="M1.7,2 3.4,1 3.4,1 1.7,2 z"/>
+                            </g>
                         </g>
                     </g>
                 </svg>
             </section>
             <footer>
                 <span>These metrics include private contributions</span>
-                <span>Last updated 27 Oct 2026, 12:57:44 (timezone Asia/Kolkata) with lowlighter/metrics@3.34.0-beta</span>
+                <span>Last updated 28 Oct 2026, 13:31:04 (timezone Asia/Kolkata) with lowlighter/metrics@3.34.0-beta</span>
             </footer>
         </div>
         <div xmlns="http://www.w3.org/1999/xhtml" id="metrics-end"></div>
