@@ -513,7 +513,7 @@ svg.meter { width: 100%; min-width: 560px; height: auto; display: block; }
 .flow.road { margin-top: 8px; }
 
 /* Research */
-.docs { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 20px; }
+.docs { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 20px; }
 .doc { display: grid; gap: 8px; align-content: start; padding: 22px 22px 24px; border: 1.5px solid var(--form); border-radius: 2px; color: var(--ink); text-decoration: none; transition: border-color 0.15s, background-color 0.15s; }
 .doc:hover { border-color: var(--pen); background: var(--pen-wash); }
 .doc-kind { font-size: 0.85rem; color: var(--form-ink); }
