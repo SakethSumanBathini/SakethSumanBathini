@@ -7,7 +7,7 @@
 | Live demo | [`index.html`](https://raw.githack.com/SakethSumanBathini/SakethSumanBathini/leak-trace-site/index.html): the decoder runs in your browser against 500 simulated colleges |
 | Research paper | [`leak-trace-paper.pdf`](https://raw.githack.com/SakethSumanBathini/SakethSumanBathini/leak-trace-site/leak-trace-paper.pdf) (15 pages; LaTeX source and chart script in `paper/`) |
 | Concept document | [`leak-trace-concept.pdf`](https://raw.githack.com/SakethSumanBathini/SakethSumanBathini/leak-trace-site/leak-trace-concept.pdf) (10 pages) |
-| Demo video | [`leak-trace-demo.mp4`](https://raw.githack.com/SakethSumanBathini/SakethSumanBathini/leak-trace-site/leak-trace-demo.mp4) (1 min 34 s) |
+| Demo video | [`leak-trace-demo.mp4`](https://raw.githack.com/SakethSumanBathini/SakethSumanBathini/leak-trace-site/leak-trace-demo.mp4) (2 min 16 s, with voice-over and music; subtitles in [`leak-trace-demo.srt`](leak-trace-demo.srt); the video's sources are in `media/`) |
 | Page sources | `site/` (`index.html` at the root is the same page with fonts, styles and script inlined) |
 
 Everything below documents the code and results in this branch.

@@ -1,0 +1,70 @@
+[
+ {
+  "id": "hero",
+  "text": "Nine oh four in the morning. An exam paper is already on WhatsApp, an hour before the exam. Five hundred colleges printed it. Which one leaked it?",
+  "sub": "9:04 in the morning. An exam paper is already on WhatsApp, an hour before the exam. 500 colleges printed it. Which one leaked it?"
+ },
+ {
+  "id": "trick",
+  "text": "Leak Trace gives every college the same questions and the same marks. But each copy hides its own pattern: its own question order, and its own approved wording."
+ },
+ {
+  "id": "layers",
+  "text": "There are three layers: the order, the wording, and the numbers and answer letters. A leaker can't change that last layer without making the leaked answers wrong."
+ },
+ {
+  "id": "demo",
+  "text": "Let's be the leaker. We retype seven questions, with typos, and no question numbers."
+ },
+ {
+  "id": "named",
+  "text": "Leak Trace names a college only when the odds reach ten thousand to one. Here, it does.",
+  "sub": "Leak Trace names a college only when the odds reach 10,000 to 1. Here, it does."
+ },
+ {
+  "id": "meter",
+  "text": "Each line adds evidence, until one college crosses the bar."
+ },
+ {
+  "id": "dodge",
+  "text": "Now try to dodge it. Reword every line, and shuffle the order."
+ },
+ {
+  "id": "held",
+  "text": "With the order and wording gone, it holds back instead of guessing. No innocent college is named."
+ },
+ {
+  "id": "keys",
+  "text": "Even a leaked answer key gives the college away. With coded keys, any two colleges differ in at least twelve of twenty answers.",
+  "sub": "Even a leaked answer key gives the college away. With coded keys, any two colleges differ in at least 12 of 20 answers."
+ },
+ {
+  "id": "keynamed",
+  "text": "Sixteen answers, one in ten of them wrong, and the source is still named.",
+  "sub": "16 answers, one in ten of them wrong, and the source is still named."
+ },
+ {
+  "id": "batch",
+  "text": "Now, two hundred random leaks at once.",
+  "sub": "Now, 200 random leaks at once."
+ },
+ {
+  "id": "zero",
+  "text": "Innocent colleges blamed: zero. Across a hundred and forty-eight thousand attack leaks, just one, from a chance match on a copy from outside the system.",
+  "sub": "Innocent colleges blamed: zero. Across 148,000 attack leaks, just one, from a chance match on a copy from outside the system."
+ },
+ {
+  "id": "proof",
+  "text": "And there is a proof. Under our model, a copy from outside the system clears the bar at most once in ten thousand times. We checked it on eight hundred thousand simulated copies.",
+  "sub": "And there is a proof. Under our model, a copy from outside the system clears the bar at most once in 10,000 times. We checked it on 800,000 simulated copies."
+ },
+ {
+  "id": "paper",
+  "text": "It is all in a fifteen page research paper, with open code and data. Every result so far is simulated. Next comes a pilot in one college.",
+  "sub": "It is all in a 15-page research paper, with open code and data. Every result so far is simulated. Next comes a pilot in one college."
+ },
+ {
+  "id": "end",
+  "text": "Leak Trace. Tracing a leaked exam paper to the college that printed it."
+ }
+]
