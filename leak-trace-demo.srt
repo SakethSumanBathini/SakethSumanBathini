@@ -1,160 +1,160 @@
 1
-00:00:00,420 --> 00:00:02,065
+00:00:00,426 --> 00:00:01,872
 9:04 in the morning.
 
 2
-00:00:02,065 --> 00:00:07,163
+00:00:01,872 --> 00:00:06,353
 An exam paper is already on WhatsApp,
 an hour before the exam.
 
 3
-00:00:07,163 --> 00:00:09,137
+00:00:06,353 --> 00:00:08,088
 500 colleges printed it.
 
 4
-00:00:09,137 --> 00:00:10,781
+00:00:08,088 --> 00:00:09,534
 Which one leaked it?
 
 5
-00:00:12,610 --> 00:00:17,084
+00:00:11,363 --> 00:00:15,612
 Leak Trace gives every college the same
 questions and the same marks.
 
 6
-00:00:17,084 --> 00:00:19,418
+00:00:15,612 --> 00:00:17,830
 But each copy hides its own pattern:
 
 7
-00:00:19,418 --> 00:00:22,854
+00:00:17,830 --> 00:00:21,094
 its own question order, and its
 own approved wording.
 
 8
-00:00:24,382 --> 00:00:25,798
+00:00:22,624 --> 00:00:23,908
 There are three layers:
 
 9
-00:00:25,798 --> 00:00:29,429
+00:00:23,908 --> 00:00:27,202
 the order, the wording, and the
 numbers and answer letters.
 
 10
-00:00:29,429 --> 00:00:34,230
+00:00:27,202 --> 00:00:31,557
 A leaker can't change that last layer without
 making the leaked answers wrong.
 
 11
-00:00:35,845 --> 00:00:37,413
+00:00:33,181 --> 00:00:34,411
 Let's be the leaker.
 
 12
-00:00:37,413 --> 00:00:42,353
+00:00:34,411 --> 00:00:38,283
 We retype seven questions, with typos,
 and no question numbers.
 
 13
-00:00:42,761 --> 00:00:47,507
+00:00:38,688 --> 00:00:43,069
 Leak Trace names a college only when
 the odds reach 10,000 to 1.
 
 14
-00:00:47,507 --> 00:00:48,545
+00:00:43,069 --> 00:00:44,027
 Here, it does.
 
 15
-00:00:50,061 --> 00:00:53,863
+00:00:45,539 --> 00:00:48,993
 Each line adds evidence, until one
 college crosses the bar.
 
 16
-00:00:56,274 --> 00:00:57,780
+00:00:51,404 --> 00:00:52,559
 Now try to dodge it.
 
 17
-00:00:57,780 --> 00:01:00,866
+00:00:52,559 --> 00:00:54,926
 Reword every line, and shuffle the order.
 
 18
-00:01:01,272 --> 00:01:05,559
+00:00:55,330 --> 00:00:59,241
 With the order and wording gone, it
 holds back instead of guessing.
 
 19
-00:01:05,559 --> 00:01:07,414
+00:00:59,241 --> 00:01:00,933
 No innocent college is named.
 
 20
-00:01:09,243 --> 00:01:12,570
+00:01:02,765 --> 00:01:05,757
 Even a leaked answer key gives
 the college away.
 
 21
-00:01:12,570 --> 00:01:17,423
+00:01:05,757 --> 00:01:10,121
 With coded keys, any two colleges differ
 in at least 12 of 20 answers.
 
 22
-00:01:18,575 --> 00:01:23,307
+00:01:11,290 --> 00:01:15,102
 16 answers, one in ten of them wrong, and
 the source is still named.
 
 23
-00:01:28,539 --> 00:01:31,233
+00:01:20,324 --> 00:01:22,369
 Now, 200 random leaks at once.
 
 24
-00:01:31,740 --> 00:01:33,880
+00:01:23,292 --> 00:01:25,245
 Innocent colleges blamed:
 
 25
-00:01:33,880 --> 00:01:34,308
+00:01:25,245 --> 00:01:25,636
 zero.
 
 26
-00:01:34,308 --> 00:01:37,560
+00:01:25,636 --> 00:01:28,604
 Across 148,000 attack leaks, just one,
 
 27
-00:01:37,560 --> 00:01:42,182
+00:01:28,604 --> 00:01:32,823
 from a chance match on a copy from
 outside the system.
 
 28
-00:01:44,000 --> 00:01:45,594
+00:01:34,648 --> 00:01:36,119
 And there is a proof.
 
 29
-00:01:45,594 --> 00:01:51,515
+00:01:36,119 --> 00:01:41,583
 Under our model, a copy from outside the
 system clears the bar at most once in
 
 30
-00:01:51,515 --> 00:01:52,502
+00:01:41,583 --> 00:01:42,494
 10,000 times.
 
 31
-00:01:52,502 --> 00:01:55,690
+00:01:42,494 --> 00:01:45,437
 We checked it on 800,000 simulated copies.
 
 32
-00:01:57,727 --> 00:02:02,380
+00:01:47,457 --> 00:01:52,064
 It is all in a 15-page research paper,
 with open code and data.
 
 33
-00:02:02,380 --> 00:02:04,817
+00:01:52,064 --> 00:01:54,478
 Every result so far is simulated.
 
 34
-00:02:04,817 --> 00:02:07,328
+00:01:54,478 --> 00:01:56,964
 Next comes a pilot in one college.
 
 35
-00:02:08,546 --> 00:02:09,270
+00:01:58,185 --> 00:01:58,815
 Leak Trace.
 
 36
-00:02:09,270 --> 00:02:13,155
+00:01:58,815 --> 00:02:02,197
 Tracing a leaked exam paper to the
 college that printed it.
 
