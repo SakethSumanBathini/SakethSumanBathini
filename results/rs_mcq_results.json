@@ -1,0 +1,246 @@
+{
+ "meta": {
+  "n_colleges": 500,
+  "questions": 20,
+  "eps": 0.02,
+  "tau_nats": 9.21,
+  "trials": 2000,
+  "rs": "GF(23), f(x)=m0+m1*x, x=0..19, symbols = 23 of the 24 option orders"
+ },
+ "results": [
+  {
+   "code": "random",
+   "scenario": "single",
+   "k": 4,
+   "named_only_true": 0.0,
+   "named_innocent": 0.0,
+   "abstain": 1.0,
+   "closest_college_is_a_source": 0.987
+  },
+  {
+   "code": "random",
+   "scenario": "single",
+   "k": 6,
+   "named_only_true": 0.902,
+   "named_innocent": 0.0,
+   "abstain": 0.098,
+   "closest_college_is_a_source": 1.0
+  },
+  {
+   "code": "rs23",
+   "scenario": "single",
+   "k": 4,
+   "named_only_true": 0.0,
+   "named_innocent": 0.0,
+   "abstain": 1.0,
+   "closest_college_is_a_source": 0.9965
+  },
+  {
+   "code": "rs23",
+   "scenario": "single",
+   "k": 6,
+   "named_only_true": 0.8925,
+   "named_innocent": 0.0,
+   "abstain": 0.1075,
+   "closest_college_is_a_source": 0.9995
+  },
+  {
+   "code": "random",
+   "scenario": "mix2",
+   "k": 4,
+   "named_only_true": 0.0,
+   "named_innocent": 0.0,
+   "abstain": 1.0,
+   "closest_college_is_a_source": 0.5815
+  },
+  {
+   "code": "random",
+   "scenario": "mix2",
+   "k": 5,
+   "named_only_true": 0.071,
+   "named_innocent": 0.0,
+   "abstain": 0.929,
+   "closest_college_is_a_source": 0.7505
+  },
+  {
+   "code": "random",
+   "scenario": "mix2",
+   "k": 6,
+   "named_only_true": 0.03,
+   "named_innocent": 0.0,
+   "abstain": 0.97,
+   "closest_college_is_a_source": 0.732
+  },
+  {
+   "code": "random",
+   "scenario": "mix2",
+   "k": 8,
+   "named_only_true": 0.094,
+   "named_innocent": 0.0,
+   "abstain": 0.906,
+   "closest_college_is_a_source": 0.7925
+  },
+  {
+   "code": "random",
+   "scenario": "mix2",
+   "k": 10,
+   "named_only_true": 0.814,
+   "named_innocent": 0.0,
+   "abstain": 0.186,
+   "closest_college_is_a_source": 0.834
+  },
+  {
+   "code": "rs23",
+   "scenario": "mix2",
+   "k": 4,
+   "named_only_true": 0.0,
+   "named_innocent": 0.0,
+   "abstain": 1.0,
+   "closest_college_is_a_source": 0.647
+  },
+  {
+   "code": "rs23",
+   "scenario": "mix2",
+   "k": 5,
+   "named_only_true": 0.0725,
+   "named_innocent": 0.0,
+   "abstain": 0.9275,
+   "closest_college_is_a_source": 0.894
+  },
+  {
+   "code": "rs23",
+   "scenario": "mix2",
+   "k": 6,
+   "named_only_true": 0.0385,
+   "named_innocent": 0.0,
+   "abstain": 0.9615,
+   "closest_college_is_a_source": 0.7815
+  },
+  {
+   "code": "rs23",
+   "scenario": "mix2",
+   "k": 8,
+   "named_only_true": 0.0795,
+   "named_innocent": 0.0,
+   "abstain": 0.9205,
+   "closest_college_is_a_source": 0.8335
+  },
+  {
+   "code": "rs23",
+   "scenario": "mix2",
+   "k": 10,
+   "named_only_true": 0.8345,
+   "named_innocent": 0.0,
+   "abstain": 0.1655,
+   "closest_college_is_a_source": 0.864
+  },
+  {
+   "code": "random",
+   "scenario": "mix3",
+   "k": 6,
+   "named_only_true": 0.0055,
+   "named_innocent": 0.0,
+   "abstain": 0.9945,
+   "closest_college_is_a_source": 0.5595
+  },
+  {
+   "code": "random",
+   "scenario": "mix3",
+   "k": 8,
+   "named_only_true": 0.0145,
+   "named_innocent": 0.0,
+   "abstain": 0.9855,
+   "closest_college_is_a_source": 0.705
+  },
+  {
+   "code": "random",
+   "scenario": "mix3",
+   "k": 10,
+   "named_only_true": 0.0745,
+   "named_innocent": 0.0,
+   "abstain": 0.9255,
+   "closest_college_is_a_source": 0.773
+  },
+  {
+   "code": "random",
+   "scenario": "mix3",
+   "k": 12,
+   "named_only_true": 0.1745,
+   "named_innocent": 0.0,
+   "abstain": 0.8255,
+   "closest_college_is_a_source": 0.7945
+  },
+  {
+   "code": "rs23",
+   "scenario": "mix3",
+   "k": 6,
+   "named_only_true": 0.006,
+   "named_innocent": 0.0,
+   "abstain": 0.994,
+   "closest_college_is_a_source": 0.655
+  },
+  {
+   "code": "rs23",
+   "scenario": "mix3",
+   "k": 8,
+   "named_only_true": 0.012,
+   "named_innocent": 0.0,
+   "abstain": 0.988,
+   "closest_college_is_a_source": 0.741
+  },
+  {
+   "code": "rs23",
+   "scenario": "mix3",
+   "k": 10,
+   "named_only_true": 0.0705,
+   "named_innocent": 0.0,
+   "abstain": 0.9295,
+   "closest_college_is_a_source": 0.7785
+  },
+  {
+   "code": "rs23",
+   "scenario": "mix3",
+   "k": 12,
+   "named_only_true": 0.1565,
+   "named_innocent": 0.0,
+   "abstain": 0.8435,
+   "closest_college_is_a_source": 0.831
+  },
+  {
+   "code": "random",
+   "scenario": "outside",
+   "k": 6,
+   "named_only_true": 0.0,
+   "named_innocent": 0.0,
+   "abstain": 1.0,
+   "closest_college_is_a_source": 0.0
+  },
+  {
+   "code": "random",
+   "scenario": "outside",
+   "k": 10,
+   "named_only_true": 0.0,
+   "named_innocent": 0.0,
+   "abstain": 1.0,
+   "closest_college_is_a_source": 0.0
+  },
+  {
+   "code": "rs23",
+   "scenario": "outside",
+   "k": 6,
+   "named_only_true": 0.0,
+   "named_innocent": 0.0,
+   "abstain": 1.0,
+   "closest_college_is_a_source": 0.0
+  },
+  {
+   "code": "rs23",
+   "scenario": "outside",
+   "k": 10,
+   "named_only_true": 0.0,
+   "named_innocent": 0.0,
+   "abstain": 1.0,
+   "closest_college_is_a_source": 0.0
+  }
+ ]
+}

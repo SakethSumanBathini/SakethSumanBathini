@@ -1,0 +1,19 @@
+mix2    numbered   k= 4 true-only=  0.0% both=  0.0% innocent=0.00% abstain=100.0% via-stage2=  0.0% top5= 88.0% innocent-stages=[]
+mix2    numbered   k= 6 true-only=  3.5% both=  0.0% innocent=0.00% abstain= 96.5% via-stage2=  0.0% top5= 97.5% innocent-stages=[]
+mix2    numbered   k= 8 true-only= 10.9% both=  0.0% innocent=0.00% abstain= 89.1% via-stage2=  4.4% top5= 99.7% innocent-stages=[]
+mix2    numbered   k=10 true-only= 59.5% both=  1.5% innocent=0.00% abstain= 40.5% via-stage2= 52.2% top5=100.0% innocent-stages=[]
+mix2    numbered   k=12 true-only= 86.9% both= 17.8% innocent=0.00% abstain= 13.1% via-stage2= 83.0% top5=100.0% innocent-stages=[]
+mix2    unnumbered k= 4 true-only=  0.0% both=  0.0% innocent=0.00% abstain=100.0% via-stage2=  0.0% top5= 55.6% innocent-stages=[]
+mix2    unnumbered k= 6 true-only=  0.0% both=  0.0% innocent=0.00% abstain=100.0% via-stage2=  0.0% top5= 75.7% innocent-stages=[]
+mix2    unnumbered k= 8 true-only=  0.9% both=  0.0% innocent=0.00% abstain= 99.1% via-stage2=  0.0% top5= 86.4% innocent-stages=[]
+mix2    unnumbered k=10 true-only=  1.7% both=  0.0% innocent=0.00% abstain= 98.3% via-stage2=  0.0% top5= 93.1% innocent-stages=[]
+mix2    unnumbered k=12 true-only=  2.0% both=  0.0% innocent=0.00% abstain= 98.0% via-stage2=  0.0% top5= 95.7% innocent-stages=[]
+mix2    mcq        k= 4 true-only=  0.0% both=  0.0% innocent=0.00% abstain=100.0% via-stage2=  0.0% top5= 97.1% innocent-stages=[]
+mix2    mcq        k= 6 true-only=  3.6% both=  0.0% innocent=0.00% abstain= 96.4% via-stage2=  0.0% top5=100.0% innocent-stages=[]
+mix2    mcq        k= 8 true-only=  8.0% both=  0.0% innocent=0.00% abstain= 92.0% via-stage2=  0.0% top5=100.0% innocent-stages=[]
+mix2    mcq        k=10 true-only= 82.6% both= 13.4% innocent=0.00% abstain= 17.4% via-stage2= 70.8% top5=100.0% innocent-stages=[]
+mix2    mcq        k=12 true-only= 96.5% both= 22.7% innocent=0.00% abstain=  3.5% via-stage2= 90.4% top5=100.0% innocent-stages=[]
+
+real	28m23.810s
+user	25m36.267s
+sys	2m36.058s

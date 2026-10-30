@@ -1,0 +1,50 @@
+numbered   V=1 k= 2 correct=  0.0% wrong=0.00% abstain=100.0% false-acc=0.00% top5=  9.1% median-shortlist=13
+numbered   V=1 k= 3 correct=  0.0% wrong=0.00% abstain=100.0% false-acc=0.00% top5= 74.8% median-shortlist=3
+numbered   V=1 k= 4 correct=  0.0% wrong=0.00% abstain=100.0% false-acc=0.00% top5= 94.3% median-shortlist=1
+numbered   V=1 k= 5 correct=  0.0% wrong=0.00% abstain=100.0% false-acc=0.00% top5= 99.0% median-shortlist=1
+numbered   V=1 k= 6 correct=  0.0% wrong=0.00% abstain=100.0% false-acc=0.00% top5= 99.8% median-shortlist=1
+numbered   V=1 k= 7 correct=  0.1% wrong=0.00% abstain= 99.9% false-acc=0.00% top5=100.0% median-shortlist=1
+numbered   V=1 k= 8 correct=  7.8% wrong=0.00% abstain= 92.2% false-acc=0.00% top5=100.0% median-shortlist=1
+numbered   V=1 k= 9 correct= 62.3% wrong=0.00% abstain= 37.7% false-acc=0.00% top5=100.0% median-shortlist=1
+numbered   V=1 k=10 correct= 76.1% wrong=0.00% abstain= 23.9% false-acc=0.00% top5=100.0% median-shortlist=1
+numbered   V=4 k= 2 correct=  0.0% wrong=0.00% abstain=100.0% false-acc=0.00% top5= 89.2% median-shortlist=2
+numbered   V=4 k= 3 correct=  0.0% wrong=0.00% abstain=100.0% false-acc=0.00% top5= 99.4% median-shortlist=1
+numbered   V=4 k= 4 correct=  0.0% wrong=0.00% abstain=100.0% false-acc=0.00% top5= 99.9% median-shortlist=1
+numbered   V=4 k= 5 correct= 36.3% wrong=0.00% abstain= 63.7% false-acc=0.00% top5=100.0% median-shortlist=1
+numbered   V=4 k= 6 correct= 73.9% wrong=0.00% abstain= 26.1% false-acc=0.00% top5=100.0% median-shortlist=1
+numbered   V=4 k= 7 correct= 91.5% wrong=0.00% abstain=  8.5% false-acc=0.00% top5=100.0% median-shortlist=1
+numbered   V=4 k= 8 correct= 97.1% wrong=0.00% abstain=  2.9% false-acc=0.00% top5=100.0% median-shortlist=1
+numbered   V=4 k= 9 correct= 99.2% wrong=0.00% abstain=  0.8% false-acc=0.00% top5=100.0% median-shortlist=1
+numbered   V=4 k=10 correct= 99.5% wrong=0.00% abstain=  0.5% false-acc=0.00% top5=100.0% median-shortlist=1
+unnumbered V=1 k= 2 correct=  0.0% wrong=0.00% abstain=100.0% false-acc=0.00% top5=  0.0% median-shortlist=248
+unnumbered V=1 k= 3 correct=  0.0% wrong=0.00% abstain=100.0% false-acc=0.00% top5=  0.0% median-shortlist=124
+unnumbered V=1 k= 4 correct=  0.0% wrong=0.00% abstain=100.0% false-acc=0.00% top5=  0.0% median-shortlist=60
+unnumbered V=1 k= 5 correct=  0.0% wrong=0.00% abstain=100.0% false-acc=0.00% top5=  0.8% median-shortlist=28
+unnumbered V=1 k= 6 correct=  0.0% wrong=0.00% abstain=100.0% false-acc=0.00% top5= 14.0% median-shortlist=13
+unnumbered V=1 k= 7 correct=  0.0% wrong=0.00% abstain=100.0% false-acc=0.00% top5= 49.8% median-shortlist=6
+unnumbered V=1 k= 8 correct=  0.0% wrong=0.00% abstain=100.0% false-acc=0.00% top5= 77.2% median-shortlist=3
+unnumbered V=1 k= 9 correct=  0.0% wrong=0.00% abstain=100.0% false-acc=0.00% top5= 87.2% median-shortlist=1
+unnumbered V=1 k=10 correct=  0.0% wrong=0.00% abstain=100.0% false-acc=0.00% top5= 93.9% median-shortlist=1
+unnumbered V=4 k= 2 correct=  0.0% wrong=0.00% abstain=100.0% false-acc=0.00% top5=  2.0% median-shortlist=16
+unnumbered V=4 k= 3 correct=  0.0% wrong=0.00% abstain=100.0% false-acc=0.00% top5= 83.3% median-shortlist=3
+unnumbered V=4 k= 4 correct=  0.0% wrong=0.00% abstain=100.0% false-acc=0.00% top5= 95.0% median-shortlist=1
+unnumbered V=4 k= 5 correct=  0.0% wrong=0.00% abstain=100.0% false-acc=0.00% top5= 99.2% median-shortlist=1
+unnumbered V=4 k= 6 correct=  0.0% wrong=0.00% abstain=100.0% false-acc=0.00% top5= 99.7% median-shortlist=1
+unnumbered V=4 k= 7 correct=  1.6% wrong=0.00% abstain= 98.4% false-acc=0.00% top5=100.0% median-shortlist=1
+unnumbered V=4 k= 8 correct= 50.8% wrong=0.00% abstain= 49.2% false-acc=0.00% top5=100.0% median-shortlist=1
+unnumbered V=4 k= 9 correct= 61.9% wrong=0.00% abstain= 38.1% false-acc=0.00% top5=100.0% median-shortlist=1
+unnumbered V=4 k=10 correct= 83.8% wrong=0.00% abstain= 16.2% false-acc=0.00% top5=100.0% median-shortlist=1
+mcq        V=1 k= 2 correct=  0.0% wrong=0.00% abstain=100.0% false-acc=0.00% top5= 95.8% median-shortlist=2
+mcq        V=1 k= 3 correct=  0.0% wrong=0.00% abstain=100.0% false-acc=0.00% top5= 99.3% median-shortlist=1
+mcq        V=1 k= 4 correct=  0.0% wrong=0.00% abstain=100.0% false-acc=0.00% top5= 99.8% median-shortlist=1
+mcq        V=1 k= 5 correct= 90.4% wrong=0.00% abstain=  9.6% false-acc=0.00% top5=100.0% median-shortlist=1
+mcq        V=1 k= 6 correct= 88.5% wrong=0.00% abstain= 11.5% false-acc=0.00% top5=100.0% median-shortlist=1
+mcq        V=1 k= 7 correct= 87.2% wrong=0.00% abstain= 12.8% false-acc=0.00% top5=100.0% median-shortlist=1
+mcq        V=1 k= 8 correct= 99.2% wrong=0.00% abstain=  0.8% false-acc=0.00% top5=100.0% median-shortlist=1
+mcq        V=1 k= 9 correct= 98.8% wrong=0.00% abstain=  1.2% false-acc=0.00% top5=100.0% median-shortlist=1
+mcq        V=1 k=10 correct=100.0% wrong=0.00% abstain=  0.0% false-acc=0.00% top5=100.0% median-shortlist=1
+{"n_colleges": 500, "trials": 3000, "eps_item": 0.02, "eps_variant": 0.05, "eps_swap": 0.03, "tau_nats": 9.21, "union_bound_correction": "tau + ln(N) vs outside-copy null"}
+
+real	0m37.620s
+user	0m36.953s
+sys	0m0.024s

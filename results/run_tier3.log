@@ -1,0 +1,23 @@
+Leak Trace tier 3 — 500 colleges, naming bar 10,000:1
+quaternary [20,5] code: minimum distance 12 (90 codewords of that weight), search 34.0s
+answer keys for 500 colleges: each letter appears 3-7 times in 20, 8-12 right answers in the middle positions B and C; closest two keys differ in 12 answers; every key differs from the master in >= 12
+random keys for comparison: closest two differ in 6 answers
+answer-key leaks (decoder assumes up to one wrong answer in five):
+  code    solver errors  0%: named k=4:0% k=6:0% k=8:0% k=10:0% k=12:0% k=14:100% k=16:100% k=18:100% k=20:100% | wrong 0
+  code    solver errors 10%: named k=4:0% k=6:0% k=8:0% k=10:0% k=12:0% k=14:23% k=16:53% k=18:73% k=20:87% | wrong 0
+  code    solver errors 20%: named k=4:0% k=6:0% k=8:0% k=10:0% k=12:0% k=14:4% k=16:13% k=18:28% k=20:41% | wrong 0
+  code    solver errors 30%: named k=4:0% k=6:0% k=8:0% k=10:0% k=12:0% k=14:1% k=16:3% k=18:6% k=20:10% | wrong 0
+  code    master-key leaks (16 answers, 10% errors): traced upstream 52.1%, pinned on a college 0
+  random  solver errors  0%: named k=4:0% k=6:0% k=8:0% k=10:0% k=12:0% k=14:98% k=16:100% k=18:100% k=20:100% | wrong 0
+  random  solver errors 10%: named k=4:0% k=6:0% k=8:0% k=10:0% k=12:0% k=14:24% k=16:51% k=18:72% k=20:87% | wrong 0
+  random  solver errors 20%: named k=4:0% k=6:0% k=8:0% k=10:0% k=12:0% k=14:4% k=16:14% k=18:27% k=20:41% | wrong 0
+  random  solver errors 30%: named k=4:0% k=6:0% k=8:0% k=10:0% k=12:0% k=14:1% k=16:2% k=18:6% k=20:10% | wrong 0
+  random  master-key leaks (16 answers, 10% errors): traced upstream 48.8%, pinned on a college 0
+numeric values, reworded and shuffled (only the numbers survive):
+  numeric values,  4 approved sets per question (any two colleges share <= 5 of 8): named k=2:0% k=3:0% k=4:0% k=5:0% k=6:0% k=7:0% k=8:0% | wrong 0
+  numeric values, 16 approved sets per question (any two colleges share <= 2 of 8): named k=2:0% k=3:0% k=4:0% k=5:0% k=6:83% k=7:80% k=8:98% | wrong 0
+  numeric values, 64 approved sets per question (any two colleges share <= 1 of 8): named k=2:0% k=3:0% k=4:89% k=5:87% k=6:98% k=7:98% k=8:100% | wrong 0
+the guarantee, checked on outside copies:
+  Part A outside copies (model), 200,000: T=10: any line 1.02e-02, 7 lines 1.15e-04 (bound 1e-01), T=100: any line 8.17e-03, 7 lines 3.00e-05 (bound 1e-02), T=1,000: any line 2.25e-04, 7 lines 0.00e+00 (bound 1e-03), T=10,000: any line 5.00e-06, 7 lines 0.00e+00 (bound 1e-04)
+  Part A outside copies (realistic), 200,000: T=10: any line 1.60e-02, 7 lines 6.70e-04 (bound 1e-01), T=100: any line 1.13e-02, 7 lines 3.20e-04 (bound 1e-02), T=1,000: any line 7.35e-04, 7 lines 1.05e-04 (bound 1e-03), T=10,000: any line 5.50e-05, 7 lines 5.00e-06 (bound 1e-04)
+  answer-key outside copies, 400,000: T=10: any answer 5.10e-02, full key 1.94e-03 (bound 1e-01), T=100: any answer 5.39e-03, full key 1.94e-03 (bound 1e-02), T=1,000: any answer 4.05e-04, full key 2.00e-04 (bound 1e-03), T=10,000: any answer 3.50e-05, full key 2.75e-05 (bound 1e-04)

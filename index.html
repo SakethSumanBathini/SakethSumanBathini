@@ -4,10 +4,14 @@
 <meta charset='utf-8'>
 <meta name='viewport' content='width=device-width, initial-scale=1'>
 <title>Leak Trace</title>
-<meta name='description' content='Leak Trace names the college a leaked exam paper came from, even when the questions are retyped. Our entry for the Seva First Innovation Challenge 2026.'>
+<meta name='description' content='Leak Trace names the college a leaked exam paper came from, even when the questions are retyped, reworded or only the answer key leaks. Our entry for the Seva First Innovation Challenge 2026.'>
 <meta property='og:title' content='Leak Trace: which of 500 colleges leaked the paper?'>
 <meta property='og:description' content='Every college gets the same questions with a hidden pattern. Try being the leaker and see if it catches you.'>
 <meta property='og:type' content='website'>
+<meta property='og:image' content='https://raw.githack.com/SakethSumanBathini/SakethSumanBathini/leak-trace-site/og.png'>
+<meta property='og:image:width' content='1200'>
+<meta property='og:image:height' content='630'>
+<meta name='twitter:card' content='summary_large_image'>
 <meta name='theme-color' content='#FFFFFF'>
 <link rel='icon' href='data:image/svg+xml,%3Csvg xmlns=%27http://www.w3.org/2000/svg%27 viewBox=%270 0 32 32%27%3E%3Ccircle cx=%2716%27 cy=%2716%27 r=%2713.5%27 fill=%27%23fff%27 stroke=%27%23E8467C%27 stroke-width=%273%27/%3E%3Ccircle cx=%2716%27 cy=%2716%27 r=%278.5%27 fill=%27%231E2FC6%27/%3E%3C/svg%3E'>
 <style>
@@ -453,6 +457,109 @@ footer .wrap { display: flex; flex-wrap: wrap; justify-content: space-between; g
   .grow .bar { display: none; }
   .sources { columns: 1; }
 }
+/* Three layers */
+.layers th { vertical-align: bottom; }
+.layers th b { display: block; font-size: 1.05rem; font-weight: 800; font-stretch: 85%; color: var(--pen); }
+.layers th span { display: block; font-size: 0.85rem; color: var(--graphite); margin-top: 2px; max-width: 24ch; }
+.layers td:first-child { font-weight: 700; font-stretch: 92%; }
+.layers td { white-space: normal; }
+.layers td i { display: inline-block; vertical-align: -3px; width: 16px; height: 16px; margin-right: 8px; border-radius: 50%; border: 1.5px solid var(--form); }
+.layers td i.sv { background: var(--pen); border-color: var(--pen); }
+.layers td i.er { background: var(--paper); }
+.layers td:has(i.er) { color: var(--form-ink); }
+.layers-note { margin-top: 14px; max-width: 70ch; }
+
+/* Evidence meter */
+.meter-fig { margin: clamp(40px, 5vw, 56px) 0 0; padding-top: 28px; border-top: 1.5px solid var(--form); }
+.meter-head { display: flex; flex-wrap: wrap; align-items: baseline; justify-content: space-between; gap: 10px 28px; margin-bottom: 12px; }
+.mkey { list-style: none; display: flex; flex-wrap: wrap; gap: 6px 20px; font-size: 0.92rem; color: var(--graphite); }
+.mkey li { display: flex; align-items: center; gap: 8px; }
+.mkey i { display: inline-block; width: 22px; height: 0; border-top: 3px solid var(--pen); }
+.mkey i.k-run { border-top: 2px solid var(--graphite); }
+.mkey i.k-truth { border-top: 2.5px solid var(--form); }
+.mkey i.k-bar { border-top: 2px dashed var(--form-ink); }
+svg.meter { width: 100%; min-width: 560px; height: auto; display: block; }
+.meter .gl { stroke: var(--form-soft); stroke-width: 1; }
+.meter .ax { font-family: var(--font); font-size: 12px; fill: var(--graphite); }
+.meter .barline { fill: none; stroke: var(--form-ink); stroke-width: 1.6; stroke-dasharray: 6 5; }
+.meter .barlab { font-family: var(--font); font-size: 12px; font-weight: 700; fill: var(--form-ink); }
+.meter .namedline { stroke: var(--pen); stroke-width: 1; }
+.meter .namedlab { font-family: var(--font); font-size: 12px; font-weight: 700; fill: var(--pen); }
+.meter .mline { fill: none; stroke-width: 2; stroke-linejoin: round; stroke-linecap: round; }
+.meter .mline.lead { stroke: var(--pen); stroke-width: 3; }
+.meter .mline.run { stroke: var(--graphite); stroke-opacity: 0.8; }
+.meter .mline.truth { stroke: var(--form); stroke-width: 2.5; }
+.meter .mdot { stroke: var(--paper); stroke-width: 2; }
+.meter .mdot.lead { fill: var(--pen); }
+.meter .mdot.run { fill: var(--graphite); }
+.meter .mdot.truth { fill: var(--form); }
+.meter .mlab { font-family: var(--font); font-size: 12.5px; fill: var(--ink); }
+.meter .mlab.lead { font-weight: 700; }
+#meterNote, #akMeterNote { margin-top: 8px; max-width: 80ch; }
+
+/* Answer sheet */
+.omr { width: 100%; max-width: 380px; height: auto; margin-top: 18px; }
+.omr .oh { font-family: var(--font); font-size: 10px; fill: var(--form-ink); }
+.omr .onum { font-family: var(--font); font-size: 11px; fill: var(--graphite); font-variant-numeric: tabular-nums; }
+.omr .ob { fill: var(--paper); stroke: var(--form); stroke-width: 1.2; }
+.omr .pen { fill: var(--pen); }
+.omr .oring { fill: none; stroke: var(--form-ink); stroke-width: 1.6; stroke-opacity: 0.55; }
+.omr .oring.ok { stroke-opacity: 1; stroke-width: 2.2; }
+.omr .oring.miss { stroke-opacity: 1; stroke-width: 2.2; stroke-dasharray: 3 2.5; }
+.omr-key { margin-top: 6px; }
+
+/* Numbers */
+.numbers { margin-top: clamp(48px, 6vw, 72px); display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1.25fr); gap: 28px 48px; align-items: start; }
+.numbers > div:first-child { display: grid; gap: 12px; align-content: start; }
+.numcards { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 20px; }
+.paper.mini { padding: 16px 18px 18px; font-size: 0.98rem; }
+.paper.mini .qpcode { display: inline-block; margin-bottom: 8px; }
+.paper.mini b { color: var(--pen); }
+.numstats { grid-column: 1 / -1; display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); border-block: 1.5px solid var(--form); }
+.numstats div { padding: 18px 20px 20px; display: grid; gap: 6px; align-content: start; }
+.numstats div:first-child { padding-left: 0; }
+.numstats div + div { border-left: 1px solid var(--form-soft); }
+.numstats dt { font-size: 0.9rem; color: var(--form-ink); }
+.numstats dd { font-size: 1.05rem; }
+.numstats b { font-size: 1.9rem; font-weight: 800; font-stretch: 78%; color: var(--pen); }
+
+/* Guarantee */
+.two-wide { display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1.15fr); gap: 32px 56px; align-items: start; }
+.two-wide .intro { margin-bottom: 0; }
+.gfig { margin-top: 0; }
+.gfig .mkey { margin-bottom: 8px; }
+#gchart .ax { font-size: 13px; }
+#gchart .barlab { font-size: 13px; }
+
+/* Roadmap */
+.flow.road { margin-top: 8px; }
+
+/* Research */
+.docs { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 20px; }
+.doc { display: grid; gap: 8px; align-content: start; padding: 22px 22px 24px; border: 1.5px solid var(--form); border-radius: 2px; color: var(--ink); text-decoration: none; transition: border-color 0.15s, background-color 0.15s; }
+.doc:hover { border-color: var(--pen); background: var(--pen-wash); }
+.doc-kind { font-size: 0.85rem; color: var(--form-ink); }
+.doc b { font-size: 1.3rem; font-weight: 800; font-stretch: 82%; line-height: 1.15; color: var(--pen); }
+.doc-sub { font-size: 0.98rem; color: var(--graphite); }
+
+@media (max-width: 1080px) {
+  .two-wide { grid-template-columns: minmax(0, 1fr); }
+  .numbers { grid-template-columns: minmax(0, 1fr); }
+  .docs { grid-template-columns: minmax(0, 1fr); }
+}
+@media (max-width: 760px) {
+  .numcards { grid-template-columns: minmax(0, 1fr); }
+  .numstats { grid-template-columns: minmax(0, 1fr); }
+  .numstats div { padding-left: 0; }
+  .numstats div + div { border-left: 0; border-top: 1px solid var(--form-soft); }
+  .layers tr { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); column-gap: 12px; }
+  .layers td:first-child { grid-column: 1 / -1; }
+  .layers td:first-child::before { display: none; }
+  .layers td { font-size: 0.9rem; }
+  .layers td i { display: block; margin: 4px 0 4px; }
+  svg.meter { min-width: 520px; }
+}
+
 @media (prefers-reduced-motion: reduce) {
   *, *::before, *::after { transition-duration: 0.01ms !important; animation-duration: 0.01ms !important; }
 }
@@ -467,8 +574,9 @@ footer .wrap { display: flex; flex-wrap: wrap; justify-content: space-between; g
     <nav class='links' aria-label='Sections'>
       <a href='#problem'>Problem</a>
       <a href='#trick'>How it works</a>
+      <a href='#keys'>Answer keys</a>
       <a href='#results'>Results</a>
-      <a href='#plan'>Plan</a>
+      <a href='#research'>Research</a>
     </nav>
     <a class='btn small' href='#demo'>Try it</a>
   </div>
@@ -480,10 +588,10 @@ footer .wrap { display: flex; flex-wrap: wrap; justify-content: space-between; g
   <div class='wrap'>
     <h1>Which of 500 colleges leaked the paper?</h1>
     <div class='hero-sub'>
-      <p class='lede'>Leak Trace gives every college the same exam with a hidden pattern in it. When a few questions turn up on WhatsApp, even retyped with mistakes, the pattern points back to the college that leaked them.</p>
+      <p class='lede'>Leak Trace gives every college the same exam with a hidden pattern in it. When a few questions, a photo or even just the answer key turns up on WhatsApp, the pattern points back to the college whose copy leaked.</p>
       <div class='cta'>
         <a class='btn' href='#demo'>Try being the leaker</a>
-        <a class='btn ghost' href='#problem'>Read the problem statement</a>
+        <a class='btn ghost' href='#research'>Read the research</a>
       </div>
     </div>
 
@@ -520,7 +628,8 @@ footer .wrap { display: flex; flex-wrap: wrap; justify-content: space-between; g
     <dl class='fields'>
       <div><dt>Entry for</dt><dd>Seva First Innovation Challenge 2026, South Zone</dd></div>
       <div><dt>Theme</dt><dd>4. Shikshit &amp; Kaushal Bharat</dd></div>
-      <div><dt>Track</dt><dd>A</dd></div>
+      <div><dt>Track</dt><dd>A, Product &amp; Technology</dd></div>
+      <div><dt>Team from</dt><dd>Sreyas Institute of Engineering and Technology, Hyderabad</dd></div>
     </dl>
   </div>
 </section>
@@ -532,8 +641,8 @@ footer .wrap { display: flex; flex-wrap: wrap; justify-content: space-between; g
     </div>
 
     <fieldset class='statement'>
-      <legend>Problem statement (final, 60 words)</legend>
-      <p id='statement'>When a university exam paper leaks on WhatsApp, nobody can tell which of its hundreds of colleges leaked it. Leakers retype a few questions, stripping QR codes and printed IDs, so sources are found, if at all, by luck or police work, and every student risks a re-exam. It happened at Kannur University and Karnataka State Law University in 2025.</p>
+      <legend>Problem statement (59 words)</legend>
+      <p id='statement'>When a university exam paper leaks on WhatsApp, nobody can tell which of its 100-plus colleges leaked it. Leakers post a few typed or cropped questions without QR codes or printed IDs, so sources surface only by luck or police work, and every student risks a re-exam. It happened at Kannur University and Karnataka State Law University in 2025.</p>
       <div class='statement-foot'>
         <button class='btn ghost small' id='copyBtn' type='button'>Copy statement</button>
         <span class='note' id='copyMsg' aria-live='polite'></span>
@@ -543,14 +652,15 @@ footer .wrap { display: flex; flex-wrap: wrap; justify-content: space-between; g
     <div class='hurt'>
       <div><h3>Students</h3><p>Lose an exam they prepared for and sit a re-exam, punished for one college's leak.</p></div>
       <div><h3>Universities</h3><p>Pay for re-exams and observers in every college, and lose credibility each time.</p></div>
-      <div><h3>Investigators</h3><p>Start with no lead and spend weeks or months on phone forensics.</p></div>
+      <div><h3>Investigators</h3><p>Start with no lead and spend days or weeks on phone forensics.</p></div>
     </div>
 
-    <h3 class='table-title'>Five recent leaks in South India, and how each source was found</h3>
+    <h3 class='table-title'>Six recent leaks in South India, and how each source was found</h3>
     <div class='table-wrap'>
       <table class='register'>
         <thead><tr><th scope='col'>When</th><th scope='col'>Where</th><th scope='col'>What happened</th><th scope='col'>How the source was found</th></tr></thead>
         <tbody>
+          <tr><td data-label='When'>Jan 2026</td><td data-label='Where'>Telangana agricultural university (PJTSAU)</td><td data-label='What happened'>Papers for six exams reached in-service students before they sat them.</td><td data-label='How the source was found'><b>By chance.</b> The Vice-Chancellor noticed unusually high marks; CCTV showed a student finishing in ten minutes.</td></tr>
           <tr><td data-label='When'>Jan 2026</td><td data-label='Where'>Karnataka SSLC preparatory</td><td data-label='What happened'>Papers downloaded with teachers' logins and sold on social media for ₹200–500.</td><td data-label='How the source was found'><b>Police investigation.</b> Six teachers arrested.</td></tr>
           <tr><td data-label='When'>Apr 2025</td><td data-label='Where'>Kannur University, BCA</td><td data-label='What happened'>A principal got the PIN at 9:00 and posted 4–5 questions on WhatsApp at 9:04. The exam began at 10:00.</td><td data-label='How the source was found'><b>By luck.</b> An exam squad caught a student copying.</td></tr>
           <tr><td data-label='When'>Jan 2025</td><td data-label='Where'>Karnataka State Law University</td><td data-label='What happened'>Sold on WhatsApp and Telegram as “two, five or 10 questions”.</td><td data-label='How the source was found'><b>Phone forensics,</b> back to a vice-principal.</td></tr>
@@ -560,7 +670,7 @@ footer .wrap { display: flex; flex-wrap: wrap; justify-content: space-between; g
       </table>
     </div>
 
-    <p class='big-fact'><b>50 of 66</b><span>recorded paper leaks in India from 2014 to 2024 were in state-run exams (PolicyEdge; the count is not exhaustive). NEET-UG 2026 was cancelled on 12 May after a leak, and the anti-leak law was toughened in August 2026.</span></p>
+    <p class='big-fact'><b>89</b><span>suspected paper leaks were reported in India in the ten years to 2024, 68 of them in state exams, and at least 48 papers had to be re-tested (Newslaundry). NEET-UG 2026 was cancelled on 12 May after a leak and re-held on 21 June.</span></p>
   </div>
 </section>
 
@@ -568,7 +678,7 @@ footer .wrap { display: flex; flex-wrap: wrap; justify-content: space-between; g
   <div class='wrap'>
     <div class='intro'>
       <h2>Every current fix breaks when someone retypes five questions.</h2>
-      <p>Giving each recipient a slightly different copy is an old idea: spies call it a canary trap, and IBM patented a version for exam papers in 2003. What nobody has deployed is a version that survives retyping across hundreds of colleges and states its own error rate.</p>
+      <p>Giving each recipient a slightly different copy is an old idea: spies call it a canary trap, and IBM filed a patent on a version for exam papers in 2003 (granted 2007). We found no deployed version that survives retyping, rewording and partial leaks across hundreds of colleges and states its own error rate.</p>
     </div>
     <div class='table-wrap'>
       <table class='fixes'>
@@ -578,7 +688,7 @@ footer .wrap { display: flex; flex-wrap: wrap; justify-content: space-between; g
           <tr><td data-label='Fix'>Hidden code readable from a photo</td><td data-label='Used by'>West Bengal board</td><td data-label='Where it breaks' class='breaks'>Gone the moment questions are retyped</td></tr>
           <tr><td data-label='Fix'>A few reordered sets</td><td data-label='Used by'>CBSE, NEET booklet codes</td><td data-label='Where it breaks' class='breaks'>4–8 sets cannot single out one college among hundreds</td></tr>
           <tr><td data-label='Fix'>OTP login and access logs</td><td data-label='Used by'>Paper-delivery portals</td><td data-label='Where it breaks' class='breaks'>Shows who opened the file, not who leaked it</td></tr>
-          <tr class='ours'><td data-label='Fix'>Leak Trace</td><td data-label='Used by'>Our entry</td><td data-label='What it does'>Survives retyping, tells 500 colleges apart, states its error rate</td></tr>
+          <tr class='ours'><td data-label='Fix'>Leak Trace</td><td data-label='Used by'>Our entry</td><td data-label='What it does'>Survives retyping and rewording, tells 500 colleges apart, states its error rate</td></tr>
         </tbody>
       </table>
     </div>
@@ -589,11 +699,29 @@ footer .wrap { display: flex; flex-wrap: wrap; justify-content: space-between; g
   <div class='wrap'>
     <div class='intro'>
       <h2>Same questions, same marks. A different pattern for every college.</h2>
-      <p>Each college's paper puts the questions in its own order and uses its own approved wording, like “Compare a stack and a queue” or “Compare a queue and a stack”. Marks, content and difficulty stay the same. That pattern is the college's code, and it survives retyping.</p>
+      <p>Each college's paper puts the questions in its own order and uses its own approved wording, like “Compare a stack and a queue” or “How does a stack differ from a queue?”. Marks, content and difficulty stay the same. That pattern is the college's code, and it survives retyping.</p>
     </div>
     <div class='papers' id='papers'></div>
     <p class='explain' id='explain' aria-live='polite'></p>
     <p class='note pattern-key'>Read the small grids like an OMR sheet. Columns A to J are the ten questions every college gets, rows are where each one is printed, and the number in a filled bubble is the wording that college got. Point at or tap a question to compare.</p>
+
+    <h3 class='table-title' id='layersTitle'>Three layers of marks, from easy to erase to costly to erase</h3>
+    <div class='table-wrap'>
+      <table class='layers' aria-labelledby='layersTitle'>
+        <thead>
+          <tr><th scope='col'>What the leaker does</th><th scope='col'><b>Order</b><span>Question order, either/or labels, sub-part and option order</span></th><th scope='col'><b>Wording</b><span>One of several approved wordings</span></th><th scope='col'><b>Numbers and answers</b><span>The values in numerical questions and the letter of each right option</span></th></tr>
+        </thead>
+        <tbody>
+          <tr><td data-label='What the leaker does'>Retypes it, with mistakes</td><td data-label='Order'><i class='sv'></i>Survives</td><td data-label='Wording'><i class='sv'></i>Survives</td><td data-label='Numbers and answers'><i class='sv'></i>Survives</td></tr>
+          <tr><td data-label='What the leaker does'>Sends a photo or a crop</td><td data-label='Order'><i class='sv'></i>Survives</td><td data-label='Wording'><i class='sv'></i>Survives</td><td data-label='Numbers and answers'><i class='sv'></i>Survives</td></tr>
+          <tr><td data-label='What the leaker does'>Drops or changes the question numbers</td><td data-label='Order'><i class='sv'></i>The order of the lines still counts</td><td data-label='Wording'><i class='sv'></i>Survives</td><td data-label='Numbers and answers'><i class='sv'></i>Survives</td></tr>
+          <tr><td data-label='What the leaker does'>Shuffles the lines</td><td data-label='Order'><i class='er'></i>Erased</td><td data-label='Wording'><i class='sv'></i>Survives</td><td data-label='Numbers and answers'><i class='sv'></i>Survives</td></tr>
+          <tr><td data-label='What the leaker does'>Rewords every question, even with an AI tool</td><td data-label='Order'><i class='sv'></i>Survives</td><td data-label='Wording'><i class='er'></i>Erased</td><td data-label='Numbers and answers'><i class='sv'></i>Survives</td></tr>
+          <tr><td data-label='What the leaker does'>Rewords and shuffles</td><td data-label='Order'><i class='er'></i>Erased</td><td data-label='Wording'><i class='er'></i>Erased</td><td data-label='Numbers and answers'><i class='sv'></i>Survives</td></tr>
+        </tbody>
+      </table>
+    </div>
+    <p class='note layers-note'>Changing the numbers or the answers would erase the third layer too, but then the leak gives students wrong answers. That is what makes it the strongest layer.</p>
   </div>
 </section>
 
@@ -669,6 +797,20 @@ footer .wrap { display: flex; flex-wrap: wrap; justify-content: space-between; g
       </div>
     </div>
 
+    <figure class='meter-fig'>
+      <figcaption class='meter-head'>
+        <h3>How the evidence built up, line by line</h3>
+        <ul class='mkey' aria-hidden='true'>
+          <li><i class='k-lead'></i>Leading college</li>
+          <li><i class='k-run'></i>Runner-up</li>
+          <li><i class='k-truth'></i>Real source, if it is neither</li>
+          <li><i class='k-bar'></i>Naming bar: 10,000 × 500</li>
+        </ul>
+      </figcaption>
+      <div class='chart-scroll'><svg class='meter' id='meter' role='img' aria-label='Odds for the leading colleges after each line of the leak, against a copy from outside the 500 colleges'></svg></div>
+      <p class='note' id='meterNote' aria-live='polite'></p>
+    </figure>
+
     <div class='batch'>
       <div class='batch-copy'>
         <h3>Now run 200 leaks like this one</h3>
@@ -697,17 +839,116 @@ footer .wrap { display: flex; flex-wrap: wrap; justify-content: space-between; g
   </div>
 </section>
 
+<section id='keys'>
+  <div class='wrap'>
+    <div class='intro'>
+      <h2>Even an answer key gives the college away.</h2>
+      <p>A careful leaker can shuffle and reword questions. They cannot change the answers, or the numbers in a numerical question, without making the leaked answers wrong. So on MCQ papers whose key may leak, each college's options are arranged to put the right answers under its own letters. Any two colleges' answer keys differ in at least 12 of 20 answers.</p>
+    </div>
+
+    <div class='bench'>
+      <fieldset class='maker'>
+        <legend>Leak an answer key</legend>
+        <div>
+          <span class='field-label' id='akLabel'>Answers leaked</span>
+          <div class='kbubbles' role='radiogroup' aria-labelledby='akLabel'>
+            <label><input type='radio' name='ak' value='8'><span>8</span></label>
+            <label><input type='radio' name='ak' value='10'><span>10</span></label>
+            <label><input type='radio' name='ak' value='12'><span>12</span></label>
+            <label><input type='radio' name='ak' value='14'><span>14</span></label>
+            <label><input type='radio' name='ak' value='16' checked><span>16</span></label>
+            <label><input type='radio' name='ak' value='18'><span>18</span></label>
+            <label><input type='radio' name='ak' value='20'><span>20</span></label>
+          </div>
+        </div>
+        <div>
+          <span class='field-label' id='aeLabel'>Wrong answers in the key</span>
+          <div class='opt-row' role='radiogroup' aria-labelledby='aeLabel'>
+            <label class='opt'><input type='radio' name='ae' value='0' checked> None</label>
+            <label class='opt'><input type='radio' name='ae' value='0.1'> About 1 in 10</label>
+            <label class='opt'><input type='radio' name='ae' value='0.2'> About 1 in 5</label>
+          </div>
+        </div>
+        <div class='opt-group' role='radiogroup' aria-labelledby='asrcLabel'>
+          <span class='field-label' id='asrcLabel'>Where the key came from</span>
+          <label class='opt'><input type='radio' name='asrc' value='college' checked> A college's paper</label>
+          <label class='opt'><input type='radio' name='asrc' value='master'> The setter's master copy</label>
+          <label class='opt'><input type='radio' name='asrc' value='outside'> Made up</label>
+        </div>
+        <button class='btn ghost' id='akMake' type='button'>Make a new key</button>
+      </fieldset>
+
+      <div class='leakbox'>
+        <label class='field-label' for='akText'>The leaked answer key. You can edit it.</label>
+        <div class='chat'>
+          <div class='chat-head'><b>Mid-term doubts group</b><span>10:41 am</span></div>
+          <div class='msg'>
+            <span class='fwd'><svg viewBox='0 0 16 12' aria-hidden='true'><path d='M9 1l5 4.5L9 10M4 1l5 4.5L4 10' fill='none' stroke='currentColor' stroke-width='1.5' stroke-linejoin='round'/></svg>Forwarded many times</span>
+            <textarea id='akText' spellcheck='false' rows='6'></textarea>
+          </div>
+        </div>
+        <div class='trace-row'>
+          <button class='btn' id='akTrace' type='button'>Trace the key</button>
+          <span class='note' id='akNote'></span>
+        </div>
+      </div>
+
+      <div class='result' aria-live='polite'>
+        <span class='field-label'>What Leak Trace says</span>
+        <p class='status' id='akStatus'></p>
+        <p class='who' id='akWho'></p>
+        <p class='why' id='akWhy'></p>
+        <svg class='omr' id='akSheet' role='img' aria-label='Answer sheet. Filled bubbles: the leaked answers. Rings: the answer key of the leading college.'></svg>
+        <p class='note omr-key'>Filled bubbles are the leaked answers. Rings mark the leading college's own key.</p>
+        <ol class='top5' id='akTop5' aria-label='Top five suspects'></ol>
+        <div class='reveal' id='akReveal'></div>
+      </div>
+    </div>
+
+    <figure class='meter-fig'>
+      <figcaption class='meter-head'>
+        <h3>How the evidence built up, answer by answer</h3>
+        <ul class='mkey' aria-hidden='true'>
+          <li><i class='k-lead'></i>Leading key</li>
+          <li><i class='k-run'></i>Runner-up</li>
+          <li><i class='k-truth'></i>Real source, if it is neither</li>
+          <li><i class='k-bar'></i>Naming bar</li>
+        </ul>
+      </figcaption>
+      <div class='chart-scroll'><svg class='meter' id='akMeter' role='img' aria-label='Odds for the leading answer keys after each leaked answer'></svg></div>
+      <p class='note' id='akMeterNote' aria-live='polite'></p>
+    </figure>
+
+    <div class='numbers'>
+      <div>
+        <h3>Numbers work the same way</h3>
+        <p>For a numerical question, the paper-setter approves several sets of values chosen to be of equal difficulty, and each college gets one. Reworded or not, a leaked question has to keep its numbers, or its answer changes.</p>
+        <p class='note'>Simulated on 500 colleges, eight numerical questions, reworded and shuffled so that only the numbers survive, 3% of numbers misread.</p>
+      </div>
+      <div class='numcards'>
+        <div class='paper mini'><p class='qpcode'>SET 041</p><p>A simply supported beam of span <b>6 m</b> carries a point load of <b>12 kN</b> at mid-span. Find the maximum bending moment.</p></div>
+        <div class='paper mini'><p class='qpcode'>SET 213</p><p>A simply supported beam of span <b>5 m</b> carries a point load of <b>16 kN</b> at mid-span. Find the maximum bending moment.</p></div>
+      </div>
+      <dl class='numstats'>
+        <div><dt>16 approved sets per question</dt><dd><b>83%</b> named from 6 questions, <b>98%</b> from 8</dd></div>
+        <div><dt>64 approved sets per question</dt><dd><b>89%</b> named from 4 questions, <b>98%</b> from 6</dd></div>
+        <div><dt>Innocent colleges named</dt><dd><b>0</b> in 63,000 leaks</dd></div>
+      </dl>
+    </div>
+  </div>
+</section>
+
 <section id='results'>
   <div class='wrap'>
     <div class='intro'>
       <h2>Seven numbered questions name the source 92% of the time.</h2>
-      <p>We tested the decoder on simulated leaks from 500 colleges, then end to end: printed pages, damaged like a WhatsApp photo, read by OCR. It names a college only when the odds are 10,000 to 1; below that, investigators get a shortlist. A campus leak lab with real phones on 21–22 Oct adds the first real data.</p>
+      <p>We tested the decoder on simulated leaks from 500 colleges, then end to end: rendered pages, damaged like a WhatsApp photo, read by OCR. It names a college only when the odds are 10,000 to 1; below that, investigators get a shortlist. Every result so far is simulated; real leaks made by real people are the next test.</p>
     </div>
     <div class='tally'>
       <div><b>0</b><span>wrong accusations in 135,000 simulated single-college leaks</span></div>
       <div><b>100%</b><span>of synthetic phone photos showing 5–6 questions traced to the right college (30 photos)</span></div>
       <div><b>99%</b><span>of 3-question numbered leaks with wording variants keep the real source in a top-5 shortlist</span></div>
-      <div><b>87%</b><span>of two-college mixes traced from 12 numbered questions, with no innocent college blamed in 45,000 mixes</span></div>
+      <div><b>100%</b><span>of leaked answer keys with 14 correct answers named, with no innocent college named in 108,000 key leaks</span></div>
     </div>
     <figure class='chart'>
       <div class='chart-scroll'>
@@ -734,7 +975,26 @@ footer .wrap { display: flex; flex-wrap: wrap; justify-content: space-between; g
         </tbody>
       </table>
     </div>
-    <p class='note atk-note'>“Names the source from” is the smallest leak named in at least 95% of cases. Before we hardened the decoder on 18 Oct, the same 148,000 leaks named 8 innocent colleges. Three changes, plus a bug fix in the second check: numbers that simply run 1, 2, 3 may be the leaker’s own, so both readings are weighed; a line’s wording counts only when it clearly matches one approved wording; and the bar went from 1,000 to 10,000 to 1.</p>
+    <p class='note atk-note'>“Names the source from” is the smallest leak named in at least 95% of cases. The rewording and shuffling rows are what the answer-key and numbers layer is for. Before we hardened the decoder on 18 Oct, the same 148,000 leaks named 8 innocent colleges. Three changes, plus a bug fix in the second check: numbers that simply run 1, 2, 3 may be the leaker’s own, so both readings are weighed; a line’s wording counts only when it clearly matches one approved wording; and the bar went from 1,000 to 10,000 to 1.</p>
+  </div>
+</section>
+
+<section id='guarantee'>
+  <div class='wrap two-wide'>
+    <div class='intro'>
+      <h2>A bound on false names. Proven, then tested.</h2>
+      <p>The naming bar is not a hunch. Take a leak that came from none of the 500 colleges, made up or copied from elsewhere. Under our model of such copies, the chance that it clears the bar for naming a college is at most 1 in 10,000 (2 in 10,000 counting the separate check for two-college mixes), and that stays true however many times investigators re-run the trace as more lines turn up. The proof is short: a likelihood ratio averages to one on such copies, so it rarely grows large (Markov's and Ville's inequalities; see the paper).</p>
+      <p>We then checked it on 800,000 simulated outside copies, read one line at a time. At the 10,000-to-1 bar, 11 of 200,000 realistic short-question copies and 14 of 400,000 answer keys ever crossed it, inside the bound; in the attack test the full decoder named 1 of 32,000 outside copies. Wrong names for real leaks are measured, not bounded: in our tests no real leak was pinned on the wrong college.</p>
+    </div>
+    <figure class='chart gfig'>
+      <ul class='mkey' aria-hidden='true'>
+        <li><i class='k-lead'></i>Answer keys</li>
+        <li><i class='k-run'></i>Short questions, real papers</li>
+        <li><i class='k-bar'></i>Proven limit</li>
+      </ul>
+      <div class='chart-scroll'><svg id='gchart' class='meter' role='img' aria-label='Share of outside copies that crossed the naming bar, compared with the proven limit, for four bars from 10 to 10,000 to 1'></svg></div>
+      <figcaption class='note'>Share of outside copies that ever crossed the bar while being read line by line, against the proven limit. At 100 to 1, real papers crossed slightly more often than the proof's model allows (1.13% against 1%), because a real paper's numbers never repeat; at the bar we use, they stay inside the bound.</figcaption>
+    </figure>
   </div>
 </section>
 
@@ -747,19 +1007,19 @@ footer .wrap { display: flex; flex-wrap: wrap; justify-content: space-between; g
     <div class='phase'>
       <h3>Before the exam</h3>
       <ol class='flow'>
-        <li><span class='num'>1</span><b>Setter writes one paper</b><p>And approves four meaning-neutral wordings per question.</p></li>
-        <li><span class='num'>2</span><b>Codebook makes 500 versions</b><p>One per college, kept secret by the controller of exams.</p></li>
-        <li><span class='num'>3</span><b>Per-college PDFs and keys</b><p>Each paper prints its version ID for the valuers.</p></li>
+        <li><span class='num'>1</span><b>Setter writes one paper</b><p>And approves wordings, number sets and which questions may move.</p></li>
+        <li><span class='num'>2</span><b>Two of three officials unlock</b><p>The secret key is split three ways; any two make the 500 versions. No table is stored.</p></li>
+        <li><span class='num'>3</span><b>Per-college PDFs, keys and a seal</b><p>A fingerprint of all 500 PDFs, signed by two officials, goes to every principal first.</p></li>
         <li><span class='num'>4</span><b>Existing portal delivers</b><p>OTP or PIN as today; each college prints its own copy.</p></li>
       </ol>
     </div>
     <div class='phase'>
       <h3>After a leak</h3>
       <ol class='flow' start='5'>
-        <li><span class='num'>5</span><b>Leak spotted</b><p>A phone photo, or 2–10 questions retyped on WhatsApp.</p></li>
+        <li><span class='num'>5</span><b>Leak spotted</b><p>A phone photo, a few retyped questions, or an answer key on WhatsApp.</p></li>
         <li><span class='num'>6</span><b>Read it</b><p>OCR reads photos; fuzzy matching ties typo-ridden lines to the master questions.</p></li>
         <li><span class='num'>7</span><b>Compare with all 500</b><p>A likelihood for every college; a second stage checks for mixed copies.</p></li>
-        <li class='end'><span class='num'>8</span><b>Ranked lead</b><p>Names a college only when it is 10,000 times likelier than any other; otherwise a shortlist.</p></li>
+        <li class='end'><span class='num'>8</span><b>Ranked lead</b><p>Names a college only when it is 10,000 times likelier than any other, and 10,000 × 500 times likelier than an outside copy; otherwise a shortlist.</p></li>
       </ol>
     </div>
   </div>
@@ -771,10 +1031,10 @@ footer .wrap { display: flex; flex-wrap: wrap; justify-content: space-between; g
       <h2>How it answers the six judging criteria.</h2>
     </div>
     <dl class='crit'>
-      <div><dt>Problem clarity</dt><dd>Real, recent leaks at Kannur, KSLU and the Karnataka SSLC exams. A survey of our own students adds first-hand evidence.</dd></div>
-      <div><dt>Originality</dt><dd>Builds openly on the canary trap and IBM's 2003 patent. New: survives retyped, partial leaks across 500 colleges and states its error rate.</dd></div>
-      <div><dt>Demonstrated feasibility</dt><dd>Working simulation, OCR test, an attack test of 148,000 leaks and the live demo on this page. A leak lab with classmates on 21–22 Oct.</dd></div>
-      <div><dt>Cost</dt><dd>Software only. It changes one step, making each college's PDF, and runs on a laptop.</dd></div>
+      <div><dt>Problem clarity</dt><dd>Real, recent leaks at Kannur, KSLU, PJTSAU and the Karnataka SSLC exams. In none of them did the leaked paper itself say where it came from.</dd></div>
+      <div><dt>Originality</dt><dd>Builds openly on the canary trap and IBM's 2003 patent. New: three layers of content-identical marks, including answer keys and numbers that survive rewording, and a proven bound on naming a college for a copy from outside the system.</dd></div>
+      <div><dt>Demonstrated feasibility</dt><dd>A working prototype: this live demo, OCR on phone photos, 135,000 whole-paper and 148,000 attack leaks, answer-key and numbers tests, and key custody with 12 of 12 checks passing.</dd></div>
+      <div><dt>Cost</dt><dd>Software only, all open source. It changes one step, making each college's PDF, and tracing runs on a laptop in under a second.</dd></div>
       <div><dt>Beneficiary impact</dt><dd>A re-exam at one college instead of all. Kannur's sub-committee recommended exactly that once the source was known.</dd></div>
       <div><dt>Scalability</dt><dd>The same method serves state boards and paper-delivery vendors that reach 2,000+ colleges; more colleges need about one more leaked line, because the bar rises with their number.</dd></div>
     </dl>
@@ -786,20 +1046,21 @@ footer .wrap { display: flex; flex-wrap: wrap; justify-content: space-between; g
     <div>
       <h2>Different order, same exam.</h2>
       <ul class='ticks filled'>
-        <li>We reorder only where order does not change difficulty: equal-mark short questions, either/or blocks, MCQ options and sub-parts.</li>
+        <li>We reorder only where we expect order not to change difficulty: equal-mark short questions, either/or blocks, MCQ options and sub-parts.</li>
         <li>Related questions stay together and the easy-to-hard order stays fixed.</li>
-        <li>A faculty member approves every wording variant.</li>
+        <li>A faculty member approves every wording and every set of numbers, answer keys are generated for each version, and value sets are calibrated in a pilot before high-stakes use.</li>
+        <li>Every college's answer key uses each letter 3 to 7 times out of 20, with 8 to 12 right answers in the middle positions B and C, so no college's key is lopsided.</li>
         <li>Average marks for each version are published after the exam.</li>
       </ul>
     </div>
     <div>
       <h2>What it cannot do yet.</h2>
       <ul class='ticks'>
-        <li>All results so far are simulated. The leak lab adds the first real data.</li>
+        <li>All results so far are simulated. Real leaks made by real people are the next test.</li>
         <li>English only for now. OCR for Telugu, Kannada, Tamil and Malayalam is untested.</li>
-        <li>A leaker who rewords every question or shuffles the lines can stop it naming anyone. In our tests it then gave a shortlist instead of blaming an innocent college. A trace is a lead to confirm, not proof.</li>
-        <li>Two colleges mixing their copies can, rarely, make a third look guilty: twice in 65,000 simulated mixes at our old 1,000-to-1 bar, none in 45,000 at 10,000 to 1. A structured codebook is the next fix.</li>
-        <li>Leaks from the setter or the press happen before versions exist, so they cannot be traced to a college.</li>
+        <li>A leaker who rewords and shuffles every short question erases the first two layers; then only numbers and answers can name the college. In our tests it gave a shortlist rather than blame an innocent college. A trace is a lead to confirm, not proof.</li>
+        <li>An answer key needs about 14 correct answers to name a college; a key full of mistakes gives a shortlist.</li>
+        <li>Leaks from the setter or the press happen before versions exist. A leaked answer key that matches the master copy tells investigators to look upstream; for question text, Leak Trace holds back.</li>
       </ul>
     </div>
   </div>
@@ -808,25 +1069,39 @@ footer .wrap { display: flex; flex-wrap: wrap; justify-content: space-between; g
 <section id='plan'>
   <div class='wrap'>
     <div class='intro'>
-      <h2>Seven days, one submission.</h2>
-      <p>The portal closes on Saturday 24 October. We submit a day early.</p>
+      <h2>From prototype to a university exam.</h2>
     </div>
-    <div class='gantt' role='list'>
-      <div class='ghead' aria-hidden='true'><span>Task</span><span>Sun 18</span><span>Mon 19</span><span>Tue 20</span><span>Wed 21</span><span>Thu 22</span><span>Fri 23</span><span>Sat 24</span></div>
-      <div class='grow' role='listitem'><p class='t'><span class='d'>Sun 18 Oct</span><b>Go or no-go by 10 am.</b> Patent and paper search; student survey goes live.</p><span class='bar key' style='grid-column: 2 / 3'></span></div>
-      <div class='grow' role='listitem'><p class='t'><span class='d'>18–19 Oct</span>Generator and codebook: per-college PDFs and answer keys.</p><span class='bar' style='grid-column: 2 / 4'></span></div>
-      <div class='grow' role='listitem'><p class='t'><span class='d'>19–20 Oct</span>Faculty approves wording variants; versions issued for the lab.</p><span class='bar' style='grid-column: 3 / 5'></span></div>
-      <div class='grow' role='listitem'><p class='t'><span class='d'>21–22 Oct</span>Leak lab: 20–30 classmates, 300+ leaks, decoded blind.</p><span class='bar' style='grid-column: 5 / 7'></span></div>
-      <div class='grow' role='listitem'><p class='t'><span class='d'>22–23 Oct</span>Score and harden; write the entry, record the 2-minute video, build the deck.</p><span class='bar' style='grid-column: 6 / 8'></span></div>
-      <div class='grow' role='listitem'><p class='t'><span class='d'>Fri 23 Oct</span><b>Coordinator submits,</b> a day early.</p><span class='bar key' style='grid-column: 7 / 8'></span></div>
-      <div class='grow' role='listitem'><p class='t'><span class='d'>Sat 24 Oct</span>Portal closes.</p><span class='bar end' style='grid-column: 8 / 9'></span></div>
+    <ol class='flow road'>
+      <li><span class='num'>1</span><b>Done, October 2026</b><p>Decoder, codes, OCR test, key custody, hundreds of thousands of simulated leaks and a research paper.</p></li>
+      <li><span class='num'>2</span><b>November 2026</b><p>A leak lab with classmates, a student survey, and the per-college PDF generator with answer keys.</p></li>
+      <li><span class='num'>3</span><b>Next semester</b><p>A pilot in one college's internal exams, one version per hall; marks published per version.</p></li>
+      <li class='end'><span class='num'>4</span><b>2027</b><p>One affiliating university exam series, then Telugu and other Indian-language papers.</p></li>
+    </ol>
+  </div>
+</section>
+
+<section id='research'>
+  <div class='wrap'>
+    <div class='intro'>
+      <h2>Read the research.</h2>
+      <p>Every number on this page comes from code we can share and re-run. The paper sets out the method, the codes, the proof and every experiment, including where Leak Trace fails.</p>
     </div>
-    <div class='gates'>
-      <h3>Two go/no-go checks for Sunday morning</h3>
-      <ul class='ticks'>
-        <li>Our university, or a nearby one, sends papers to colleges as files they print. Bangalore University and Kannur University already do.</li>
-        <li>20–30 classmates agree to act as “colleges” in the leak lab on 21–22 Oct.</li>
-      </ul>
+    <div class='docs'>
+      <a class='doc' href='https://raw.githack.com/SakethSumanBathini/SakethSumanBathini/leak-trace-site/leak-trace-paper.pdf' target='_blank' rel='noopener'>
+        <span class='doc-kind'>Research paper · PDF</span>
+        <b>Tracing partial, retyped exam-paper leaks to their source college</b>
+        <span class='doc-sub'>Method, codes, the 1-in-10,000 proof and all experiments.</span>
+      </a>
+      <a class='doc' href='https://raw.githack.com/SakethSumanBathini/SakethSumanBathini/leak-trace-site/leak-trace-concept.pdf' target='_blank' rel='noopener'>
+        <span class='doc-kind'>Concept document · PDF</span>
+        <b>Leak Trace in ten pages</b>
+        <span class='doc-sub'>The problem, the solution, the evidence, the cost and the plan.</span>
+      </a>
+      <a class='doc' href='https://github.com/SakethSumanBathini/SakethSumanBathini/tree/leak-trace-site' target='_blank' rel='noopener'>
+        <span class='doc-kind'>Code · GitHub</span>
+        <b>Simulations, attack tests and key custody</b>
+        <span class='doc-sub'>Python and JavaScript; seeds included, so every table can be re-run.</span>
+      </a>
     </div>
   </div>
 </section>
@@ -840,13 +1115,13 @@ footer .wrap { display: flex; flex-wrap: wrap; justify-content: space-between; g
       <li><a href='https://onmanorama.com/news/kerala/2025/04/18/kannur-university-exam-paper-leaked-through-whatsapp.html' target='_blank' rel='noopener'>Kannur University paper leaked through WhatsApp (Onmanorama)</a></li>
       <li><a href='https://onmanorama.com/news/kerala/2025/04/19/bekal-police-book-kasaragod-college-principal-leaking-bca-questions-students.html' target='_blank' rel='noopener'>Kannur: re-exam recommended only for the source college (Onmanorama)</a></li>
       <li><a href='https://www.deccanherald.com/amp/story/india%2Fkarnataka%2Fbengaluru%2Flaw-college-vice-principal-among-three-arrested-for-exam-paper-leak-2-3410420' target='_blank' rel='noopener'>Law college vice-principal arrested in KSLU leak (Deccan Herald)</a></li>
+      <li><a href='https://www.siasat.com/telangana-agricultural-university-exam-paper-leaked-4-staff-suspended-3323281/amp/' target='_blank' rel='noopener'>Telangana agricultural university paper leak (Siasat)</a></li>
       <li><a href='https://www.deccanherald.com/india/karnataka/bengaluru/karnataka-sslc-preparatory-question-paper-leak-students-sold-papers-on-social-media-for-rs-200rs-500-six-teachers-arrestedtwo-minor-students-detained-3859190' target='_blank' rel='noopener'>Karnataka SSLC preparatory paper leak (Deccan Herald)</a></li>
       <li><a href='https://thesouthfirst.com/keralam/question-paper-leak-kerala-crime-branch-arrests-school-peon/' target='_blank' rel='noopener'>Kerala question paper leak: peon arrested (South First)</a></li>
       <li><a href='https://thesouthfirst.com/telangana/day-2-of-ssc-exams-in-telangana-2nd-question-paper-leaked-circulated-on-whatsapp' target='_blank' rel='noopener'>Telangana SSC leaks (South First)</a></li>
       <li><a href='https://www.etvbharat.com/en/!state/bangalore-university-to-send-bed-exam-question-papers-online-to-prevent-leaks-enn25022103978' target='_blank' rel='noopener'>Bangalore University sends BEd papers online (ETV Bharat)</a></li>
-      <li><a href='https://www.policyedge.in/p/the-hidden-price-tag-of-a-leaked-paper-indias-silent-tax-on-human-capital' target='_blank' rel='noopener'>The hidden price tag of a leaked paper (PolicyEdge)</a></li>
-      <li><a href='https://scroll.in/latest/1092784/undergraduate-neet-2026-cancelled-after-alleged-paper-leak' target='_blank' rel='noopener'>NEET-UG 2026 cancelled after alleged leak (Scroll)</a></li>
-      <li><a href='https://www.governancenow.com/news/regular-story/lok-sabha-passes-amendment-bill-to-improve-public-examination-system' target='_blank' rel='noopener'>Lok Sabha passes the 2026 anti-leak amendment (Governance Now)</a></li>
+      <li><a href='https://newslaundry.com/2024/07/31/10-years-89-paper-leak-cases-48-retests-from-centre-to-states-few-plugs-for-a-leaky-record' target='_blank' rel='noopener'>10 years, 89 paper leak cases, 48 re-tests (Newslaundry)</a></li>
+      <li><a href='https://moneylife.in/article/neetug-2026-cancelled-over-paper-leak-allegations-reexam-to-be-held-cbi-probe-ordered/80438.html' target='_blank' rel='noopener'>NEET-UG 2026 cancelled, re-exam ordered (Moneylife)</a></li>
       <li><a href='https://patents.google.com/patent/US7181158B2/en' target='_blank' rel='noopener'>IBM patent US7181158B2 (Google Patents)</a></li>
       <li><a href='https://en.wikipedia.org/wiki/Canary_trap' target='_blank' rel='noopener'>Canary trap (Wikipedia)</a></li>
     </ul>
@@ -857,8 +1132,8 @@ footer .wrap { display: flex; flex-wrap: wrap; justify-content: space-between; g
 
 <footer>
   <div class='wrap'>
-    <p>Leak Trace, built for the Seva First Innovation Challenge 2026, South Zone.</p>
-    <p>Results come from simulations run on 17–18 Oct 2026. College codes in the demo are fictional.</p>
+    <p>Leak Trace, built for the Seva First Innovation Challenge 2026, South Zone, by a team from Sreyas Institute of Engineering and Technology, Hyderabad.</p>
+    <p>Results come from simulations run on 17–18 and 30 Oct 2026. College codes in the demo are fictional.</p>
   </div>
 </footer>
 
@@ -1098,7 +1373,7 @@ footer .wrap { display: flex; flex-wrap: wrap; justify-content: space-between; g
       if (s2 > best) { best = s2; ba = a2; bb = b2; }
     }
     var gap = ll[top] - ll[second], overNull = ll[top] - nll;
-    var res = { status: 'held', k: k, numbered: numbered, own: own, clear: clearCount, order: order, post: post, ll: ll, gap: gap, named: [], stage: 0 };
+    var res = { status: 'held', k: k, numbered: numbered, own: own, clear: clearCount, order: order, post: post, ll: ll, nll: nll, gap: gap, named: [], stage: 0 };
     if (gap >= TAU && overNull >= TAU + LOG_N && best - P[top * N + top] < TAU) {
       res.status = 'named'; res.named = [top]; res.stage = 1; return res;
     }
@@ -1147,6 +1422,69 @@ footer .wrap { display: flex; flex-wrap: wrap; justify-content: space-between; g
     for (i = 0; i < N; i++) if (ll[i] >= mx - TAU) { m[i] = 1; n++; }
     return { mask: m, count: n };
   }
+
+  // ------------------------------------------------------------ evidence meter: how the odds grow, line by line
+  // series: [{ label, cls: 'lead' | 'run' | 'truth', v: [log10 odds against an outside copy after line t, or null] }]
+  var SUP = { '0': '⁰', '1': '¹', '2': '²', '3': '³', '4': '⁴', '5': '⁵', '6': '⁶', '7': '⁷', '8': '⁸', '9': '⁹', '-': '⁻' };
+  function pow10(e) { return e === 0 ? '1' : e === 1 ? '10' : '10' + String(e).split('').map(function (ch) { return SUP[ch]; }).join(''); }
+  function drawMeter(root, o) {
+    while (root.firstChild) root.removeChild(root.firstChild);
+    var cw = (root.parentNode && root.parentNode.clientWidth) || 960;
+    var W = Math.max(520, Math.min(960, cw)), H = W < 700 ? 300 : 320, L = 62, R = W - 150, T = 38, B = H - 46, n = o.steps;
+    root.setAttribute('viewBox', '0 0 ' + W + ' ' + H);
+    var lo = 0, hi = o.bar + 1.5;
+    o.series.forEach(function (s) { s.v.forEach(function (v) { if (v !== null) { lo = Math.min(lo, v); hi = Math.max(hi, v + 0.6); } }); });
+    lo = Math.max(Math.floor(lo), -6); hi = Math.ceil(hi);
+    function X(t) { return n <= 1 ? (L + R) / 2 : L + (t - 1) / (n - 1) * (R - L); }
+    function Y(v) { return B - (Math.max(lo, Math.min(hi, v)) - lo) / (hi - lo) * (B - T); }
+    var step = hi - lo > 8 ? 2 : 1;
+    for (var e = Math.ceil(lo / step) * step; e <= hi; e += step) {
+      svg('line', { 'class': 'gl', x1: L, x2: R, y1: Y(e), y2: Y(e) }, root);
+      svg('text', { 'class': 'ax', x: L - 8, y: Y(e) + 4, 'text-anchor': 'end' }, root).textContent = pow10(e);
+    }
+    for (var t = 1; t <= n; t++) svg('text', { 'class': 'ax', x: X(t), y: B + 18, 'text-anchor': 'middle' }, root).textContent = String(t);
+    svg('text', { 'class': 'ax', x: (L + R) / 2, y: H - 4, 'text-anchor': 'middle' }, root).textContent = o.xLabel || 'Lines read';
+    svg('line', { 'class': 'barline', x1: L, x2: R, y1: Y(o.bar), y2: Y(o.bar) }, root);
+    svg('text', { 'class': 'barlab', x: R + 8, y: Y(o.bar) + 4 }, root).textContent = 'Naming bar';
+    if (o.namedAt) {
+      var right = X(o.namedAt) > (L + R) / 2;
+      svg('line', { 'class': 'namedline', x1: X(o.namedAt), x2: X(o.namedAt), y1: T - 22, y2: B }, root);
+      svg('text', { 'class': 'namedlab', x: X(o.namedAt) + (right ? -8 : 8), y: T - 12, 'text-anchor': right ? 'end' : 'start' }, root).textContent = 'Named at ' + (o.unit || 'line') + ' ' + o.namedAt;
+    }
+    var ends = [];
+    o.series.slice().reverse().forEach(function (s) {
+      var d = '', pen = false;
+      s.v.forEach(function (v, i) {
+        if (v === null) { pen = false; return; }
+        d += (pen ? 'L' : 'M') + X(i + 1).toFixed(1) + ' ' + Y(v).toFixed(1) + ' '; pen = true;
+      });
+      if (!d) return;
+      svg('path', { 'class': 'mline ' + s.cls, d: d }, root);
+      s.v.forEach(function (v, i) {
+        if (v === null) return;
+        var c = svg('circle', { 'class': 'mdot ' + s.cls, cx: X(i + 1), cy: Y(v), r: s.cls === 'lead' ? 4.5 : 3.5 }, root);
+        svg('title', null, c).textContent = s.label + ', after ' + (o.unit || 'line') + ' ' + (i + 1) + ': ' + oddsWords(v) + ' times likelier than an outside copy';
+      });
+      var last = -1; s.v.forEach(function (v, i) { if (v !== null) last = i; });
+      if (last >= 0) ends.push({ s: s, y: Y(s.v[last]) });
+    });
+    ends.sort(function (a, b) { return a.y - b.y; });
+    var prev = -Infinity;
+    ends.forEach(function (e) {
+      var y = Math.max(e.y, prev + 16); prev = y;
+      svg('text', { 'class': 'mlab ' + e.s.cls, x: R + 8, y: Math.min(B, y) + 4 }, root).textContent = e.s.label;
+    });
+  }
+  function oddsWords(l10) {
+    if (l10 < -0.5) return 'less than one (' + pow10(Math.round(l10)) + ')';
+    var x = Math.pow(10, l10);
+    if (x < 10) return x.toFixed(1);
+    if (x < 1e5) return Math.round(x).toLocaleString('en-IN');
+    if (x < 1e7) return (x / 1e5).toFixed(x < 1e6 ? 1 : 0) + ' lakh';
+    if (x < 1e9) return (x / 1e7).toFixed(1) + ' crore';
+    return pow10(Math.round(l10));
+  }
+  var LOG10_BAR = Math.log10(ODDS * N);
 
   // ------------------------------------------------------------ bubble grid (one bubble per college)
   function makeGrid(root, n, cols, opts) {
@@ -1522,6 +1860,27 @@ footer .wrap { display: flex; flex-wrap: wrap; justify-content: space-between; g
         top5.appendChild(li);
       });
 
+      // evidence meter: decode every prefix of the leak, in the order its lines appear
+      var mroot = $('meter');
+      if (mroot) {
+        var steps = [], namedAt = null;
+        for (var t = 1; t <= res.parsed.length; t++) {
+          var r2 = decode(res.parsed.slice(0, t));
+          steps.push(r2.status === 'empty' ? null : r2);
+          if (namedAt === null && r2.status === 'named') namedAt = t;
+        }
+        var picks = [{ c: res.order[0], cls: 'lead' }, { c: res.order[1], cls: 'run' }];
+        truth.forEach(function (s) { if (s !== res.order[0] && s !== res.order[1]) picks.push({ c: s, cls: 'truth' }); });
+        drawMeter(mroot, {
+          steps: res.parsed.length, bar: LOG10_BAR, namedAt: res.status === 'named' ? namedAt : null, xLabel: 'Lines read, in the order they appear',
+          series: picks.map(function (pk) { return { label: code(pk.c), cls: pk.cls, v: steps.map(function (r3) { return r3 ? (r3.ll[pk.c] - r3.nll) / Math.LN10 : null; }) }; })
+        });
+        var lead = res.order[0], fin = steps[steps.length - 1];
+        $('meterNote').textContent = fin
+          ? 'After the last line, ' + code(lead) + ' makes the leak ' + oddsWords((fin.ll[lead] - fin.nll) / Math.LN10) + ' times likelier than a copy from outside the 500 colleges, and ' + times(Math.exp(res.gap)) + ' times likelier than ' + code(res.order[1]) + '.'
+          : '';
+      }
+
       if (current) {
         var p = el('p');
         p.appendChild(document.createTextNode(truth.length > 1 ? 'Actual sources: ' : 'Actual source: '));
@@ -1582,6 +1941,206 @@ footer .wrap { display: flex; flex-wrap: wrap; justify-content: space-between; g
 
     newLeak();
     trace();
+  })();
+
+
+  // ------------------------------------------------------------ answer keys (paraphrase-proof marks)
+  // Each college's MCQ options are arranged so that its answer key is a codeword of a quaternary linear [20, 5, 12]
+  // code, with the four letters relabelled per position so every key is balanced: any two keys differ in at least 12
+  // of 20 answers, and every key differs from the setter's master key (the zero codeword, never issued) in at least 12.
+  var KEY_Q = 20, KEY_DELTA = 0.2;
+  var GF4 = [[0, 0, 0, 0], [0, 1, 2, 3], [0, 2, 3, 1], [0, 3, 1, 2]];
+  var KEY_G = [[1,0,0,0,0,3,0,1,1,2,0,1,2,3,3,3,2,3,1,0],[0,1,0,0,0,0,2,3,2,2,1,1,1,0,3,1,2,2,2,0],[0,0,1,0,0,3,1,1,3,1,0,0,2,0,2,0,3,2,2,3],[0,0,0,1,0,1,3,0,2,1,2,1,0,1,3,3,3,3,0,3],[0,0,0,0,1,1,2,2,2,3,3,0,0,3,3,1,0,2,1,3]];
+  var KEY_LABELS = [[3,2,0,1],[0,1,3,2],[2,3,1,0],[3,0,1,2],[1,0,3,2],[0,1,3,2],[0,1,2,3],[1,2,0,3],[0,1,3,2],[1,0,3,2],[2,1,0,3],[0,3,1,2],[1,2,3,0],[0,3,1,2],[3,2,1,0],[2,0,3,1],[1,3,0,2],[0,2,1,3],[2,0,3,1],[1,0,2,3]];   // letter used at each position for each code symbol (balances every key)
+  var KEY_MSGS = [1,4,5,6,8,9,10,11,14,15,16,18,20,23,24,25,26,29,30,31,32,34,35,39,41,43,44,45,47,54,55,56,57,58,59,60,61,64,65,67,69,74,75,77,79,80,81,85,87,88,91,93,94,95,96,97,98,101,103,104,106,107,109,111,113,114,116,117,119,123,126,127,128,132,133,134,135,136,138,139,143,144,147,148,149,150,151,153,156,157,159,161,163,164,165,167,170,171,173,174,177,181,182,186,188,189,192,194,196,198,200,201,203,205,207,210,211,212,214,217,219,221,222,225,226,227,228,230,234,235,236,237,238,239,244,245,246,247,248,250,251,252,255,256,258,259,261,263,264,267,269,271,279,280,281,282,284,286,288,289,290,291,292,293,294,296,298,303,304,306,313,314,315,318,319,321,323,324,325,327,328,330,334,336,337,338,339,340,342,343,344,345,346,347,351,352,356,357,358,368,372,373,374,376,377,378,380,381,382,384,385,386,388,389,390,393,395,396,397,400,401,404,406,407,409,412,413,415,416,418,420,421,422,423,425,426,428,429,430,431,432,436,437,438,439,440,441,444,449,456,458,459,460,464,466,467,469,472,473,474,475,477,480,481,483,487,489,490,492,493,498,501,502,504,506,507,512,513,514,519,522,524,529,530,531,533,535,536,539,540,542,545,549,552,553,558,559,560,563,568,576,578,580,581,585,587,590,593,595,597,599,600,603,605,606,616,617,619,621,624,626,627,629,630,638,641,645,646,647,648,649,651,652,654,655,657,660,664,668,674,675,676,683,684,686,687,688,691,692,695,699,702,704,705,708,711,717,718,721,724,727,728,729,730,731,733,734,735,742,743,746,747,749,750,752,753,754,756,758,760,761,762,764,765,769,770,771,772,773,774,776,778,785,791,792,793,795,796,798,799,806,812,813,815,816,817,818,822,823,827,830,833,834,835,845,850,852,853,854,857,859,860,863,865,867,868,870,871,874,875,876,879,881,882,883,887,890,893,894,896,899,900,902,903,906,910,913,916,917,918,920,921,926,927,929,931,935,937,938,942,948,949,951,952,953,954,955,956,958,959,961,962,963,964,967,968,969,973,977,978,979,982,983,988,989,990,992,995,996,998,999,1001,1004,1010,1011,1012,1016,1018,1021,1022];
+  function keyOf(m) {
+    var dg = [(m >> 8) & 3, (m >> 6) & 3, (m >> 4) & 3, (m >> 2) & 3, m & 3], out = new Uint8Array(KEY_Q);
+    for (var j = 0; j < KEY_Q; j++) {
+      var s = 0;
+      for (var i = 0; i < 5; i++) s ^= GF4[dg[i]][KEY_G[i][j]];
+      out[j] = KEY_LABELS[j][s];
+    }
+    return out;
+  }
+  var KEYS = KEY_MSGS.map(keyOf);               // KEYS[c][q]: 0..3 = A..D, the right option's letter for question q+1
+  KEYS.push(keyOf(0));                          // index N: the master key (setter or press)
+  function parseKey(text) {
+    var out = {}, order = [], m, re = /(?:^|[^A-Za-z0-9])(?:[Qq](?:uestion|n|no)?[ .]*)?([0-9]{1,2})[ ]*[).:=-]*[ ]*[(]?([A-Da-d])[)]?(?![A-Za-z])/g;
+    while ((m = re.exec(text))) {
+      var q = parseInt(m[1], 10) - 1;
+      if (q < 0 || q >= KEY_Q) continue;
+      if (!(q in out)) order.push(q);
+      out[q] = 'ABCD'.indexOf(m[2].toUpperCase());
+      re.lastIndex = m.index + m[0].length - 1;
+    }
+    if (!order.length) {   // a bare run of letters: B D A C ... or BDAC...
+      var letters = text.toUpperCase().replace(/[^A-D]/g, '');
+      if (/^[A-D ,]+$/.test(text.toUpperCase().split(NL).join(' ').trim())) for (var i = 0; i < Math.min(letters.length, KEY_Q); i++) { out[i] = 'ABCD'.indexOf(letters[i]); order.push(i); }
+    }
+    return order.map(function (q) { return { q: q, a: out[q] }; });
+  }
+  function keyDecode(items) {
+    var k = items.length, C = N + 1, ll = new Float64Array(C), hit = Math.log(1 - KEY_DELTA), miss = Math.log(KEY_DELTA / 3);
+    var traj = [];   // ll after each answer, for the meter
+    for (var t = 0; t < k; t++) {
+      for (var c = 0; c < C; c++) ll[c] += KEYS[c][items[t].q] === items[t].a ? hit : miss;
+      traj.push(Float64Array.from(ll));
+    }
+    var nll = k * Math.log(0.25);
+    var order = range(C).sort(function (a, b) { return ll[b] - ll[a]; });
+    var top = order[0], gap = k ? ll[top] - ll[order[1]] : 0, over = ll[top] - nll;
+    var named = k > 0 && gap >= TAU && over >= TAU + Math.log(C);
+    var mx = ll[top], z = 0; for (var c2 = 0; c2 < C; c2++) z += Math.exp(ll[c2] - mx);
+    return { k: k, ll: ll, nll: nll, order: order, gap: gap, named: named, top: top, traj: traj,
+             post: order.slice(0, 5).map(function (c) { return { c: c, p: Math.exp(ll[c] - mx) / z }; }) };
+  }
+  function keyName(c) { return c === N ? 'Setter’s master key' : code(c); }
+
+  (function keysDemo() {
+    var text = $('akText'), sheet = $('akSheet'), meter = $('akMeter');
+    if (!text) return;
+    var current = null;
+    function val(name, dflt) { var r = document.querySelector('input[name=' + name + ']:checked'); return r ? r.value : dflt; }
+    function makeKey() {
+      var k = +val('ak', '16'), err = +val('ae', '0'), from = val('asrc', 'college');
+      var src = from === 'master' ? N : Math.floor(Math.random() * N);
+      var qs = shuffle(range(KEY_Q), Math.random).slice(0, k).sort(function (a, b) { return a - b; });
+      var parts = qs.map(function (q) {
+        var a = from === 'outside' ? Math.floor(Math.random() * 4) : KEYS[src][q];
+        if (from !== 'outside' && Math.random() < err) a = (a + 1 + Math.floor(Math.random() * 3)) % 4;
+        return (q + 1) + '-' + 'ABCD'[a];
+      });
+      var lines = [];
+      for (var i = 0; i < parts.length; i += 5) lines.push(parts.slice(i, i + 5).join('  '));
+      current = { src: from === 'outside' ? null : src, from: from, edited: false };
+      text.value = 'DS mid-term objective answers' + NL + lines.join(NL);
+      $('akNote').textContent = 'The source stays secret until you trace.';
+    }
+    text.addEventListener('input', function () { if (current) current.edited = true; });
+
+    function drawSheet(items, ringKey) {
+      while (sheet.firstChild) sheet.removeChild(sheet.firstChild);
+      var colW = 150, rowH = 22, top = 22;
+      sheet.setAttribute('viewBox', '0 0 ' + 2 * colW + ' ' + (top + 10 * rowH + 4));
+      var filt = penFilter(sheet, 'akSheet-pen'), seen = {};
+      items.forEach(function (it) { seen[it.q] = it.a; });
+      for (var half = 0; half < 2; half++) ['A', 'B', 'C', 'D'].forEach(function (L, a) {
+        svg('text', { 'class': 'oh', x: half * colW + 40 + a * 26, y: 12, 'text-anchor': 'middle' }, sheet).textContent = L;
+      });
+      var layer = svg('g', { filter: filt }, sheet);
+      for (var q = 0; q < KEY_Q; q++) {
+        var col = q < 10 ? 0 : 1, row = q % 10, y = top + row * rowH + rowH / 2;
+        svg('text', { 'class': 'onum', x: col * colW + 18, y: y + 4, 'text-anchor': 'end' }, sheet).textContent = String(q + 1);
+        for (var a = 0; a < 4; a++) {
+          var cx = col * colW + 40 + a * 26;
+          svg('circle', { 'class': 'ob', cx: cx, cy: y, r: 7.5 }, sheet);
+          if (q in seen && seen[q] === a) svg('circle', { 'class': 'pen on', cx: cx, cy: y, r: 7.9 }, layer);
+          if (ringKey && ringKey[q] === a) svg('circle', { 'class': 'oring' + (q in seen ? (seen[q] === a ? ' ok' : ' miss') : ''), cx: cx, cy: y, r: 10.5 }, sheet);
+        }
+      }
+    }
+    function setStatus(text2, cls) {
+      var st = $('akStatus'); st.className = 'status' + (cls ? ' ' + cls : ''); st.textContent = '';
+      st.appendChild(el('i')); st.appendChild(document.createTextNode(text2));
+    }
+    function trace() {
+      var items = parseKey(text.value), res = keyDecode(items), who = $('akWho'), why = $('akWhy'), top5 = $('akTop5'), reveal = $('akReveal');
+      top5.textContent = ''; reveal.textContent = '';
+      if (!items.length) {
+        setStatus('No answers recognised'); who.textContent = 'Nothing to trace';
+        why.textContent = 'Type answers like 1-B 2-D 3-A, one or several per line.';
+        drawSheet([], null); drawMeter(meter, { steps: 1, series: [], bar: LOG10_BAR, unit: 'answer', xLabel: 'Answers read' });
+        $('akMeterNote').textContent = '';
+        return;
+      }
+      var lead = res.top, ringKey = KEYS[lead], matches = items.filter(function (it) { return ringKey[it.q] === it.a; }).length;
+      var bestOther = 0;
+      for (var c = 0; c < N + 1; c++) if (c !== lead) { var mm = 0; items.forEach(function (it) { if (KEYS[c][it.q] === it.a) mm++; }); bestOther = Math.max(bestOther, mm); }
+      if (res.named) {
+        setStatus(lead === N ? 'Traced upstream' : 'Source named', 'named');
+        who.textContent = keyName(lead);
+        why.textContent = (lead === N
+          ? 'The key matches the setter’s master order, which no college received, so the leak happened before printing: at the setter or the press. '
+          : 'Every college’s options are in their own order, so every college has its own answer key. ')
+          + 'This key matches ' + matches + ' of ' + items.length + ' answers; no other key matches more than ' + bestOther + '. Named because it is at least ' + ODDS_TEXT + ' times likelier than every other key, and ' + ODDS_TEXT + ' × 501 times likelier than a made-up key.';
+      } else {
+        setStatus('Held back');
+        who.textContent = 'Shortlist only';
+        why.textContent = 'The best key matches ' + matches + ' of ' + items.length + ' answers and the next matches ' + bestOther + '. That is not yet ' + ODDS_TEXT + ' to 1, so investigators get a shortlist. Real keys usually run to 20 answers or more.';
+      }
+      res.post.forEach(function (row) {
+        var li = el('li', row.c === lead && res.named ? 'lead' : '');
+        li.appendChild(el('span', '', row.c === N ? 'Master key' : code(row.c)));
+        var bar = el('span', 'bar'), f = el('i'); f.style.width = Math.max(1.5, row.p * 100) + '%'; bar.appendChild(f); li.appendChild(bar);
+        li.appendChild(el('span', 'pc', pct(row.p)));
+        top5.appendChild(li);
+      });
+      drawSheet(items, ringKey);
+      // meter: the leader, the runner-up and (in the demo) the real source
+      var picks = [{ c: lead, cls: 'lead' }, { c: res.order[1], cls: 'run' }];
+      if (current && !current.edited && current.src !== null && current.src !== lead && current.src !== res.order[1]) picks.push({ c: current.src, cls: 'truth' });
+      var namedAt = null;
+      for (var t = 0; t < items.length && namedAt === null; t++) {
+        var tr = res.traj[t], o2 = range(N + 1).sort(function (a, b) { return tr[b] - tr[a]; }), nl = (t + 1) * Math.log(0.25);
+        if (tr[o2[0]] - tr[o2[1]] >= TAU && tr[o2[0]] - nl >= TAU + Math.log(N + 1)) namedAt = t + 1;
+      }
+      drawMeter(meter, {
+        steps: items.length, bar: Math.log10(ODDS * (N + 1)), namedAt: res.named ? namedAt : null, unit: 'answer', xLabel: 'Answers read, in the order they appear',
+        series: picks.map(function (p) { return { label: p.c === N ? 'Master key' : code(p.c), cls: p.cls, v: res.traj.map(function (tr, t) { return (tr[p.c] - (t + 1) * Math.log(0.25)) / Math.LN10; }) }; })
+      });
+      $('akMeterNote').textContent = 'Each line shows how many times likelier a key makes the leak than a made-up key would. A college is named only when its line crosses the bar and stays ' + ODDS_TEXT + ' times above every other.';
+      if (current) {
+        var p = el('p');
+        if (current.from === 'outside') p.appendChild(document.createTextNode('This key was made up. '));
+        else { p.appendChild(document.createTextNode('Actual source: ')); p.appendChild(el('b', '', keyName(current.src))); p.appendChild(document.createTextNode('. ')); }
+        if (res.named) {
+          var wrong = current.from === 'outside' || lead !== current.src;
+          if (wrong) p.appendChild(el('span', 'bad', 'Wrong accusation.')); else p.appendChild(document.createTextNode('Correct.'));
+        } else if (current.from !== 'outside') {
+          p.appendChild(document.createTextNode('Not named; ranked ' + ordinal(res.order.indexOf(current.src) + 1) + ' of 501.'));
+        } else p.appendChild(document.createTextNode('Nobody named.'));
+        if (current.edited) p.appendChild(document.createTextNode(' You edited the key.'));
+        reveal.appendChild(p);
+      }
+    }
+    $('akMake').addEventListener('click', function () { makeKey(); trace(); });
+    $('akTrace').addEventListener('click', trace);
+    Array.prototype.slice.call(document.querySelectorAll('input[name=ak], input[name=ae], input[name=asrc]')).forEach(function (x) {
+      x.addEventListener('change', function () { makeKey(); trace(); });
+    });
+    makeKey(); trace();
+  })();
+
+  // ------------------------------------------------------------ the guarantee, checked (from sim_tier3.py)
+  (function guarantee() {
+    var root = $('gchart'); if (!root) return;
+    var Ts = [10, 100, 1000, 10000];
+    var series = [
+      { label: 'Short questions, real papers', cls: 'run', v: [0.016045, 0.01128, 0.000735, 5.5e-05] },
+      { label: 'Answer keys', cls: 'lead', v: [0.0510125, 0.0053925, 0.000405, 3.5e-05] }
+    ];
+    var cw = (root.parentNode && root.parentNode.clientWidth) || 640;
+    var W = Math.max(520, Math.min(640, cw)), H = 330, L = 78, R = W - 52, T = 16, B = H - 50;
+    root.setAttribute('viewBox', '0 0 ' + W + ' ' + H);
+    function X(i) { return L + i / 3 * (R - L); }
+    function Y(p) { return T + (-Math.log10(p) - 0.5) / 5.5 * (B - T); }   // 10^-0.5 .. 10^-6
+    [-1, -2, -3, -4, -5, -6].forEach(function (e) {
+      svg('line', { 'class': 'gl', x1: L, x2: R, y1: Y(Math.pow(10, e)), y2: Y(Math.pow(10, e)) }, root);
+      svg('text', { 'class': 'ax', x: L - 8, y: Y(Math.pow(10, e)) + 4, 'text-anchor': 'end' }, root).textContent = '1 in ' + pow10(-e);
+    });
+    Ts.forEach(function (t, i) { svg('text', { 'class': 'ax', x: X(i), y: B + 20, 'text-anchor': 'middle' }, root).textContent = t.toLocaleString('en-IN') + ' to 1'; });
+    svg('text', { 'class': 'ax', x: (L + R) / 2, y: H - 6, 'text-anchor': 'middle' }, root).textContent = 'Odds bar T (an outside copy must reach T × 500)';
+    var bd = Ts.map(function (t, i) { return (i ? 'L' : 'M') + X(i) + ' ' + Y(1 / t); }).join(' ');
+    svg('path', { 'class': 'barline', d: bd }, root);
+    svg('text', { 'class': 'barlab', x: X(0) + 10, y: Y(0.1) - 8 }, root).textContent = 'Proven limit';
+    series.forEach(function (s) {
+      var d = s.v.map(function (p, i) { return (i ? 'L' : 'M') + X(i) + ' ' + Y(Math.max(p, 1e-6)); }).join(' ');
+      svg('path', { 'class': 'mline ' + s.cls, d: d }, root);
+      s.v.forEach(function (p, i) {
+        var c = svg('circle', { 'class': 'mdot ' + s.cls, cx: X(i), cy: Y(Math.max(p, 1e-6)), r: 4 }, root);
+        svg('title', null, c).textContent = s.label + ' at ' + Ts[i].toLocaleString('en-IN') + ' to 1: ' + (p ? '1 in ' + Math.round(1 / p).toLocaleString('en-IN') : 'none') + ' outside copies crossed the bar';
+      });
+    });
   })();
 
   // ------------------------------------------------------------ results chart

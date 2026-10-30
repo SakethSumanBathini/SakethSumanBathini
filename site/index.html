@@ -1,0 +1,596 @@
+<!doctype html>
+<html lang='en'>
+<head>
+<meta charset='utf-8'>
+<meta name='viewport' content='width=device-width, initial-scale=1'>
+<title>Leak Trace</title>
+<meta name='description' content='Leak Trace names the college a leaked exam paper came from, even when the questions are retyped, reworded or only the answer key leaks. Our entry for the Seva First Innovation Challenge 2026.'>
+<meta property='og:title' content='Leak Trace: which of 500 colleges leaked the paper?'>
+<meta property='og:description' content='Every college gets the same questions with a hidden pattern. Try being the leaker and see if it catches you.'>
+<meta property='og:type' content='website'>
+<meta property='og:image' content='https://raw.githack.com/SakethSumanBathini/SakethSumanBathini/leak-trace-site/og.png'>
+<meta property='og:image:width' content='1200'>
+<meta property='og:image:height' content='630'>
+<meta name='twitter:card' content='summary_large_image'>
+<meta name='theme-color' content='#FFFFFF'>
+<link rel='icon' href='data:image/svg+xml,%3Csvg xmlns=%27http://www.w3.org/2000/svg%27 viewBox=%270 0 32 32%27%3E%3Ccircle cx=%2716%27 cy=%2716%27 r=%2713.5%27 fill=%27%23fff%27 stroke=%27%23E8467C%27 stroke-width=%273%27/%3E%3Ccircle cx=%2716%27 cy=%2716%27 r=%278.5%27 fill=%27%231E2FC6%27/%3E%3C/svg%3E'>
+<link rel='preconnect' href='https://fonts.googleapis.com'>
+<link rel='preconnect' href='https://fonts.gstatic.com' crossorigin>
+<link rel='stylesheet' href='https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wdth,wght@12..96,75..100,200..800&family=Tinos:ital,wght@0,400;0,700;1,400&display=swap'>
+<link rel='stylesheet' href='styles.css'>
+</head>
+<body>
+<a class='skip' href='#main'>Skip to content</a>
+
+<header class='top'>
+  <div class='wrap'>
+    <a class='mark' href='#top' aria-label='Leak Trace, back to top'><span aria-hidden='true'>L</span><span aria-hidden='true'>E</span><span aria-hidden='true'>A</span><span aria-hidden='true'>K</span><span aria-hidden='true'></span><span aria-hidden='true'>T</span><span aria-hidden='true'>R</span><span aria-hidden='true'>A</span><span aria-hidden='true'>C</span><span aria-hidden='true'>E</span></a>
+    <nav class='links' aria-label='Sections'>
+      <a href='#problem'>Problem</a>
+      <a href='#trick'>How it works</a>
+      <a href='#keys'>Answer keys</a>
+      <a href='#results'>Results</a>
+      <a href='#research'>Research</a>
+    </nav>
+    <a class='btn small' href='#demo'>Try it</a>
+  </div>
+</header>
+
+<main id='main'>
+
+<section class='hero' id='top'>
+  <div class='wrap'>
+    <h1>Which of 500 colleges leaked the paper?</h1>
+    <div class='hero-sub'>
+      <p class='lede'>Leak Trace gives every college the same exam with a hidden pattern in it. When a few questions, a photo or even just the answer key turns up on WhatsApp, the pattern points back to the college whose copy leaked.</p>
+      <div class='cta'>
+        <a class='btn' href='#demo'>Try being the leaker</a>
+        <a class='btn ghost' href='#research'>Read the research</a>
+      </div>
+    </div>
+
+    <div class='story' id='story'>
+      <figure class='cell'>
+        <div class='chat'>
+          <div class='chat-head'><b>CSE 2nd year (unofficial)</b><span>9:04 am</span></div>
+          <div class='msg'>
+            <span class='fwd'><svg viewBox='0 0 16 12' aria-hidden='true'><path d='M9 1l5 4.5L9 10M4 1l5 4.5L4 10' fill='none' stroke='currentColor' stroke-width='1.5' stroke-linejoin='round'/></svg>Forwarded many times</span>
+            <ol id='heroLines'></ol>
+          </div>
+        </div>
+        <figcaption class='cap'>Questions from the 10 am paper, retyped with mistakes and forwarded at 9:04.</figcaption>
+      </figure>
+
+      <figure class='cell' id='heroSheet'>
+        <p class='count'><b id='heroCount'>500</b><span id='heroCountLabel'>colleges still fit the leak</span></p>
+        <svg class='grid' id='heroGrid' role='img' aria-label='500 bubbles, one for each college. Bubbles fade as colleges are ruled out.'></svg>
+        <figcaption class='cap'>One bubble per college. A bubble fades as soon as the leak rules that college out.</figcaption>
+      </figure>
+
+      <div class='cell answer' aria-live='polite'>
+        <div class='answer-body'>
+          <svg class='code' id='heroCode' role='img' aria-label='College code bubbled in like an OMR sheet'></svg>
+          <div>
+            <p class='who' id='heroWho'>Reading the leak</p>
+            <p class='why' id='heroWhy'>Each line is checked against the pattern of every college.</p>
+            <button class='btn ghost small' id='replay' type='button' hidden>Replay</button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <dl class='fields'>
+      <div><dt>Entry for</dt><dd>Seva First Innovation Challenge 2026, South Zone</dd></div>
+      <div><dt>Theme</dt><dd>4. Shikshit &amp; Kaushal Bharat</dd></div>
+      <div><dt>Track</dt><dd>A, Product &amp; Technology</dd></div>
+      <div><dt>Team from</dt><dd>Sreyas Institute of Engineering and Technology, Hyderabad</dd></div>
+    </dl>
+  </div>
+</section>
+
+<section id='problem'>
+  <div class='wrap'>
+    <div class='intro'>
+      <h2>A leak shows up. Nobody can say where it came from.</h2>
+    </div>
+
+    <fieldset class='statement'>
+      <legend>Problem statement (59 words)</legend>
+      <p id='statement'>When a university exam paper leaks on WhatsApp, nobody can tell which of its 100-plus colleges leaked it. Leakers post a few typed or cropped questions without QR codes or printed IDs, so sources surface only by luck or police work, and every student risks a re-exam. It happened at Kannur University and Karnataka State Law University in 2025.</p>
+      <div class='statement-foot'>
+        <button class='btn ghost small' id='copyBtn' type='button'>Copy statement</button>
+        <span class='note' id='copyMsg' aria-live='polite'></span>
+      </div>
+    </fieldset>
+
+    <div class='hurt'>
+      <div><h3>Students</h3><p>Lose an exam they prepared for and sit a re-exam, punished for one college's leak.</p></div>
+      <div><h3>Universities</h3><p>Pay for re-exams and observers in every college, and lose credibility each time.</p></div>
+      <div><h3>Investigators</h3><p>Start with no lead and spend days or weeks on phone forensics.</p></div>
+    </div>
+
+    <h3 class='table-title'>Six recent leaks in South India, and how each source was found</h3>
+    <div class='table-wrap'>
+      <table class='register'>
+        <thead><tr><th scope='col'>When</th><th scope='col'>Where</th><th scope='col'>What happened</th><th scope='col'>How the source was found</th></tr></thead>
+        <tbody>
+          <tr><td data-label='When'>Jan 2026</td><td data-label='Where'>Telangana agricultural university (PJTSAU)</td><td data-label='What happened'>Papers for six exams reached in-service students before they sat them.</td><td data-label='How the source was found'><b>By chance.</b> The Vice-Chancellor noticed unusually high marks; CCTV showed a student finishing in ten minutes.</td></tr>
+          <tr><td data-label='When'>Jan 2026</td><td data-label='Where'>Karnataka SSLC preparatory</td><td data-label='What happened'>Papers downloaded with teachers' logins and sold on social media for ₹200–500.</td><td data-label='How the source was found'><b>Police investigation.</b> Six teachers arrested.</td></tr>
+          <tr><td data-label='When'>Apr 2025</td><td data-label='Where'>Kannur University, BCA</td><td data-label='What happened'>A principal got the PIN at 9:00 and posted 4–5 questions on WhatsApp at 9:04. The exam began at 10:00.</td><td data-label='How the source was found'><b>By luck.</b> An exam squad caught a student copying.</td></tr>
+          <tr><td data-label='When'>Jan 2025</td><td data-label='Where'>Karnataka State Law University</td><td data-label='What happened'>Sold on WhatsApp and Telegram as “two, five or 10 questions”.</td><td data-label='How the source was found'><b>Phone forensics,</b> back to a vice-principal.</td></tr>
+          <tr><td data-label='When'>Dec 2024</td><td data-label='Where'>Kerala half-yearly exams</td><td data-label='What happened'>A peon photographed a paper through a cut sealed cover. It reached YouTube.</td><td data-label='How the source was found'><b>Three months later,</b> an arrest.</td></tr>
+          <tr><td data-label='When'>Apr 2023</td><td data-label='Where'>Telangana SSC</td><td data-label='What happened'>An invigilator photographed the paper and shared it on WhatsApp.</td><td data-label='How the source was found'><b>Officials identified the invigilator.</b> Police case filed.</td></tr>
+        </tbody>
+      </table>
+    </div>
+
+    <p class='big-fact'><b>89</b><span>suspected paper leaks were reported in India in the ten years to 2024, 68 of them in state exams, and at least 48 papers had to be re-tested (Newslaundry). NEET-UG 2026 was cancelled on 12 May after a leak and re-held on 21 June.</span></p>
+  </div>
+</section>
+
+<section id='fixes'>
+  <div class='wrap'>
+    <div class='intro'>
+      <h2>Every current fix breaks when someone retypes five questions.</h2>
+      <p>Giving each recipient a slightly different copy is an old idea: spies call it a canary trap, and IBM filed a patent on a version for exam papers in 2003 (granted 2007). We found no deployed version that survives retyping, rewording and partial leaks across hundreds of colleges and states its own error rate.</p>
+    </div>
+    <div class='table-wrap'>
+      <table class='fixes'>
+        <thead><tr><th scope='col'>Fix</th><th scope='col'>Used by</th><th scope='col'>Where it breaks</th></tr></thead>
+        <tbody>
+          <tr><td data-label='Fix'>Printed QR code or serial number</td><td data-label='Used by'>Haryana board, Telangana SSC, NIOS</td><td data-label='Where it breaks' class='breaks'>Gone the moment questions are retyped</td></tr>
+          <tr><td data-label='Fix'>Hidden code readable from a photo</td><td data-label='Used by'>West Bengal board</td><td data-label='Where it breaks' class='breaks'>Gone the moment questions are retyped</td></tr>
+          <tr><td data-label='Fix'>A few reordered sets</td><td data-label='Used by'>CBSE, NEET booklet codes</td><td data-label='Where it breaks' class='breaks'>4–8 sets cannot single out one college among hundreds</td></tr>
+          <tr><td data-label='Fix'>OTP login and access logs</td><td data-label='Used by'>Paper-delivery portals</td><td data-label='Where it breaks' class='breaks'>Shows who opened the file, not who leaked it</td></tr>
+          <tr class='ours'><td data-label='Fix'>Leak Trace</td><td data-label='Used by'>Our entry</td><td data-label='What it does'>Survives retyping and rewording, tells 500 colleges apart, states its error rate</td></tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+</section>
+
+<section id='trick'>
+  <div class='wrap'>
+    <div class='intro'>
+      <h2>Same questions, same marks. A different pattern for every college.</h2>
+      <p>Each college's paper puts the questions in its own order and uses its own approved wording, like “Compare a stack and a queue” or “How does a stack differ from a queue?”. Marks, content and difficulty stay the same. That pattern is the college's code, and it survives retyping.</p>
+    </div>
+    <div class='papers' id='papers'></div>
+    <p class='explain' id='explain' aria-live='polite'></p>
+    <p class='note pattern-key'>Read the small grids like an OMR sheet. Columns A to J are the ten questions every college gets, rows are where each one is printed, and the number in a filled bubble is the wording that college got. Point at or tap a question to compare.</p>
+
+    <h3 class='table-title' id='layersTitle'>Three layers of marks, from easy to erase to costly to erase</h3>
+    <div class='table-wrap'>
+      <table class='layers' aria-labelledby='layersTitle'>
+        <thead>
+          <tr><th scope='col'>What the leaker does</th><th scope='col'><b>Order</b><span>Question order, either/or labels, sub-part and option order</span></th><th scope='col'><b>Wording</b><span>One of several approved wordings</span></th><th scope='col'><b>Numbers and answers</b><span>The values in numerical questions and the letter of each right option</span></th></tr>
+        </thead>
+        <tbody>
+          <tr><td data-label='What the leaker does'>Retypes it, with mistakes</td><td data-label='Order'><i class='sv'></i>Survives</td><td data-label='Wording'><i class='sv'></i>Survives</td><td data-label='Numbers and answers'><i class='sv'></i>Survives</td></tr>
+          <tr><td data-label='What the leaker does'>Sends a photo or a crop</td><td data-label='Order'><i class='sv'></i>Survives</td><td data-label='Wording'><i class='sv'></i>Survives</td><td data-label='Numbers and answers'><i class='sv'></i>Survives</td></tr>
+          <tr><td data-label='What the leaker does'>Drops or changes the question numbers</td><td data-label='Order'><i class='sv'></i>The order of the lines still counts</td><td data-label='Wording'><i class='sv'></i>Survives</td><td data-label='Numbers and answers'><i class='sv'></i>Survives</td></tr>
+          <tr><td data-label='What the leaker does'>Shuffles the lines</td><td data-label='Order'><i class='er'></i>Erased</td><td data-label='Wording'><i class='sv'></i>Survives</td><td data-label='Numbers and answers'><i class='sv'></i>Survives</td></tr>
+          <tr><td data-label='What the leaker does'>Rewords every question, even with an AI tool</td><td data-label='Order'><i class='sv'></i>Survives</td><td data-label='Wording'><i class='er'></i>Erased</td><td data-label='Numbers and answers'><i class='sv'></i>Survives</td></tr>
+          <tr><td data-label='What the leaker does'>Rewords and shuffles</td><td data-label='Order'><i class='er'></i>Erased</td><td data-label='Wording'><i class='er'></i>Erased</td><td data-label='Numbers and answers'><i class='sv'></i>Survives</td></tr>
+        </tbody>
+      </table>
+    </div>
+    <p class='note layers-note'>Changing the numbers or the answers would erase the third layer too, but then the leak gives students wrong answers. That is what makes it the strongest layer.</p>
+  </div>
+</section>
+
+<section id='demo'>
+  <div class='wrap'>
+    <div class='intro'>
+      <h2>Be the leaker. See if Leak Trace catches you.</h2>
+      <p>This is the decoding method from our prototype, running in your browser against 500 simulated colleges. Make a leak, try the tricks a careful leaker would use, then trace it.</p>
+    </div>
+
+    <div class='bench'>
+      <fieldset class='maker'>
+        <legend>Make a leak</legend>
+        <div>
+          <span class='field-label' id='kLabel'>Questions leaked</span>
+          <div class='kbubbles' role='radiogroup' aria-labelledby='kLabel'>
+            <label><input type='radio' name='k' value='2'><span>2</span></label>
+            <label><input type='radio' name='k' value='3'><span>3</span></label>
+            <label><input type='radio' name='k' value='4'><span>4</span></label>
+            <label><input type='radio' name='k' value='5' checked><span>5</span></label>
+            <label><input type='radio' name='k' value='6'><span>6</span></label>
+            <label><input type='radio' name='k' value='7'><span>7</span></label>
+            <label><input type='radio' name='k' value='8'><span>8</span></label>
+            <label><input type='radio' name='k' value='9'><span>9</span></label>
+            <label><input type='radio' name='k' value='10'><span>10</span></label>
+          </div>
+        </div>
+        <div>
+          <span class='field-label' id='numLabel'>Question numbers</span>
+          <div class='opt-row' role='radiogroup' aria-labelledby='numLabel'>
+            <label class='opt'><input type='radio' name='num' value='paper' checked> As printed</label>
+            <label class='opt'><input type='radio' name='num' value='own'> My own 1, 2, 3</label>
+            <label class='opt'><input type='radio' name='num' value='none'> None</label>
+          </div>
+        </div>
+        <div class='opt-group' role='group' aria-labelledby='dodgeLabel'>
+          <span class='field-label' id='dodgeLabel'>Try to dodge the trace</span>
+          <label class='opt'><input type='checkbox' id='optTypo' checked> Add typing mistakes</label>
+          <label class='opt'><input type='checkbox' id='optReword'> Reword the questions</label>
+          <label class='opt'><input type='checkbox' id='optShuffle'> Shuffle the order</label>
+          <label class='opt'><input type='checkbox' id='optMix'> Mix in a second college's copy</label>
+        </div>
+        <button class='btn ghost' id='makeBtn' type='button'>Make a new leak</button>
+      </fieldset>
+
+      <div class='leakbox'>
+        <label class='field-label' for='leakText'>The leaked message. You can edit it.</label>
+        <div class='chat'>
+          <div class='chat-head'><b>CSE 2nd year (unofficial)</b><span>now</span></div>
+          <div class='msg'>
+            <span class='fwd'><svg viewBox='0 0 16 12' aria-hidden='true'><path d='M9 1l5 4.5L9 10M4 1l5 4.5L4 10' fill='none' stroke='currentColor' stroke-width='1.5' stroke-linejoin='round'/></svg>Forwarded many times</span>
+            <textarea id='leakText' spellcheck='false' rows='9'></textarea>
+          </div>
+        </div>
+        <div class='trace-row'>
+          <button class='btn' id='traceBtn' type='button'>Trace the leak</button>
+          <span class='note' id='secretNote'></span>
+        </div>
+      </div>
+
+      <div class='result' aria-live='polite'>
+        <span class='field-label'>What Leak Trace says</span>
+        <p class='status' id='status'></p>
+        <p class='who' id='who'></p>
+        <p class='why' id='why'></p>
+        <svg class='grid' id='demoGrid' role='img' aria-label='All 500 colleges after tracing. Filled: named. Blue rings: shortlist. Pink ring: the real source.'></svg>
+        <ol class='top5' id='top5' aria-label='Top five suspects out of 500'></ol>
+        <div class='reveal' id='reveal'></div>
+        <details>
+          <summary>What the decoder read</summary>
+          <ul class='readout' id='readout'></ul>
+        </details>
+      </div>
+    </div>
+
+    <figure class='meter-fig'>
+      <figcaption class='meter-head'>
+        <h3>How the evidence built up, line by line</h3>
+        <ul class='mkey' aria-hidden='true'>
+          <li><i class='k-lead'></i>Leading college</li>
+          <li><i class='k-run'></i>Runner-up</li>
+          <li><i class='k-truth'></i>Real source, if it is neither</li>
+          <li><i class='k-bar'></i>Naming bar: 10,000 × 500</li>
+        </ul>
+      </figcaption>
+      <div class='chart-scroll'><svg class='meter' id='meter' role='img' aria-label='Odds for the leading colleges after each line of the leak, against a copy from outside the 500 colleges'></svg></div>
+      <p class='note' id='meterNote' aria-live='polite'></p>
+    </figure>
+
+    <div class='batch'>
+      <div class='batch-copy'>
+        <h3>Now run 200 leaks like this one</h3>
+        <p>Same settings, 200 random leaking colleges. Each bubble is one leak.</p>
+        <div class='batch-row'>
+          <button class='btn ghost' id='batchBtn' type='button'>Run 200 random leaks</button>
+          <span class='note' id='batchMsg' aria-live='polite'></span>
+        </div>
+        <ul class='legend'>
+          <li><i class='lg lg-ok'></i>Named the right college</li>
+          <li><i class='lg lg-top'></i>Held back, real source in the top 5</li>
+          <li><i class='lg'></i>Held back, source outside the top 5</li>
+          <li><i class='lg lg-bad'></i>Blamed an innocent college</li>
+        </ul>
+      </div>
+      <div>
+        <svg class='grid batchgrid' id='batchGrid' role='img' aria-label='200 simulated leaks, one bubble each'></svg>
+        <div class='batch-stats' id='stats' hidden>
+          <div><b id='sNamed'>0</b><span>named the right college</span></div>
+          <div><b id='sTop5'>0</b><span>real source in the top 5</span></div>
+          <div><b id='sHeld'>0</b><span>held back, evidence too thin</span></div>
+          <div><b id='sWrong'>0</b><span>blamed an innocent college</span></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id='keys'>
+  <div class='wrap'>
+    <div class='intro'>
+      <h2>Even an answer key gives the college away.</h2>
+      <p>A careful leaker can shuffle and reword questions. They cannot change the answers, or the numbers in a numerical question, without making the leaked answers wrong. So on MCQ papers whose key may leak, each college's options are arranged to put the right answers under its own letters. Any two colleges' answer keys differ in at least 12 of 20 answers.</p>
+    </div>
+
+    <div class='bench'>
+      <fieldset class='maker'>
+        <legend>Leak an answer key</legend>
+        <div>
+          <span class='field-label' id='akLabel'>Answers leaked</span>
+          <div class='kbubbles' role='radiogroup' aria-labelledby='akLabel'>
+            <label><input type='radio' name='ak' value='8'><span>8</span></label>
+            <label><input type='radio' name='ak' value='10'><span>10</span></label>
+            <label><input type='radio' name='ak' value='12'><span>12</span></label>
+            <label><input type='radio' name='ak' value='14'><span>14</span></label>
+            <label><input type='radio' name='ak' value='16' checked><span>16</span></label>
+            <label><input type='radio' name='ak' value='18'><span>18</span></label>
+            <label><input type='radio' name='ak' value='20'><span>20</span></label>
+          </div>
+        </div>
+        <div>
+          <span class='field-label' id='aeLabel'>Wrong answers in the key</span>
+          <div class='opt-row' role='radiogroup' aria-labelledby='aeLabel'>
+            <label class='opt'><input type='radio' name='ae' value='0' checked> None</label>
+            <label class='opt'><input type='radio' name='ae' value='0.1'> About 1 in 10</label>
+            <label class='opt'><input type='radio' name='ae' value='0.2'> About 1 in 5</label>
+          </div>
+        </div>
+        <div class='opt-group' role='radiogroup' aria-labelledby='asrcLabel'>
+          <span class='field-label' id='asrcLabel'>Where the key came from</span>
+          <label class='opt'><input type='radio' name='asrc' value='college' checked> A college's paper</label>
+          <label class='opt'><input type='radio' name='asrc' value='master'> The setter's master copy</label>
+          <label class='opt'><input type='radio' name='asrc' value='outside'> Made up</label>
+        </div>
+        <button class='btn ghost' id='akMake' type='button'>Make a new key</button>
+      </fieldset>
+
+      <div class='leakbox'>
+        <label class='field-label' for='akText'>The leaked answer key. You can edit it.</label>
+        <div class='chat'>
+          <div class='chat-head'><b>Mid-term doubts group</b><span>10:41 am</span></div>
+          <div class='msg'>
+            <span class='fwd'><svg viewBox='0 0 16 12' aria-hidden='true'><path d='M9 1l5 4.5L9 10M4 1l5 4.5L4 10' fill='none' stroke='currentColor' stroke-width='1.5' stroke-linejoin='round'/></svg>Forwarded many times</span>
+            <textarea id='akText' spellcheck='false' rows='6'></textarea>
+          </div>
+        </div>
+        <div class='trace-row'>
+          <button class='btn' id='akTrace' type='button'>Trace the key</button>
+          <span class='note' id='akNote'></span>
+        </div>
+      </div>
+
+      <div class='result' aria-live='polite'>
+        <span class='field-label'>What Leak Trace says</span>
+        <p class='status' id='akStatus'></p>
+        <p class='who' id='akWho'></p>
+        <p class='why' id='akWhy'></p>
+        <svg class='omr' id='akSheet' role='img' aria-label='Answer sheet. Filled bubbles: the leaked answers. Rings: the answer key of the leading college.'></svg>
+        <p class='note omr-key'>Filled bubbles are the leaked answers. Rings mark the leading college's own key.</p>
+        <ol class='top5' id='akTop5' aria-label='Top five suspects'></ol>
+        <div class='reveal' id='akReveal'></div>
+      </div>
+    </div>
+
+    <figure class='meter-fig'>
+      <figcaption class='meter-head'>
+        <h3>How the evidence built up, answer by answer</h3>
+        <ul class='mkey' aria-hidden='true'>
+          <li><i class='k-lead'></i>Leading key</li>
+          <li><i class='k-run'></i>Runner-up</li>
+          <li><i class='k-truth'></i>Real source, if it is neither</li>
+          <li><i class='k-bar'></i>Naming bar</li>
+        </ul>
+      </figcaption>
+      <div class='chart-scroll'><svg class='meter' id='akMeter' role='img' aria-label='Odds for the leading answer keys after each leaked answer'></svg></div>
+      <p class='note' id='akMeterNote' aria-live='polite'></p>
+    </figure>
+
+    <div class='numbers'>
+      <div>
+        <h3>Numbers work the same way</h3>
+        <p>For a numerical question, the paper-setter approves several sets of values chosen to be of equal difficulty, and each college gets one. Reworded or not, a leaked question has to keep its numbers, or its answer changes.</p>
+        <p class='note'>Simulated on 500 colleges, eight numerical questions, reworded and shuffled so that only the numbers survive, 3% of numbers misread.</p>
+      </div>
+      <div class='numcards'>
+        <div class='paper mini'><p class='qpcode'>SET 041</p><p>A simply supported beam of span <b>6 m</b> carries a point load of <b>12 kN</b> at mid-span. Find the maximum bending moment.</p></div>
+        <div class='paper mini'><p class='qpcode'>SET 213</p><p>A simply supported beam of span <b>5 m</b> carries a point load of <b>16 kN</b> at mid-span. Find the maximum bending moment.</p></div>
+      </div>
+      <dl class='numstats'>
+        <div><dt>16 approved sets per question</dt><dd><b>83%</b> named from 6 questions, <b>98%</b> from 8</dd></div>
+        <div><dt>64 approved sets per question</dt><dd><b>89%</b> named from 4 questions, <b>98%</b> from 6</dd></div>
+        <div><dt>Innocent colleges named</dt><dd><b>0</b> in 63,000 leaks</dd></div>
+      </dl>
+    </div>
+  </div>
+</section>
+
+<section id='results'>
+  <div class='wrap'>
+    <div class='intro'>
+      <h2>Seven numbered questions name the source 92% of the time.</h2>
+      <p>We tested the decoder on simulated leaks from 500 colleges, then end to end: rendered pages, damaged like a WhatsApp photo, read by OCR. It names a college only when the odds are 10,000 to 1; below that, investigators get a shortlist. Every result so far is simulated; real leaks made by real people are the next test.</p>
+    </div>
+    <div class='tally'>
+      <div><b>0</b><span>wrong accusations in 135,000 simulated single-college leaks</span></div>
+      <div><b>100%</b><span>of synthetic phone photos showing 5–6 questions traced to the right college (30 photos)</span></div>
+      <div><b>99%</b><span>of 3-question numbered leaks with wording variants keep the real source in a top-5 shortlist</span></div>
+      <div><b>100%</b><span>of leaked answer keys with 14 correct answers named, with no innocent college named in 108,000 key leaks</span></div>
+    </div>
+    <figure class='chart'>
+      <div class='chart-scroll'>
+        <svg id='chart' viewBox='0 0 1000 410' role='img' aria-label='Share of leaks traced to one college with confidence, by number of leaked questions'></svg>
+      </div>
+      <figcaption class='note'>Simulation of a whole paper: 500 colleges, 3,000 leaks per point, 2% misreading and 5% wording-misread noise, named only at 10,000 to 1. The shaded band is the size of the Kannur leak, 4–5 questions; at that size the real source of a numbered leak with wording variants was in the top five in 99.9% of leaks or more.</figcaption>
+    </figure>
+    <h3 class='table-title' id='attackTitle'>Then we tried to fool it.</h3>
+    <p class='atk-lede'>148,000 simulated leaks against the decoder in the demo above, 2,000 for each setting, almost all with typing mistakes. Tricks can stop it naming anyone. Only once did it name an innocent college: a copy from outside the 500 colleges that matched another college’s pattern by chance, which happens to at most about 1 in 20,000 such copies.</p>
+    <div class='table-wrap'>
+      <table class='atk' aria-labelledby='attackTitle'>
+        <thead><tr><th scope='col'>What the leaker did</th><th scope='col' class='n'>Names the source from</th><th scope='col' class='n'>Real source in the top 5, 6 lines</th><th scope='col' class='n'>Innocent college named</th></tr></thead>
+        <tbody>
+          <tr><td data-label='What the leaker did'>Kept the printed numbers</td><td data-label='Names the source from' class='n'>5 lines</td><td data-label='In the top 5, 6 lines' class='n'>100%</td><td data-label='Innocent college named' class='n zero'>0 of 12,000</td></tr>
+          <tr><td data-label='What the leaker did'>Left the numbers out</td><td data-label='Names the source from' class='n'>7 lines</td><td data-label='In the top 5, 6 lines' class='n'>100%</td><td data-label='Innocent college named' class='n zero'>0 of 12,000</td></tr>
+          <tr><td data-label='What the leaker did'>Renumbered the lines 1, 2, 3</td><td data-label='Names the source from' class='n'>7 lines</td><td data-label='In the top 5, 6 lines' class='n'>100%</td><td data-label='Innocent college named' class='n zero'>0 of 12,000</td></tr>
+          <tr><td data-label='What the leaker did'>Copied the first questions, real numbers 1, 2, 3</td><td data-label='Names the source from' class='n'>6 lines</td><td data-label='In the top 5, 6 lines' class='n'>100%</td><td data-label='Innocent college named' class='n zero'>0 of 8,000</td></tr>
+          <tr><td data-label='What the leaker did'>Reworded every question, kept the numbers</td><td data-label='Names the source from' class='n'>Holds back (61% named at 10 lines)</td><td data-label='In the top 5, 6 lines' class='n'>99.8%</td><td data-label='Innocent college named' class='n zero'>0 of 12,000</td></tr>
+          <tr><td data-label='What the leaker did'>Reworded every question, no numbers</td><td data-label='Names the source from' class='n'>Holds back</td><td data-label='In the top 5, 6 lines' class='n'>56.3%</td><td data-label='Innocent college named' class='n zero'>0 of 12,000</td></tr>
+          <tr><td data-label='What the leaker did'>Shuffled the lines, no numbers</td><td data-label='Names the source from' class='n'>Holds back</td><td data-label='In the top 5, 6 lines' class='n'>31.4%</td><td data-label='Innocent college named' class='n zero'>0 of 12,000</td></tr>
+          <tr><td data-label='What the leaker did'>Mixed two colleges’ copies, kept the numbers</td><td data-label='Names the source from' class='n'>10 lines</td><td data-label='In the top 5, 6 lines' class='n'>&gt;99.9%</td><td data-label='Innocent college named' class='n zero'>0 of 6,000</td></tr>
+          <tr><td data-label='What the leaker did'>Mixed two colleges’ copies, no numbers</td><td data-label='Names the source from' class='n'>Holds back (3% named at 10 lines)</td><td data-label='In the top 5, 6 lines' class='n'>88.8% (10 lines)</td><td data-label='Innocent college named' class='n zero'>0 of 2,000</td></tr>
+          <tr><td data-label='What the leaker did'>Sent a copy from outside the 500 colleges</td><td data-label='Names the source from' class='n'>–</td><td data-label='In the top 5, 6 lines' class='n'>–</td><td data-label='Innocent college named' class='n bad'>1 of 32,000</td></tr>
+        </tbody>
+      </table>
+    </div>
+    <p class='note atk-note'>“Names the source from” is the smallest leak named in at least 95% of cases. The rewording and shuffling rows are what the answer-key and numbers layer is for. Before we hardened the decoder on 18 Oct, the same 148,000 leaks named 8 innocent colleges. Three changes, plus a bug fix in the second check: numbers that simply run 1, 2, 3 may be the leaker’s own, so both readings are weighed; a line’s wording counts only when it clearly matches one approved wording; and the bar went from 1,000 to 10,000 to 1.</p>
+  </div>
+</section>
+
+<section id='guarantee'>
+  <div class='wrap two-wide'>
+    <div class='intro'>
+      <h2>A bound on false names. Proven, then tested.</h2>
+      <p>The naming bar is not a hunch. Take a leak that came from none of the 500 colleges, made up or copied from elsewhere. Under our model of such copies, the chance that it clears the bar for naming a college is at most 1 in 10,000 (2 in 10,000 counting the separate check for two-college mixes), and that stays true however many times investigators re-run the trace as more lines turn up. The proof is short: a likelihood ratio averages to one on such copies, so it rarely grows large (Markov's and Ville's inequalities; see the paper).</p>
+      <p>We then checked it on 800,000 simulated outside copies, read one line at a time. At the 10,000-to-1 bar, 11 of 200,000 realistic short-question copies and 14 of 400,000 answer keys ever crossed it, inside the bound; in the attack test the full decoder named 1 of 32,000 outside copies. Wrong names for real leaks are measured, not bounded: in our tests no real leak was pinned on the wrong college.</p>
+    </div>
+    <figure class='chart gfig'>
+      <ul class='mkey' aria-hidden='true'>
+        <li><i class='k-lead'></i>Answer keys</li>
+        <li><i class='k-run'></i>Short questions, real papers</li>
+        <li><i class='k-bar'></i>Proven limit</li>
+      </ul>
+      <div class='chart-scroll'><svg id='gchart' class='meter' role='img' aria-label='Share of outside copies that crossed the naming bar, compared with the proven limit, for four bars from 10 to 10,000 to 1'></svg></div>
+      <figcaption class='note'>Share of outside copies that ever crossed the bar while being read line by line, against the proven limit. At 100 to 1, real papers crossed slightly more often than the proof's model allows (1.13% against 1%), because a real paper's numbers never repeat; at the bar we use, they stay inside the bound.</figcaption>
+    </figure>
+  </div>
+</section>
+
+<section id='how'>
+  <div class='wrap'>
+    <div class='intro'>
+      <h2>Only one step of today's delivery changes.</h2>
+      <p>Universities already send each college a PDF. Leak Trace sits at the moment those PDFs are made, and again when a leak appears.</p>
+    </div>
+    <div class='phase'>
+      <h3>Before the exam</h3>
+      <ol class='flow'>
+        <li><span class='num'>1</span><b>Setter writes one paper</b><p>And approves wordings, number sets and which questions may move.</p></li>
+        <li><span class='num'>2</span><b>Two of three officials unlock</b><p>The secret key is split three ways; any two make the 500 versions. No table is stored.</p></li>
+        <li><span class='num'>3</span><b>Per-college PDFs, keys and a seal</b><p>A fingerprint of all 500 PDFs, signed by two officials, goes to every principal first.</p></li>
+        <li><span class='num'>4</span><b>Existing portal delivers</b><p>OTP or PIN as today; each college prints its own copy.</p></li>
+      </ol>
+    </div>
+    <div class='phase'>
+      <h3>After a leak</h3>
+      <ol class='flow' start='5'>
+        <li><span class='num'>5</span><b>Leak spotted</b><p>A phone photo, a few retyped questions, or an answer key on WhatsApp.</p></li>
+        <li><span class='num'>6</span><b>Read it</b><p>OCR reads photos; fuzzy matching ties typo-ridden lines to the master questions.</p></li>
+        <li><span class='num'>7</span><b>Compare with all 500</b><p>A likelihood for every college; a second stage checks for mixed copies.</p></li>
+        <li class='end'><span class='num'>8</span><b>Ranked lead</b><p>Names a college only when it is 10,000 times likelier than any other, and 10,000 × 500 times likelier than an outside copy; otherwise a shortlist.</p></li>
+      </ol>
+    </div>
+  </div>
+</section>
+
+<section id='fit'>
+  <div class='wrap'>
+    <div class='intro'>
+      <h2>How it answers the six judging criteria.</h2>
+    </div>
+    <dl class='crit'>
+      <div><dt>Problem clarity</dt><dd>Real, recent leaks at Kannur, KSLU, PJTSAU and the Karnataka SSLC exams. In none of them did the leaked paper itself say where it came from.</dd></div>
+      <div><dt>Originality</dt><dd>Builds openly on the canary trap and IBM's 2003 patent. New: three layers of content-identical marks, including answer keys and numbers that survive rewording, and a proven bound on naming a college for a copy from outside the system.</dd></div>
+      <div><dt>Demonstrated feasibility</dt><dd>A working prototype: this live demo, OCR on phone photos, 135,000 whole-paper and 148,000 attack leaks, answer-key and numbers tests, and key custody with 12 of 12 checks passing.</dd></div>
+      <div><dt>Cost</dt><dd>Software only, all open source. It changes one step, making each college's PDF, and tracing runs on a laptop in under a second.</dd></div>
+      <div><dt>Beneficiary impact</dt><dd>A re-exam at one college instead of all. Kannur's sub-committee recommended exactly that once the source was known.</dd></div>
+      <div><dt>Scalability</dt><dd>The same method serves state boards and paper-delivery vendors that reach 2,000+ colleges; more colleges need about one more leaked line, because the bar rises with their number.</dd></div>
+    </dl>
+  </div>
+</section>
+
+<section id='fair'>
+  <div class='wrap two'>
+    <div>
+      <h2>Different order, same exam.</h2>
+      <ul class='ticks filled'>
+        <li>We reorder only where we expect order not to change difficulty: equal-mark short questions, either/or blocks, MCQ options and sub-parts.</li>
+        <li>Related questions stay together and the easy-to-hard order stays fixed.</li>
+        <li>A faculty member approves every wording and every set of numbers, answer keys are generated for each version, and value sets are calibrated in a pilot before high-stakes use.</li>
+        <li>Every college's answer key uses each letter 3 to 7 times out of 20, with 8 to 12 right answers in the middle positions B and C, so no college's key is lopsided.</li>
+        <li>Average marks for each version are published after the exam.</li>
+      </ul>
+    </div>
+    <div>
+      <h2>What it cannot do yet.</h2>
+      <ul class='ticks'>
+        <li>All results so far are simulated. Real leaks made by real people are the next test.</li>
+        <li>English only for now. OCR for Telugu, Kannada, Tamil and Malayalam is untested.</li>
+        <li>A leaker who rewords and shuffles every short question erases the first two layers; then only numbers and answers can name the college. In our tests it gave a shortlist rather than blame an innocent college. A trace is a lead to confirm, not proof.</li>
+        <li>An answer key needs about 14 correct answers to name a college; a key full of mistakes gives a shortlist.</li>
+        <li>Leaks from the setter or the press happen before versions exist. A leaked answer key that matches the master copy tells investigators to look upstream; for question text, Leak Trace holds back.</li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<section id='plan'>
+  <div class='wrap'>
+    <div class='intro'>
+      <h2>From prototype to a university exam.</h2>
+    </div>
+    <ol class='flow road'>
+      <li><span class='num'>1</span><b>Done, October 2026</b><p>Decoder, codes, OCR test, key custody, hundreds of thousands of simulated leaks and a research paper.</p></li>
+      <li><span class='num'>2</span><b>November 2026</b><p>A leak lab with classmates, a student survey, and the per-college PDF generator with answer keys.</p></li>
+      <li><span class='num'>3</span><b>Next semester</b><p>A pilot in one college's internal exams, one version per hall; marks published per version.</p></li>
+      <li class='end'><span class='num'>4</span><b>2027</b><p>One affiliating university exam series, then Telugu and other Indian-language papers.</p></li>
+    </ol>
+  </div>
+</section>
+
+<section id='research'>
+  <div class='wrap'>
+    <div class='intro'>
+      <h2>Read the research.</h2>
+      <p>Every number on this page comes from code we can share and re-run. The paper sets out the method, the codes, the proof and every experiment, including where Leak Trace fails.</p>
+    </div>
+    <div class='docs'>
+      <a class='doc' href='https://raw.githack.com/SakethSumanBathini/SakethSumanBathini/leak-trace-site/leak-trace-paper.pdf' target='_blank' rel='noopener'>
+        <span class='doc-kind'>Research paper · PDF</span>
+        <b>Tracing partial, retyped exam-paper leaks to their source college</b>
+        <span class='doc-sub'>Method, codes, the 1-in-10,000 proof and all experiments.</span>
+      </a>
+      <a class='doc' href='https://raw.githack.com/SakethSumanBathini/SakethSumanBathini/leak-trace-site/leak-trace-concept.pdf' target='_blank' rel='noopener'>
+        <span class='doc-kind'>Concept document · PDF</span>
+        <b>Leak Trace in ten pages</b>
+        <span class='doc-sub'>The problem, the solution, the evidence, the cost and the plan.</span>
+      </a>
+      <a class='doc' href='https://github.com/SakethSumanBathini/SakethSumanBathini/tree/leak-trace-site' target='_blank' rel='noopener'>
+        <span class='doc-kind'>Code · GitHub</span>
+        <b>Simulations, attack tests and key custody</b>
+        <span class='doc-sub'>Python and JavaScript; seeds included, so every table can be re-run.</span>
+      </a>
+    </div>
+  </div>
+</section>
+
+<section id='sources'>
+  <div class='wrap'>
+    <div class='intro'>
+      <h2>Where the facts come from.</h2>
+    </div>
+    <ul class='sources'>
+      <li><a href='https://onmanorama.com/news/kerala/2025/04/18/kannur-university-exam-paper-leaked-through-whatsapp.html' target='_blank' rel='noopener'>Kannur University paper leaked through WhatsApp (Onmanorama)</a></li>
+      <li><a href='https://onmanorama.com/news/kerala/2025/04/19/bekal-police-book-kasaragod-college-principal-leaking-bca-questions-students.html' target='_blank' rel='noopener'>Kannur: re-exam recommended only for the source college (Onmanorama)</a></li>
+      <li><a href='https://www.deccanherald.com/amp/story/india%2Fkarnataka%2Fbengaluru%2Flaw-college-vice-principal-among-three-arrested-for-exam-paper-leak-2-3410420' target='_blank' rel='noopener'>Law college vice-principal arrested in KSLU leak (Deccan Herald)</a></li>
+      <li><a href='https://www.siasat.com/telangana-agricultural-university-exam-paper-leaked-4-staff-suspended-3323281/amp/' target='_blank' rel='noopener'>Telangana agricultural university paper leak (Siasat)</a></li>
+      <li><a href='https://www.deccanherald.com/india/karnataka/bengaluru/karnataka-sslc-preparatory-question-paper-leak-students-sold-papers-on-social-media-for-rs-200rs-500-six-teachers-arrestedtwo-minor-students-detained-3859190' target='_blank' rel='noopener'>Karnataka SSLC preparatory paper leak (Deccan Herald)</a></li>
+      <li><a href='https://thesouthfirst.com/keralam/question-paper-leak-kerala-crime-branch-arrests-school-peon/' target='_blank' rel='noopener'>Kerala question paper leak: peon arrested (South First)</a></li>
+      <li><a href='https://thesouthfirst.com/telangana/day-2-of-ssc-exams-in-telangana-2nd-question-paper-leaked-circulated-on-whatsapp' target='_blank' rel='noopener'>Telangana SSC leaks (South First)</a></li>
+      <li><a href='https://www.etvbharat.com/en/!state/bangalore-university-to-send-bed-exam-question-papers-online-to-prevent-leaks-enn25022103978' target='_blank' rel='noopener'>Bangalore University sends BEd papers online (ETV Bharat)</a></li>
+      <li><a href='https://newslaundry.com/2024/07/31/10-years-89-paper-leak-cases-48-retests-from-centre-to-states-few-plugs-for-a-leaky-record' target='_blank' rel='noopener'>10 years, 89 paper leak cases, 48 re-tests (Newslaundry)</a></li>
+      <li><a href='https://moneylife.in/article/neetug-2026-cancelled-over-paper-leak-allegations-reexam-to-be-held-cbi-probe-ordered/80438.html' target='_blank' rel='noopener'>NEET-UG 2026 cancelled, re-exam ordered (Moneylife)</a></li>
+      <li><a href='https://patents.google.com/patent/US7181158B2/en' target='_blank' rel='noopener'>IBM patent US7181158B2 (Google Patents)</a></li>
+      <li><a href='https://en.wikipedia.org/wiki/Canary_trap' target='_blank' rel='noopener'>Canary trap (Wikipedia)</a></li>
+    </ul>
+  </div>
+</section>
+
+</main>
+
+<footer>
+  <div class='wrap'>
+    <p>Leak Trace, built for the Seva First Innovation Challenge 2026, South Zone, by a team from Sreyas Institute of Engineering and Technology, Hyderabad.</p>
+    <p>Results come from simulations run on 17–18 and 30 Oct 2026. College codes in the demo are fictional.</p>
+  </div>
+</footer>
+
+<script src='app.js'></script>
+</body>
+</html>

@@ -1,0 +1,11 @@
+{'label': 'photo, 3-6 questions visible (all)', 'n': 80, 'item_recovery': 0.994, 'confident_correct': 0.375, 'wrong_accusation': 0.0, 'shortlist_le5': 0.988, 'median_shortlist': 1.0}
+{'label': 'photo, 3 questions visible', 'n': 24, 'item_recovery': 0.972, 'confident_correct': 0.0, 'wrong_accusation': 0.0, 'shortlist_le5': 0.958, 'median_shortlist': 1.0}
+{'label': 'photo, 4 questions visible', 'n': 26, 'item_recovery': 1.0, 'confident_correct': 0.0, 'wrong_accusation': 0.0, 'shortlist_le5': 1.0, 'median_shortlist': 1.0}
+{'label': 'photo, 5 questions visible', 'n': 15, 'item_recovery': 1.0, 'confident_correct': 1.0, 'wrong_accusation': 0.0, 'shortlist_le5': 1.0, 'median_shortlist': 1.0}
+{'label': 'photo, 6 questions visible', 'n': 15, 'item_recovery': 1.0, 'confident_correct': 1.0, 'wrong_accusation': 0.0, 'shortlist_le5': 1.0, 'median_shortlist': 1.0}
+{'label': 'retyped with typos, numbered, 3-6 questions', 'n': 400, 'item_recovery': np.float64(1.0), 'confident_correct': 0.53, 'wrong_accusation': 0.0, 'shortlist_le5': 1.0, 'median_shortlist': 1.0}
+{'label': 'retyped with typos, no numbers, 3-6 questions', 'n': 400, 'item_recovery': np.float64(1.0), 'confident_correct': 0.0, 'wrong_accusation': 0.0, 'shortlist_le5': 0.78, 'median_shortlist': 2.0}
+
+real	0m51.300s
+user	0m38.955s
+sys	0m10.396s

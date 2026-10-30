@@ -1,0 +1,31 @@
+max pairwise agreement (sampled pairs): {'random': 5, 'rs23': 1}
+random single  k= 4 true=  0.0% innocent= 0.00% abstain=100.0% closest-is-source= 98.7%
+random single  k= 6 true= 90.2% innocent= 0.00% abstain=  9.8% closest-is-source=100.0%
+rs23   single  k= 4 true=  0.0% innocent= 0.00% abstain=100.0% closest-is-source= 99.7%
+rs23   single  k= 6 true= 89.2% innocent= 0.00% abstain= 10.8% closest-is-source=100.0%
+random mix2    k= 4 true=  0.0% innocent= 0.00% abstain=100.0% closest-is-source= 58.1%
+random mix2    k= 5 true=  7.1% innocent= 0.00% abstain= 92.9% closest-is-source= 75.0%
+random mix2    k= 6 true=  3.0% innocent= 0.00% abstain= 97.0% closest-is-source= 73.2%
+random mix2    k= 8 true=  9.4% innocent= 0.00% abstain= 90.6% closest-is-source= 79.2%
+random mix2    k=10 true= 81.4% innocent= 0.00% abstain= 18.6% closest-is-source= 83.4%
+rs23   mix2    k= 4 true=  0.0% innocent= 0.00% abstain=100.0% closest-is-source= 64.7%
+rs23   mix2    k= 5 true=  7.2% innocent= 0.00% abstain= 92.8% closest-is-source= 89.4%
+rs23   mix2    k= 6 true=  3.9% innocent= 0.00% abstain= 96.2% closest-is-source= 78.1%
+rs23   mix2    k= 8 true=  8.0% innocent= 0.00% abstain= 92.0% closest-is-source= 83.4%
+rs23   mix2    k=10 true= 83.5% innocent= 0.00% abstain= 16.6% closest-is-source= 86.4%
+random mix3    k= 6 true=  0.5% innocent= 0.00% abstain= 99.5% closest-is-source= 56.0%
+random mix3    k= 8 true=  1.5% innocent= 0.00% abstain= 98.6% closest-is-source= 70.5%
+random mix3    k=10 true=  7.4% innocent= 0.00% abstain= 92.5% closest-is-source= 77.3%
+random mix3    k=12 true= 17.4% innocent= 0.00% abstain= 82.5% closest-is-source= 79.5%
+rs23   mix3    k= 6 true=  0.6% innocent= 0.00% abstain= 99.4% closest-is-source= 65.5%
+rs23   mix3    k= 8 true=  1.2% innocent= 0.00% abstain= 98.8% closest-is-source= 74.1%
+rs23   mix3    k=10 true=  7.0% innocent= 0.00% abstain= 93.0% closest-is-source= 77.8%
+rs23   mix3    k=12 true= 15.7% innocent= 0.00% abstain= 84.4% closest-is-source= 83.1%
+random outside k= 6 true=  0.0% innocent= 0.00% abstain=100.0% closest-is-source=  0.0%
+random outside k=10 true=  0.0% innocent= 0.00% abstain=100.0% closest-is-source=  0.0%
+rs23   outside k= 6 true=  0.0% innocent= 0.00% abstain=100.0% closest-is-source=  0.0%
+rs23   outside k=10 true=  0.0% innocent= 0.00% abstain=100.0% closest-is-source=  0.0%
+
+real	13m54.095s
+user	11m16.687s
+sys	2m20.559s
