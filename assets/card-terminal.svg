@@ -91,8 +91,8 @@ text, tspan { white-space: pre; }
 <tspan x="440" y="366" class="cc">. </tspan><tspan class="key">Grid.LinkedIn</tspan><tspan class="cc"> ........................... </tspan><tspan class="value">saketh-suman-bathini-5922532ba</tspan>
 <tspan x="440" y="386" class="cc">. </tspan><tspan class="key">Grid.GitHub</tspan><tspan class="cc"> ......................................... </tspan><tspan class="value">SakethSumanBathini</tspan>
 <tspan x="440" y="412" fill="#FF8A3D">- GitHub Stats -------------------------------------------------------</tspan>
-<tspan x="440" y="434" class="cc">. </tspan><tspan class="key">Repositories</tspan><tspan class="cc" id="repo_dots"> ........................................................ </tspan><tspan class="value" id="repo_data">41</tspan>
-<tspan x="440" y="454" class="cc">. </tspan><tspan class="key">Contributions</tspan><tspan class="cc" id="contrib_dots"> .................................................... </tspan><tspan class="value" id="contrib_data">2,216</tspan>
+<tspan x="440" y="434" class="cc">. </tspan><tspan class="key">Repositories</tspan><tspan class="cc" id="repo_dots"> ........................................................ </tspan><tspan class="value" id="repo_data">42</tspan>
+<tspan x="440" y="454" class="cc">. </tspan><tspan class="key">Contributions</tspan><tspan class="cc" id="contrib_dots"> .................................................... </tspan><tspan class="value" id="contrib_data">2,217</tspan>
 <tspan x="440" y="474" class="cc">. </tspan><tspan class="key">Pull Requests</tspan><tspan class="cc" id="pr_dots"> ...................................................... </tspan><tspan class="value" id="pr_data">680</tspan>
 <tspan x="440" y="494" class="cc">. </tspan><tspan class="key">Issues</tspan><tspan class="cc" id="issue_dots"> ............................................................. </tspan><tspan class="value" id="issue_data">403</tspan>
 <tspan x="440" y="514" class="cc">. </tspan><tspan class="key">Stars Earned</tspan><tspan class="cc" id="star_dots"> ........................................................ </tspan><tspan class="value" id="star_data">23</tspan>
